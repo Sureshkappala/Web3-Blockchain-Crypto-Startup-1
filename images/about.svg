@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%" style="background-color: #040816;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="bronzeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e09d5c" />
+      <stop offset="100%" stop-color="#8c521b" />
+    </linearGradient>
+    <filter id="shieldGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Abstract digital node connections -->
+  <g stroke="#2563eb" stroke-opacity="0.15" stroke-width="1.5">
+    <line x1="100" y1="100" x2="300" y2="70" />
+    <line x1="300" y1="70" x2="500" y2="100" />
+    <line x1="100" y1="100" x2="150" y2="300" />
+    <line x1="500" y1="100" x2="450" y2="300" />
+    <line x1="150" y1="300" x2="300" y2="380" />
+    <line x1="450" y1="300" x2="300" y2="380" />
+    <line x1="300" y1="70" x2="300" y2="380" />
+  </g>
+
+  <!-- Interactive data points -->
+  <circle cx="100" cy="100" r="4" fill="#2563eb" />
+  <circle cx="300" cy="70" r="4" fill="#3b82f6" />
+  <circle cx="500" cy="100" r="4" fill="#2563eb" />
+  <circle cx="150" cy="300" r="4" fill="#e09d5c" />
+  <circle cx="450" cy="300" r="4" fill="#e09d5c" />
+  <circle cx="300" cy="380" r="4" fill="#3b82f6" />
+
+  <!-- Central Shield Node (Security / Fiduciary Standard) -->
+  <g transform="translate(300, 225)" filter="url(#shieldGlow)">
+    <!-- Outer Shield border -->
+    <path d="M 0,-60 C 25,-60 45,-50 45,-25 C 45,15 15,45 0,55 C -15,45 -45,15 -45,-25 C -45,-50 -25,-60 0,-60 Z" fill="none" stroke="url(#bronzeGrad)" stroke-width="4.5" />
+    <!-- Inner Shield space -->
+    <path d="M 0,-50 C 20,-50 35,-42 35,-22 C 35,10 12,35 0,44 C -12,35 -35,10 -35,-22 C -35,-42 -20,-50 0,-50 Z" fill="url(#primaryGrad)" fill-opacity="0.15" />
+    
+    <!-- Lock symbol in center -->
+    <path d="M -10,-5 L 10,-5 L 10,15 L -10,15 Z" fill="url(#bronzeGrad)" />
+    <path d="M -6,-5 L -6,-12 C -6,-16 6,-16 6,-12 L 6,-5" fill="none" stroke="url(#bronzeGrad)" stroke-width="2.5" />
+  </g>
+
+  <!-- Data validation blocks in columns (represents cluster validation) -->
+  <g transform="translate(60, 180)" stroke="url(#primaryGrad)" stroke-width="1.5" fill="none">
+    <rect x="0" y="0" width="50" height="30" rx="3" fill="#0b1329" fill-opacity="0.7"/>
+    <line x1="10" y1="10" x2="40" y2="10" stroke-opacity="0.5" />
+    <line x1="10" y1="20" x2="30" y2="20" stroke-opacity="0.5" />
+  </g>
+
+  <g transform="translate(480, 180)" stroke="url(#bronzeGrad)" stroke-width="1.5" fill="none">
+    <rect x="0" y="0" width="50" height="30" rx="3" fill="#0b1329" fill-opacity="0.7"/>
+    <line x1="10" y1="10" x2="40" y2="10" stroke-opacity="0.5" />
+    <line x1="10" y1="20" x2="30" y2="20" stroke-opacity="0.5" />
+  </g>
+</svg>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome Back - Access your Stackly client portal or validator dashboard.">
+    <title>Login | Stackly Web3 Advisory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-color: var(--bg-primary); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; padding: 2rem 1rem;">
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes-stacked preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- BACK TO HOME BUTTON -->
+    <a href="index.html" class="back-to-home-btn"><i class="fa-solid fa-house"></i> Back to Home</a>
+
+    <!-- LOGIN CONTAINER -->
+    <div class="container" style="max-width: 440px; padding: 0; width: 100%;">
+        <div class="glass-card" style="padding: 2.75rem 2.25rem; text-align: center; border-right: 4px solid var(--accent);">
+            
+            <!-- LOGO & HEADING -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 38px; margin: 0 auto 1.25rem auto;">
+                <h2 style="font-size: 2rem; margin-bottom: 0.4rem; color: var(--text-light); font-family: var(--font-heading);">Welcome Back</h2>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Access your client portal or validator dashboard.</p>
+            </div>
+
+            <!-- FORM -->
+            <form id="login-form" style="text-align: left;">
+                
+                <!-- EMAIL ADDRESS -->
+                <div class="form-group">
+                    <label for="login-email" style="text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">Email Address</label>
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-envelope" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <input type="email" id="login-email" placeholder="john@example.com" style="padding-left: 2.75rem;" required>
+                    </div>
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label for="login-password" style="text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">Password</label>
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-lock" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <input type="password" id="login-password" placeholder="••••••••" style="padding-left: 2.75rem; padding-right: 2.75rem;" required>
+                        <button type="button" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer;" onclick="togglePassword()">
+                            <i class="fa-solid fa-eye" id="pwd-eye-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SELECT ROLE -->
+                <div class="form-group">
+                    <label for="login-role" style="text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">Select Role</label>
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-user" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <select id="login-role" style="padding-left: 2.75rem;" required>
+                            <option value="" disabled selected>Select Role</option>
+                            <option value="client">Liquidity Provider (LP)</option>
+                            <option value="advisor">Consensus Node Advisor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- REMEMBER ME & FORGOT PASSWORD ROW -->
+                <div class="login-remember-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.85rem;">
+                    <label class="remember-label" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); cursor: pointer; text-transform: none; font-weight: 500;">
+                        <input type="checkbox" style="width: auto;"> Remember Me
+                    </label>
+                    <a href="contact.html" class="forgot-link" style="color: var(--accent-light); font-weight: 600;">Forgot Password?</a>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem; font-size: 1.05rem; border-radius: var(--radius-sm); border: none; font-weight: 700;">Access Portal</button>
+
+            </form>
+
+            <!-- BOTTOM REGISTER LINK -->
+            <div style="text-align: center; margin-top: 1.75rem; font-size: 0.85rem; color: var(--text-muted);">
+                Don't have a portal account? <a href="register.html" style="color: var(--primary-light); font-weight: 700;">Register Here</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        function togglePassword() {
+            const field = document.getElementById('login-password');
+            const icon = document.getElementById('pwd-eye-icon');
+            if (field.type === 'password') {
+                field.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const role = document.getElementById('login-role').value || 'client';
+
+            // Password complexity check
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+            if (!passwordRegex.test(password)) {
+                window.showCustomAlert('Password must be at least 8 characters long and contain a combination of uppercase, lowercase, digits, and symbols.', 'error');
+                return;
+            }
+
+            localStorage.setItem('loggedInUserName', email.split('@')[0].toUpperCase());
+            localStorage.setItem('loggedInUserRole', role);
+            window.showCustomAlert('Signature Verified! Redirecting to consensus dashboard...', 'success');
+            setTimeout(() => {
+                window.location.href = 'studio-portal.html';
+            }, 1800);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly - Premium Web3 validator infrastructure, smart contract security audits, DeFi yield optimization, and multi-sig DAO governance.">
+    <title>Stackly | Premium Web3 & Staking Node Advisory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes-stacked preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- SCROLL PROGRESS BAR & CUSTOM CURSOR -->
+    <div class="scroll-progress-container"><div class="scroll-progress-bar"></div></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                <div class="logo-text">STACKLY</div>
+            </a>
+            
+            <nav class="navbar">
+                <div class="drawer-header">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                        <div class="logo-text">STACKLY</div>
+                    </a>
+                    <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <div class="drawer-search">
+                    <div style="position: relative; width: 100%;">
+                        <input type="text" placeholder="Search node protocols...">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none;"></i>
+                    </div>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Strategies</a></li>
+                    <li><a href="portfolio.html">Node Log</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                
+                <div class="nav-mobile-cta">
+                    <a href="login.html" class="btn btn-secondary">LP Login</a>
+                    <a href="404.html" class="btn btn-primary">Sync Node</a>
+                </div>
+                
+                <div class="drawer-contact-info">
+                    <h5>Protocol Support</h5>
+                    <p><i class="fa-solid fa-phone"></i> +1 (800) 555-STACKLY</p>
+                    <p><i class="fa-solid fa-envelope"></i> consensus@blocknex.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Block 42, Decentralland Cyber Hub</p>
+                </div>
+            </nav>
+            
+            <div class="nav-controls">
+                <a href="login.html" class="btn btn-secondary btn-sm" style="margin-right: 0.5rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a href="404.html" class="btn btn-primary btn-sm">Sync Node</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION (2-COLUMN EQUAL HEIGHT) -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="hero-grid-2col">
+                
+                <!-- LEFT CONTENT BOX -->
+                <div class="hero-left-box reveal-left">
+                    <div>
+                        <span class="section-tag gold-tag"><i class="fa-solid fa-shield-halved"></i> Institutional Node Advisory</span>
+                        <h1 class="hero-title">Optimize APY, <span class="text-gradient">Secure On-Chain Capital</span></h1>
+                        <p class="hero-description">We combine institutional-grade validator infrastructure, smart contract audits, and yield-optimization algorithms to maximize returns while eliminating slashing risks.</p>
+                        <div class="hero-actions">
+                            <a href="404.html" class="btn btn-gold">Deploy Node Sync <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="404.html" class="btn btn-secondary">Explore Yield Pools</a>
+                        </div>
+                    </div>
+
+                    <!-- BOTTOM STATS ROW -->
+                    <div class="hero-stats-row">
+                        <div class="hero-stat-item">
+                            <h4 class="counter-value" data-target="99">99.99%</h4>
+                            <p>Node Uptime</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h4 class="counter-value" data-target="1280">$1.28B+</h4>
+                            <p>Total Value Locked (TVL)</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h4 class="counter-value" data-target="15">15+ Yrs</h4>
+                            <p>Combined Tech Tenure</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT CARD FRAME (SAME HEIGHT) -->
+                <div class="hero-right-card anim-float reveal-right" style="position: relative;">
+                    <!-- Floating Glass Badges -->
+                    <div class="floating-hero-badge badge-yield anim-pulse" style="position: absolute; top: 30%; right: -25px; background: rgba(11, 19, 41, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(37, 99, 235, 0.3); border-radius: var(--radius-sm); padding: 0.6rem 1rem; box-shadow: var(--shadow-md); z-index: 10;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; line-height: 1.2;">Validator APY</span>
+                        <span style="font-size: 1.1rem; color: var(--accent-light); font-weight: 800; line-height: 1.2;">+24.85%</span>
+                    </div>
+                    <div class="floating-hero-badge badge-risk anim-float" style="position: absolute; bottom: 30%; left: -25px; background: rgba(11, 19, 41, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(194, 125, 56, 0.3); border-radius: var(--radius-sm); padding: 0.6rem 1rem; box-shadow: var(--shadow-md); z-index: 10; animation-delay: 2s;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; line-height: 1.2;">Slashing Protection</span>
+                        <span style="font-size: 1.1rem; color: var(--primary-light); font-weight: 800; line-height: 1.2;">100% Backed</span>
+                    </div>
+                    
+                    <div class="hero-right-card-header">
+                        <h4>Validator Node Monitor</h4>
+                        <div class="hero-live-badge">
+                            <div class="hero-live-dot"></div> Sync Analytics
+                        </div>
+                    </div>
+
+                    <div class="hero-visual-frame">
+                        <img src="images/hero.webp" alt="Stackly Portfolio Analytics" id="hero-display-img">
+                    </div>
+
+                    <div class="hero-right-card-footer">
+                        <div class="hero-right-card-footer-info">
+                            <h5>Active Protocol Allocation</h5>
+                            <h4 id="hero-strategy-label">Multi-Asset Liquid Staking</h4>
+                        </div>
+                        <div class="hero-color-toggles">
+                            <div class="hero-color-toggle-dot" style="background-color: var(--primary);" title="L1 Liquid Staking" onclick="document.getElementById('hero-display-img').src='images/hero.webp'; document.getElementById('hero-strategy-label').textContent='Multi-Asset Liquid Staking';"></div>
+                            <div class="hero-color-toggle-dot" style="background-color: var(--accent);" title="DeFi Arbitrage Pools" onclick="document.getElementById('hero-display-img').src='images/market.webp'; document.getElementById('hero-strategy-label').textContent='DeFi Yield Optimizer Pools';"></div>
+                            <div class="hero-color-toggle-dot" style="background-color: var(--primary-light);" title="DAO Venture Treasury" onclick="document.getElementById('hero-display-img').src='images/portfolio.webp'; document.getElementById('hero-strategy-label').textContent='DAO Venture Treasury Staking';"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about">
+        <div class="container grid-2col">
+            <div class="reveal-element" style="height: 100%;">
+                <div style="height: 100%; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-glass); position: relative;">
+                    <img src="images/about.webp" alt="Stackly Blockchain Validation Control Room" class="img-fixed-feature" style="height: 100%; width: 100%; object-fit: cover; display: block;">
+                </div>
+            </div>
+            <div class="reveal-element">
+                <span class="section-tag gold-tag"><i class="fa-solid fa-award"></i> Protocol Security Heritage</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">We compile audit reports, deploy validators, and secure on-chain code.</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Founded in 2021, STACKLY operates under rigorous smart contract validation models. We eliminate delegation risk by rejecting custodial operations, focusing entirely on trustless non-custodial smart validator loops, MEV capture optimization, and security audits.</p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--primary-light); margin-right: 0.5rem;"></i> Non-custodial staking structures & slashed asset guarantees</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--primary-light); margin-right: 0.5rem;"></i> Certified Smart Contract Architects & DevSecOps security engineers</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--primary-light); margin-right: 0.5rem;"></i> Real-time cryptographic ledger portal tracking validator node drift</li>
+                </ul>
+                <a href="about.html" class="btn btn-secondary">Read Full Whitepaper</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section id="services">
+        <div class="container" style="text-align: center; margin-bottom: 4rem;">
+            <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Cryptographic Operations</span>
+            <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Discretionary Web3 Services</h2>
+            <p style="color: var(--text-muted);">Engineered for decentralized autonomous organizations, Web3 foundations, and private LPs.</p>
+        </div>
+        <div class="container grid-3col">
+            <div class="glass-card reveal-element">
+                <img src="images/portfolio.webp" alt="Liquid Staking Advisory" class="img-fixed-card" style="margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">L1 Staking Node Allocation</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Direct capital allocation to high-uptime Ethereum, Solana, and Cosmos validator nodes with automated MEV rewards distribution.</p>
+                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Allocation</a>
+            </div>
+            
+            <div class="glass-card reveal-element" style="transition-delay: 150ms;">
+                <img src="images/market.webp" alt="Stablecoin Yield Optimizer" class="img-fixed-card" style="margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">DeFi Yield Optimization</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Delta-neutral arbitrage algorithms, cross-chain yield aggregator staking, and collateral debt position management.</p>
+                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Allocation</a>
+            </div>
+            
+            <div class="glass-card reveal-element" style="transition-delay: 300ms;">
+                <img src="images/success.webp" alt="Multi-Sig DAO Governance" class="img-fixed-card" style="margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">Multi-Sig DAO Governance</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Custom multi-signature cold vault setups, on-chain voting policy templates, and trustless smart contract treasury rules.</p>
+                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Allocation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ANIMATED STATS COUNTERS -->
+    <section class="stats-counter-section" style="padding: 5rem 0;">
+        <div class="container grid-4col" style="text-align: center;">
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="15000">0</h3>
+                <p>Validator Addresses Delegated</p>
+            </div>
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="50">0</h3>
+                <p>Supported L1/L2 Protocols</p>
+            </div>
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="15">0</h3>
+                <p>Node Operations Track Record</p>
+            </div>
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="1280">0</h3>
+                <p>Total Value Locked ($M)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONSULTATION TIMETABLE SCHEDULE -->
+    <section id="schedule">
+        <div class="container" style="text-align: center; margin-bottom: 4rem;">
+            <span class="section-tag"><i class="fa-solid fa-calendar-check"></i> Consensus Timetable</span>
+            <h2 style="font-size: 2.5rem;">Validator Operations Sync</h2>
+        </div>
+        <div class="container" style="max-width: 900px;">
+            <div class="schedule-tabs">
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Monday Consensus Slot: MEV Boost Param Audit @ 9 AM, Cosmos IBC Relayer Setup @ 2 PM', 'success')">Mon</button>
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Tuesday Consensus Slot: ETH Validator Upgrades @ 10 AM, Solana Fee Setup @ 4 PM', 'success')">Tue</button>
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Wednesday Consensus Slot: Multi-Sig Parameter Test @ 11 AM, Relayer Drift Audit @ 3 PM', 'success')">Wed</button>
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Thursday Consensus Slot: L2 Gas Optimizations @ 9 AM, Testnet Relayer Sync @ 5 PM', 'success')">Thu</button>
+                <button class="btn btn-secondary btn-sm" onclick="window.showCustomAlert('Friday Consensus Slot: Weekly Yield Rebalancing @ 10 AM, DAO Consensus Review @ 4 PM', 'success')">Fri</button>
+            </div>
+            <div class="glass-card">
+                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-glass);">
+                    <span>09:00 AM - 10:30 AM</span>
+                    <span style="font-weight: 700; color: var(--primary-light);">Consensus Validator Client Upgrades</span>
+                    <span>Marcus Vance, Tech Lead</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-glass);">
+                    <span>02:00 PM - 03:30 PM</span>
+                    <span style="font-weight: 700; color: var(--primary-light);">Smart Contract Gas Optimization Review</span>
+                    <span>Sarah Jenkins, Security Audit CIO</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 1rem 0;">
+                    <span>05:00 PM - 06:30 PM</span>
+                    <span style="font-weight: 700; color: var(--primary-light);">Cross-Chain Yield Rebalancing Run</span>
+                    <span>David Ross, Yield Lead</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ROI / APY CALCULATOR -->
+    <section id="calculator">
+        <div class="container grid-2col">
+            <div class="calc-box reveal-element">
+                <span class="section-tag gold-tag"><i class="fa-solid fa-calculator"></i> Staking Yield Engine</span>
+                <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-light);">Estimate Staking Yield Growth</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Calculate long-term validator rewards based on initial staking capital, recurring monthly delegations, and estimated protocol APY.</p>
+                <form onsubmit="event.preventDefault(); window.calculateWealthGrowth();">
+                    <div class="form-group">
+                        <label for="calc-principal">Initial Staking Capital ($)</label>
+                        <input type="number" id="calc-principal" value="250000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-monthly">Monthly Delegation Boost ($)</label>
+                        <input type="number" id="calc-monthly" value="2500" required>
+                    </div>
+                    <div class="grid-2col" style="gap: 1rem; margin-bottom: 0;">
+                        <div class="form-group">
+                            <label for="calc-rate">Protocol APY (%)</label>
+                            <input type="number" id="calc-rate" value="9.5" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="calc-years">Staking Horizon (Yrs)</label>
+                            <input type="number" id="calc-years" value="15" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 1rem;">Run Projection Model</button>
+                </form>
+            </div>
+            
+            <div class="reveal-element">
+                <div class="glass-card" style="margin-bottom: 1.5rem;">
+                    <h4 style="font-size: 1.2rem; color: var(--primary-light); margin-bottom: 0.5rem;"><i class="fa-solid fa-chart-line"></i> Cryptographic Yield Optimizer</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Our MEV-Boost relays harvest gas block priority rewards dynamically to optimize validator yield performance.</p>
+                </div>
+                <img src="images/portfolio.webp" alt="Validator Yield Curve" class="img-fixed-feature">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CALL TO ACTION SECTION -->
+    <section class="cta-section">
+        <div class="container" style="max-width: 960px;">
+            <div class="glass-card reveal-element" style="padding: 4rem 3rem; text-align: center; border-color: rgba(37, 99, 235, 0.25); box-shadow: var(--shadow-glow-primary); border-radius: var(--radius-lg); position: relative; overflow: hidden;">
+                <!-- Ambient glow decoration -->
+                <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(194, 125, 56, 0.15); filter: blur(40px); border-radius: 50%;"></div>
+                
+                <span class="section-tag gold-tag" style="margin-bottom: 1.5rem;"><i class="fa-solid fa-gem"></i> Decentralized Capital Advisory</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); line-height: 1.25; margin-bottom: 1rem; font-weight: 800; color: var(--text-light);">Ready to Stabilitze & <span class="text-gradient">Optimize Your Node APY?</span></h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin: 0 auto 2.5rem auto;">Request a confidential consensus audit and devnet node sync checklist with our validator security team today.</p>
+                
+                <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-gold" style="padding: 0.95rem 2rem;"><i class="fa-solid fa-calendar-days" style="margin-right: 0.5rem;"></i> Sync Node Consultation</a>
+                    <a href="services.html" class="btn btn-secondary" style="padding: 0.95rem 2rem;"><i class="fa-solid fa-compass" style="margin-right: 0.5rem;"></i> Explore Staking Tiers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+                    <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                    <div class="logo-text">STACKLY</div>
+                </a>
+                <p>Stackly is a premier non-custodial Web3 node operator and smart contract audit platform, specializing in staking yields optimization, MEV capture, and secure consensus governance.</p>
+                <div class="footer-social-row">
+                    <a href="404.html" class="social-fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404.html" class="social-x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" class="social-in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" class="social-ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Strategies</a></li>
+                    <li><a href="portfolio.html">Track Record</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">L1 Staking Node Allocation</a></li>
+                    <li><a href="services.html">DeFi Yield Optimization</a></li>
+                    <li><a href="services.html">Gas/MEV Audit Logging</a></li>
+                    <li><a href="services.html">Multi-Sig DAO Governance</a></li>
+                    <li><a href="services.html">Venture DAO Allocations</a></li>
+                    <li><a href="services.html">Staking Yield Advisory</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">Subscribe to receive instant devnet telemetry alerts, protocol upgrades, and validator performance reports from our team.</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Validator email address" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Stackly. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

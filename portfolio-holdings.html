@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly Active Staking - Detailed directory tracking delegated addresses and validator nodes.">
+    <title>Active Staking Directory | Stackly Web3 Advisory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes-stacked preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- DASHBOARD CONTAINER -->
+    <div class="db-container">
+        
+        <!-- MOBILE HEADER -->
+        <div class="db-mobile-header">
+            <button class="db-hamburger" aria-label="Toggle Sidebar"><i class="fa-solid fa-bars"></i></button>
+            <div class="db-mobile-logo">
+                <img src="images/logo.webp" alt="Stackly Logo">
+            </div>
+            <div class="db-mobile-avatar user-avatar">LP</div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="db-sidebar">
+            <button class="db-sidebar-close" aria-label="Close Sidebar"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div style="overflow-y: auto; height: 100%; width: 100%;">
+                <a href="index.html" class="sidebar-logo"><img src="images/logo.webp" alt="Stackly Logo"></a>
+                
+                <div class="sidebar-section-title">Consensus Node</div>
+                <nav class="sidebar-menu">
+                    <a href="studio-portal.html" class="sidebar-link"><i class="fa-solid fa-chart-pie"></i> LP Overview</a>
+                    <a href="portfolio-holdings.html" class="sidebar-link active"><i class="fa-solid fa-server"></i> Active Staking</a>
+                    <a href="asset-allocation.html" class="sidebar-link"><i class="fa-solid fa-scale-balanced"></i> Swap Allocations</a>
+                    <a href="advisory-schedule.html" class="sidebar-link"><i class="fa-solid fa-calendar-check"></i> Sync Telemetry</a>
+                </nav>
+
+                <div class="sidebar-section-title" style="margin-top: 1.5rem;">Node Security</div>
+                <nav class="sidebar-menu">
+                    <a href="fiduciary-booking.html" class="sidebar-link"><i class="fa-solid fa-file-shield"></i> Slashing Audits</a>
+                </nav>
+
+                <div class="sidebar-section-title" style="margin-top: 1.5rem;">Yield Simulator</div>
+                <nav class="sidebar-menu">
+                    <a href="roi-calculator.html" class="sidebar-link"><i class="fa-solid fa-gauge-high"></i> APY Calculator</a>
+                    <a href="tax-harvesting.html" class="sidebar-link"><i class="fa-solid fa-shield-halved"></i> Gas Optimization</a>
+                </nav>
+                
+                <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass);">
+                    <a href="login.html" class="sidebar-link" style="color: var(--accent-light);" onclick="localStorage.clear();"><i class="fa-solid fa-right-from-bracket"></i> Disconnect Wallet</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- SIDEBAR MOBILE OVERLAY -->
+        <div class="db-sidebar-overlay"></div>
+
+        <!-- MAIN DASHBOARD CONTENT -->
+        <main class="db-main">
+            
+            <!-- Welcome Hero -->
+            <div class="db-welcome-hero reveal-element">
+                <h1>Active Staking Directory</h1>
+                <p>Telemetry details of your delegated validator keys, node address hashes, and live protocol returns.</p>
+            </div>
+
+            <!-- Staking Details Table -->
+            <div class="panel-box reveal-element">
+                <div class="panel-box-header">
+                    <h3 class="panel-box-title">Delegated Validator Node Log</h3>
+                </div>
+                <table class="db-table">
+                    <thead>
+                        <tr>
+                            <th>Staked Pool</th>
+                            <th>Validator Key Address</th>
+                            <th>Delegated Balance</th>
+                            <th>Validator Uptime Score</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-light-value">Ethereum L1 Validator Key #42</td>
+                            <td data-label="Address">0x3a9A8C...C481</td>
+                            <td data-label="TVL">25.0 ETH ($90,000)</td>
+                            <td data-label="Uptime">99.99%</td>
+                            <td data-label="Status"><span class="badge-status status-active">Online</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-light-value">Ethereum L1 Validator Key #89</td>
+                            <td data-label="Address">0x9Fa48F...012B</td>
+                            <td data-label="TVL">17.5 ETH ($62,000)</td>
+                            <td data-label="Uptime">99.98%</td>
+                            <td data-label="Status"><span class="badge-status status-active">Online</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-light-value">Solana Jito-MEV Node Pool</td>
+                            <td data-label="Address">0x81F28B...0E29</td>
+                            <td data-label="TVL">500 SOL ($68,000)</td>
+                            <td data-label="Uptime">100.00%</td>
+                            <td data-label="Status"><span class="badge-status status-active">Online</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-light-value">Cosmos IBC Relayer Pool</td>
+                            <td data-label="Address">0x7D27B4...F202</td>
+                            <td data-label="TVL">2,500 ATOM ($25,000)</td>
+                            <td data-label="Uptime">99.94%</td>
+                            <td data-label="Status"><span class="badge-status status-active">Online</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

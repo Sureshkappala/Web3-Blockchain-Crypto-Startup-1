@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlockNex Services - Institutional staking allocations, smart contract security audits, DeFi yield aggregator staking, and multi-sig DAO governance.">
+    <title>Validator Services | Stackly Staking & Security</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes-stacked preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- SCROLL PROGRESS & CUSTOM CURSOR -->
+    <div class="scroll-progress-container"><div class="scroll-progress-bar"></div></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                <div class="logo-text">STACKLY</div>
+            </a>
+            
+            <nav class="navbar">
+                <div class="drawer-header">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                        <div class="logo-text">STACKLY</div>
+                    </a>
+                    <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <div class="drawer-search">
+                    <div style="position: relative; width: 100%;">
+                        <input type="text" placeholder="Search validator solutions...">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none;"></i>
+                    </div>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="strategies.html">Strategies</a></li>
+                    <li><a href="portfolio.html">Node Log</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                
+                <div class="nav-mobile-cta">
+                    <a href="login.html" class="btn btn-secondary">LP Login</a>
+                    <a href="404.html" class="btn btn-primary">Sync Node</a>
+                </div>
+            </nav>
+            
+            <div class="nav-controls">
+                <a href="login.html" class="btn btn-secondary btn-sm" style="margin-right: 0.5rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a href="404.html" class="btn btn-primary btn-sm">Sync Node</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="hero" style="min-height: 48vh; padding-top: 10rem; padding-bottom: 3rem; text-align: center;">
+        <div class="container">
+            <span class="section-tag gold-tag"><i class="fa-solid fa-gears"></i> Solutions & Specialties</span>
+            <h1 style="font-size: clamp(2.2rem, 4vw, 3.5rem); margin-bottom: 1rem;">Decentralized Yield <span style="background: var(--gradient-hybrid); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Capabilities</span></h1>
+            <p style="color: var(--text-muted); max-width: 680px; margin: 0 auto; font-size: 1.05rem; line-height: 1.75;">Explore our bare-metal validator configurations, cryptographic security audits, and automated capital delegation programs.</p>
+        </div>
+    </section>
+
+    <!-- 2. NEW SECTION: PROTOCOL SERVICES HUB (6 INTERACTIVE CARDS) -->
+    <section id="services-hub" style="background-color: var(--bg-primary); padding: 5rem 0;">
+        <div class="container" style="text-align: center; margin-bottom: 4rem;">
+            <span class="section-tag"><i class="fa-solid fa-circle-nodes"></i> Active Protocols</span>
+            <h2 style="font-size: 2.3rem; margin-bottom: 0.5rem;">Supported Validator Nodes</h2>
+            <p style="color: var(--text-muted);">Non-custodial, high-performance staking setups with integrated anti-slashing databases.</p>
+        </div>
+
+        <div class="container grid-3col">
+            <!-- Card 1 -->
+            <div class="glass-card shimmer-card reveal-element">
+                <div style="font-size: 2.5rem; color: var(--primary-light); margin-bottom: 1.25rem;"><i class="fa-brands fa-ethereum"></i></div>
+                <h3 style="font-size: 1.35rem; color: var(--text-light); margin-bottom: 0.5rem;">Ethereum Staking</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">Multi-key Beacon Chain validation running custom anti-slashing signer databases. Uptime SLA: 99.99%.</p>
+                <div style="font-weight: 700; color: var(--accent-light); font-size: 0.9rem;">Est. APY: ~4.2%</div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass-card shimmer-card reveal-element" style="transition-delay: 100ms;">
+                <div style="font-size: 2.5rem; color: var(--accent-light); margin-bottom: 1.25rem;"><i class="fa-solid fa-bolt"></i></div>
+                <h3 style="font-size: 1.35rem; color: var(--text-light); margin-bottom: 0.5rem;">Solana Jito-Staking</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">Bare-metal nodes configured with Jito block proposal engines to harvest searcher rewards bundles.</p>
+                <div style="font-weight: 700; color: var(--primary-light); font-size: 0.9rem;">Est. APY: ~8.2%</div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass-card shimmer-card reveal-element" style="transition-delay: 200ms;">
+                <div style="font-size: 2.5rem; color: var(--primary-light); margin-bottom: 1.25rem;"><i class="fa-solid fa-arrows-spin"></i></div>
+                <h3 style="font-size: 1.35rem; color: var(--text-light); margin-bottom: 0.5rem;">Cosmos IBC Staking</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">Active IBC relayer validation for Cosmos Hub, Osmosis, and Celestia networks with auto-compounding.</p>
+                <div style="font-weight: 700; color: var(--accent-light); font-size: 0.9rem;">Est. APY: ~14.5%</div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="glass-card shimmer-card reveal-element" style="transition-delay: 300ms;">
+                <div style="font-size: 2.5rem; color: var(--accent-light); margin-bottom: 1.25rem;"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 style="font-size: 1.35rem; color: var(--text-light); margin-bottom: 0.5rem;">Smart Contract Auditing</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">Formal verification, static compilation checks, and threat analysis logs for EVM and Rust codebases.</p>
+                <div style="font-weight: 700; color: var(--primary-light); font-size: 0.9rem;">Turnaround: 5-7 Days</div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="glass-card shimmer-card reveal-element" style="transition-delay: 400ms;">
+                <div style="font-size: 2.5rem; color: var(--primary-light); margin-bottom: 1.25rem;"><i class="fa-solid fa-key"></i></div>
+                <h3 style="font-size: 1.35rem; color: var(--text-light); margin-bottom: 0.5rem;">Multi-Sig Vault Setup</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">Irrevocable Gnosis-Safe vault administration, secure hardware HSM signing keys, and cold storage parameters.</p>
+                <div style="font-weight: 700; color: var(--accent-light); font-size: 0.9rem;">Setup: Bespoke HSM</div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="glass-card shimmer-card reveal-element" style="transition-delay: 500ms;">
+                <div style="font-size: 2.5rem; color: var(--accent-light); margin-bottom: 1.25rem;"><i class="fa-solid fa-chart-line"></i></div>
+                <h3 style="font-size: 1.35rem; color: var(--text-light); margin-bottom: 0.5rem;">DeFi Arbitrage Pools</h3>
+                <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">Delta-neutral automated yield optimization pools with cross-chain funding rate capture.</p>
+                <div style="font-weight: 700; color: var(--primary-light); font-size: 0.9rem;">Est. APY: ~11.8%</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. REDESIGNED SECTION: APY PROGRAM RETAINERS (FULLY FIXED FOR MOBILE) -->
+    <section style="background-color: var(--bg-secondary); padding: 6rem 0;" id="packages">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3.5rem;">
+                <span class="section-tag gold-tag"><i class="fa-solid fa-sliders"></i> Delegation Tiers</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Consensus Staking Tiers</h2>
+                <p style="color: var(--text-muted);">Transparent, non-custodial validator commission structures scaled to your delegated volume.</p>
+            </div>
+            
+            <div class="grid-3col">
+                <!-- Program 1 -->
+                <div class="glass-card reveal-element" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 480px; padding: 2.25rem 1.75rem;">
+                    <div>
+                        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--accent-light); margin-bottom: 0.5rem;">Core Validator Tier</h4>
+                        <div style="font-size: 2.25rem; font-weight: 800; color: var(--text-light); margin-bottom: 1rem; line-height: 1;">0.65% <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">/ commission</span></div>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem; line-height: 1.6;">For individual and treasury addresses delegating $100k – $1M. Standard slashing prevention relaying.</p>
+                        <ul style="list-style: none; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem; color: var(--text-muted); padding-left: 0;">
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light); margin-top: 0.2rem; flex-shrink: 0;"></i> <span>L1 Validator Staking</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light); margin-top: 0.2rem; flex-shrink: 0;"></i> <span>Standard MEV-Boost Relays</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light); margin-top: 0.2rem; flex-shrink: 0;"></i> <span>Encrypted Telemetry Portal</span></li>
+                        </ul>
+                    </div>
+                    <a href="404.html" class="btn btn-secondary" style="width: 100%; border-radius: var(--radius-sm);">Deploy Core Tier</a>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="glass-card reveal-element" style="border-color: var(--primary); box-shadow: var(--shadow-glow-primary); display: flex; flex-direction: column; justify-content: space-between; min-height: 480px; padding: 2.25rem 1.75rem;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                            <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--primary-light);">Sovereign Validator</h4>
+                            <span style="background: rgba(37, 99, 235, 0.15); color: var(--primary-light); font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); font-weight: 700; text-transform: uppercase;">Active Staking</span>
+                        </div>
+                        <div style="font-size: 2.25rem; font-weight: 800; color: var(--text-light); margin-bottom: 1rem; line-height: 1;">0.45% <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">/ commission</span></div>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem; line-height: 1.6;">For institutional nodes ($1M – $5M) seeking priority validator configurations and MEV relays.</p>
+                        <ul style="list-style: none; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem; color: var(--text-muted); padding-left: 0;">
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light); margin-top: 0.2rem; flex-shrink: 0;"></i> <span>Dedicated dev Ops support</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light); margin-top: 0.2rem; flex-shrink: 0;"></i> <span>Priority MEV Relayers</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light); margin-top: 0.2rem; flex-shrink: 0;"></i> <span>Hardware HSM signer key Setup</span></li>
+                        </ul>
+                    </div>
+                    <a href="404.html" class="btn btn-primary" style="width: 100%; border-radius: var(--radius-sm);">Deploy Sovereign Tier</a>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="glass-card reveal-element" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 480px; padding: 2.25rem 1.75rem;">
+                    <div>
+                        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--accent-light); margin-bottom: 0.5rem;">Enterprise DAO Multi-Sig</h4>
+                        <div style="font-size: 2.25rem; font-weight: 800; color: var(--text-light); margin-bottom: 1rem; line-height: 1;">Bespoke Retainer</div>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem; line-height: 1.6;">For DAOs ($5M+) requiring Gnosis Safe governance audits, timelock protocols, and consensus audits.</p>
+                        <ul style="list-style: none; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem; color: var(--text-muted); padding-left: 0;">
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: var(--accent-light); margin-top: 0.2rem; flex-shrink: 0;"></i> <span>Gnosis Safe Multisig Setup</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: var(--accent-light); margin-top: 0.2rem; flex-shrink: 0;"></i> <span>Smart Contract security audits</span></li>
+                            <li style="display: flex; align-items: flex-start; gap: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: var(--accent-light); margin-top: 0.2rem; flex-shrink: 0;"></i> <span>24/7 Priority Consensus relayer</span></li>
+                        </ul>
+                    </div>
+                    <a href="404.html" class="btn btn-gold" style="width: 100%; border-radius: var(--radius-sm);">Deploy DAO Tier</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. NEW SECTION: FAQ ACCORDION -->
+    <section id="faq-section" style="background-color: var(--bg-primary); padding: 6rem 0;">
+        <div class="container" style="max-width: 800px;">
+            <div style="text-align: center; margin-bottom: 3.5rem;">
+                <span class="section-tag"><i class="fa-solid fa-circle-info"></i> Staking FAQ</span>
+                <h2 style="font-size: 2.3rem;">Frequently Asked Questions</h2>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                <div class="glass-card" style="padding: 1.5rem 1.75rem;">
+                    <h4 style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 0.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="window.showCustomAlert('Non-Custodial means you delegate staking voting weight but never transfer token ownership to Stackly. You maintain 100% control of your private keys.', 'success')">
+                        <span>Is staking custodial?</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size: 0.85rem; color: var(--primary-light);"></i>
+                    </h4>
+                </div>
+
+                <div class="glass-card" style="padding: 1.5rem 1.75rem;">
+                    <h4 style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 0.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="window.showCustomAlert('Our anti-slashing signer database ensures our validators never sign twice. We back our uptime node operations with 100% slashing replacement protection.', 'success')">
+                        <span>What is slashing protection?</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size: 0.85rem; color: var(--primary-light);"></i>
+                    </h4>
+                </div>
+
+                <div class="glass-card" style="padding: 1.5rem 1.75rem;">
+                    <h4 style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 0.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="window.showCustomAlert('Withdrawal delays depend on the native L1 consensus rules (e.g. Ethereum takes ~3-5 days, Solana takes ~2-3 days). You can un-delegate at any time.', 'success')">
+                        <span>How long do withdrawals take?</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size: 0.85rem; color: var(--primary-light);"></i>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+                    <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                    <div class="logo-text">STACKLY</div>
+                </a>
+                <p>Stackly is a premier non-custodial Web3 node operator and smart contract audit platform, specializing in staking yields optimization, MEV capture, and secure consensus governance.</p>
+                <div class="footer-social-row">
+                    <a href="404.html" class="social-fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404.html" class="social-x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" class="social-in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" class="social-ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Strategies</a></li>
+                    <li><a href="portfolio.html">Track Record</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">L1 Staking Node Allocation</a></li>
+                    <li><a href="services.html">DeFi Yield Optimization</a></li>
+                    <li><a href="services.html">Gas/MEV Audit Logging</a></li>
+                    <li><a href="services.html">Multi-Sig DAO Governance</a></li>
+                    <li><a href="services.html">Venture DAO Allocations</a></li>
+                    <li><a href="services.html">Staking Yield Advisory</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">Subscribe to receive instant devnet telemetry alerts, protocol upgrades, and validator performance reports from our team.</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Validator email address" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Stackly. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

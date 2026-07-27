@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Stackly - Connect with us. We are here to listen. Coordinate protocol syncs or send validator telemetry inquiries.">
+    <title>Contact & Sync | Stackly Web3 Advisory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes-stacked preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- SCROLL PROGRESS & CUSTOM CURSOR -->
+    <div class="scroll-progress-container"><div class="scroll-progress-bar"></div></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                <div class="logo-text">STACKLY</div>
+            </a>
+            
+            <nav class="navbar">
+                <div class="drawer-header">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                        <div class="logo-text">STACKLY</div>
+                    </a>
+                    <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <div class="drawer-search">
+                    <div style="position: relative; width: 100%;">
+                        <input type="text" placeholder="Search support...">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none;"></i>
+                    </div>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Strategies</a></li>
+                    <li><a href="portfolio.html">Node Log</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+                
+                <div class="nav-mobile-cta">
+                    <a href="login.html" class="btn btn-secondary">LP Login</a>
+                    <a href="404.html" class="btn btn-primary">Sync Node</a>
+                </div>
+            </nav>
+            
+            <div class="nav-controls">
+                <a href="login.html" class="btn btn-secondary btn-sm" style="margin-right: 0.5rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a href="404.html" class="btn btn-primary btn-sm">Sync Node</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section style="padding-top: 10rem; padding-bottom: 6rem; background-color: var(--bg-primary);">
+        <div class="container grid-2col" style="align-items: flex-start;">
+            
+            <!-- LEFT COLUMN: INQUIRIES DESK & DETAILS & MAP -->
+            <div class="reveal-element">
+                <span class="section-tag gold-tag"><i class="fa-solid fa-headset"></i> INQUIRIES DESK</span>
+                <h1 style="font-size: clamp(2rem, 3.5vw, 2.5rem); margin: 1rem 0 0.75rem 0; color: var(--text-light); line-height: 1.25;">Connect With Us. We're Here to Listen.</h1>
+                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2.5rem;">Get in touch for custom protocol audits, node telemetry setups, or validator inquiries.</p>
+                
+                <!-- CONTACT BLOCKS -->
+                <div style="display: flex; flex-direction: column; gap: 1.75rem; margin-bottom: 2.5rem;">
+                    
+                    <!-- BLOCK 1: LOCATION -->
+                    <div style="display: flex; gap: 1.25rem; align-items: center;">
+                        <div style="width: 46px; height: 46px; border-radius: var(--radius-sm); background: rgba(194, 125, 56, 0.1); color: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1rem; color: var(--text-light); margin-bottom: 0.2rem;">Agency Location</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted);">100 Wall Street, 28th Floor, New York, NY 10005</p>
+                        </div>
+                    </div>
+
+                    <!-- BLOCK 2: EMAIL -->
+                    <div style="display: flex; gap: 1.25rem; align-items: center;">
+                        <div style="width: 46px; height: 46px; border-radius: var(--radius-sm); background: rgba(194, 125, 56, 0.1); color: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1rem; color: var(--text-light); margin-bottom: 0.2rem;">Email Communication</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted);">consensus@stackly.com</p>
+                        </div>
+                    </div>
+
+                    <!-- BLOCK 3: HOURS -->
+                    <div style="display: flex; gap: 1.25rem; align-items: center;">
+                        <div style="width: 46px; height: 46px; border-radius: var(--radius-sm); background: rgba(194, 125, 56, 0.1); color: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1rem; color: var(--text-light); margin-bottom: 0.2rem;">Working Hours</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted);">Mon - Fri: 09:00 AM - 06:00 PM (Eastern Standard)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- EMBEDDED DARK GOOGLE MAP -->
+                <div class="glass-card" style="padding: 0; overflow: hidden; height: 300px; border-radius: var(--radius-md); border: 1px solid var(--border-glass); box-shadow: var(--shadow-md);">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.0086884234273!3d40.70648607139364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1655db270d%3A0xb35a3a7004f85e49!2s100%20Wall%20St%2C%20New%20York%2C%20NY%2010005!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(1.2);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        title="Stackly Wall Street HQ Location Map"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: LEAVE A MESSAGE FORM CARD -->
+            <div class="glass-card reveal-element" style="padding: 2.5rem 2.25rem;">
+                <h3 style="font-size: 1.65rem; margin-bottom: 1.75rem; color: var(--text-light);">Leave a Message</h3>
+                
+                <form id="contact-form">
+                    
+                    <!-- FULL NAME -->
+                    <div class="form-group">
+                        <label for="contact-name" style="text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">Full Name</label>
+                        <div style="position: relative;">
+                            <i class="fa-solid fa-user" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                            <input type="text" id="contact-name" placeholder="John Doe" style="padding-left: 2.75rem;" required>
+                        </div>
+                    </div>
+
+                    <!-- EMAIL ADDRESS -->
+                    <div class="form-group">
+                        <label for="contact-email" style="text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">Email Address</label>
+                        <div style="position: relative;">
+                            <i class="fa-solid fa-envelope" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                            <input type="email" id="contact-email" placeholder="john@example.com" style="padding-left: 2.75rem;" required>
+                        </div>
+                    </div>
+
+                    <!-- PHONE NUMBER -->
+                    <div class="form-group">
+                        <label for="contact-phone" style="text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">Phone Number</label>
+                        <div style="position: relative;">
+                            <i class="fa-solid fa-phone" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                            <input type="tel" id="contact-phone" placeholder="1234567890" style="padding-left: 2.75rem;" required>
+                        </div>
+                    </div>
+
+                    <!-- MESSAGE SUBJECT -->
+                    <div class="form-group">
+                        <label for="contact-subject" style="text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">Message Subject</label>
+                        <div style="position: relative;">
+                            <i class="fa-solid fa-circle-question" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                            <input type="text" id="contact-subject" placeholder="Feedback / Audit Inquiry" style="padding-left: 2.75rem;" required>
+                        </div>
+                    </div>
+
+                    <!-- MESSAGE DETAILS -->
+                    <div class="form-group">
+                        <label for="contact-msg" style="text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em;">Message Details</label>
+                        <textarea id="contact-msg" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem; font-size: 1rem; border-radius: var(--radius-sm);">Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 0.4rem;"></i></button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+                    <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                    <div class="logo-text">STACKLY</div>
+                </a>
+                <p>Stackly is a premier non-custodial Web3 node operator and smart contract audit platform, specializing in staking yields optimization, MEV capture, and secure consensus governance.</p>
+                <div class="footer-social-row">
+                    <a href="404.html" class="social-fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404.html" class="social-x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" class="social-in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" class="social-ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Strategies</a></li>
+                    <li><a href="portfolio.html">Track Record</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">L1 Staking Node Allocation</a></li>
+                    <li><a href="services.html">DeFi Yield Optimization</a></li>
+                    <li><a href="services.html">Gas/MEV Audit Logging</a></li>
+                    <li><a href="services.html">Multi-Sig DAO Governance</a></li>
+                    <li><a href="services.html">Venture DAO Allocations</a></li>
+                    <li><a href="services.html">Staking Yield Advisory</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">Subscribe to receive instant devnet telemetry alerts, protocol upgrades, and validator performance reports from our team.</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Validator email address" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Stackly. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

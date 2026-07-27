@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly Gas Audits - Track validator transaction gas metrics and MEV yield captures.">
+    <title>Gas Audits | Stackly Web3 Advisory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes-stacked preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- DASHBOARD CONTAINER -->
+    <div class="db-container">
+        
+        <!-- MOBILE HEADER -->
+        <div class="db-mobile-header">
+            <button class="db-hamburger" aria-label="Toggle Sidebar"><i class="fa-solid fa-bars"></i></button>
+            <div class="db-mobile-logo">
+                <img src="images/logo.webp" alt="Stackly Logo">
+            </div>
+            <div class="db-mobile-avatar user-avatar">LP</div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="db-sidebar">
+            <button class="db-sidebar-close" aria-label="Close Sidebar"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div style="overflow-y: auto; height: 100%; width: 100%;">
+                <a href="index.html" class="sidebar-logo"><img src="images/logo.webp" alt="Stackly Logo"></a>
+                
+                <div class="sidebar-section-title">Consensus Node</div>
+                <nav class="sidebar-menu">
+                    <a href="studio-portal.html" class="sidebar-link"><i class="fa-solid fa-chart-pie"></i> LP Overview</a>
+                    <a href="portfolio-holdings.html" class="sidebar-link"><i class="fa-solid fa-server"></i> Active Staking</a>
+                    <a href="asset-allocation.html" class="sidebar-link"><i class="fa-solid fa-scale-balanced"></i> Swap Allocations</a>
+                    <a href="advisory-schedule.html" class="sidebar-link"><i class="fa-solid fa-calendar-check"></i> Sync Telemetry</a>
+                </nav>
+
+                <div class="sidebar-section-title" style="margin-top: 1.5rem;">Node Security</div>
+                <nav class="sidebar-menu">
+                    <a href="fiduciary-booking.html" class="sidebar-link"><i class="fa-solid fa-file-shield"></i> Slashing Audits</a>
+                </nav>
+
+                <div class="sidebar-section-title" style="margin-top: 1.5rem;">Yield Simulator</div>
+                <nav class="sidebar-menu">
+                    <a href="roi-calculator.html" class="sidebar-link"><i class="fa-solid fa-gauge-high"></i> APY Calculator</a>
+                    <a href="tax-harvesting.html" class="sidebar-link active"><i class="fa-solid fa-shield-halved"></i> Gas Optimization</a>
+                </nav>
+                
+                <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass);">
+                    <a href="login.html" class="sidebar-link" style="color: var(--accent-light);" onclick="localStorage.clear();"><i class="fa-solid fa-right-from-bracket"></i> Disconnect Wallet</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- SIDEBAR MOBILE OVERLAY -->
+        <div class="db-sidebar-overlay"></div>
+
+        <!-- MAIN DASHBOARD CONTENT -->
+        <main class="db-main">
+            
+            <!-- Welcome Hero -->
+            <div class="db-welcome-hero reveal-element">
+                <h1>Gas Optimization & MEV Auditing</h1>
+                <p>Track network transaction gas expenditures, batch routing savings, and compiled MEV boost captures.</p>
+            </div>
+
+            <!-- Gas Savings Table -->
+            <div class="panel-box reveal-element">
+                <div class="panel-box-header">
+                    <h3 class="panel-box-title">MEV / Gas Telemetry Run</h3>
+                </div>
+                <table class="db-table">
+                    <thead>
+                        <tr>
+                            <th>Batch Execution Block</th>
+                            <th>Validator Relayer</th>
+                            <th>Gas Savings (Gwei)</th>
+                            <th>MEV Boost Harvest</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-light-value">Block #48,190,123</td>
+                            <td>Relay 1 (Flashbots)</td>
+                            <td>12.5 Gwei ($140 saved)</td>
+                            <td>+0.042 ETH ($150)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-light-value">Block #48,190,094</td>
+                            <td>Relay 3 (Bloxroute)</td>
+                            <td>8.4 Gwei ($92 saved)</td>
+                            <td>+0.015 ETH ($54)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-light-value">Block #48,189,950</td>
+                            <td>Relay 1 (Flashbots)</td>
+                            <td>15.2 Gwei ($170 saved)</td>
+                            <td>+0.089 ETH ($320)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

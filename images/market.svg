@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%" style="background-color: #040816;">
+  <defs>
+    <!-- Grid -->
+    <pattern id="marketGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#2563eb" stroke-width="0.5" stroke-opacity="0.06" />
+    </pattern>
+    <!-- Colors -->
+    <linearGradient id="chartBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="chartBronze" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e09d5c" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#e09d5c" stop-opacity="0" />
+    </linearGradient>
+    <filter id="neon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#marketGrid)" />
+
+  <!-- Market Grid Lines -->
+  <line x1="80" y1="50" x2="80" y2="380" stroke="#2563eb" stroke-opacity="0.1" />
+  <line x1="80" y1="380" x2="520" y2="380" stroke="#2563eb" stroke-opacity="0.1" />
+
+  <!-- Blue Chart line (Stablecoin staking index) -->
+  <path d="M 80,300 C 150,280 200,320 280,240 C 350,170 420,230 520,150 L 520,380 L 80,380 Z" fill="url(#chartBlue)" />
+  <path d="M 80,300 C 150,280 200,320 280,240 C 350,170 420,230 520,150" fill="none" stroke="#2563eb" stroke-width="3.5" filter="url(#neon)" />
+
+  <!-- Bronze Chart line (Altcoin yield Index) -->
+  <path d="M 80,250 C 140,200 180,120 260,160 C 340,200 400,90 520,80 L 520,380 L 80,380 Z" fill="url(#chartBronze)" />
+  <path d="M 80,250 C 140,200 180,120 260,160 C 340,200 400,90 520,80" fill="none" stroke="#e09d5c" stroke-width="3.5" filter="url(#neon)" />
+
+  <!-- Highlights -->
+  <circle cx="520" cy="80" r="5" fill="#e09d5c" filter="url(#neon)" />
+  <circle cx="520" cy="150" r="5" fill="#2563eb" filter="url(#neon)" />
+
+  <!-- Glowing Labels -->
+  <g transform="translate(100, 60)" filter="url(#neon)">
+    <rect width="130" height="40" rx="6" fill="#0b1329" stroke="#2563eb" stroke-width="1" />
+    <text x="15" y="24" font-family="'Outfit', sans-serif" font-size="12" fill="#60a5fa" font-weight="700">LPs Yield: +18.4%</text>
+  </g>
+</svg>

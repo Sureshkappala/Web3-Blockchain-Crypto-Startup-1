@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="100%" height="100%" style="background-color: #0b1329;">
+  <defs>
+    <linearGradient id="avatarBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="avatarBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e09d5c" />
+      <stop offset="100%" stop-color="#8c521b" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer glowing rings -->
+  <circle cx="75" cy="75" r="70" fill="none" stroke="url(#avatarBlue)" stroke-width="2" stroke-opacity="0.3" />
+  <circle cx="75" cy="75" r="64" fill="none" stroke="url(#avatarBronze)" stroke-width="1.5" stroke-dasharray="8 4" stroke-opacity="0.5" />
+
+  <!-- Avatar body silhouette -->
+  <path d="M 35,120 C 35,95 48,85 75,85 C 102,85 115,95 115,120 Z" fill="url(#avatarBlue)" />
+  
+  <!-- Avatar head -->
+  <circle cx="75" cy="55" r="20" fill="url(#avatarBronze)" />
+  
+  <!-- Cybernetic eye visor line -->
+  <line x1="62" y1="52" x2="88" y2="52" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+</svg>

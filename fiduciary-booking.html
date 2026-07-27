@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly Validator Audits - Logs of node hardware syncs and double-sign security parameters.">
+    <title>Validator Audits | Stackly Web3 Advisory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes-stacked preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- DASHBOARD CONTAINER -->
+    <div class="db-container">
+        
+        <!-- MOBILE HEADER -->
+        <div class="db-mobile-header">
+            <button class="db-hamburger" aria-label="Toggle Sidebar"><i class="fa-solid fa-bars"></i></button>
+            <div class="db-mobile-logo">
+                <img src="images/logo.webp" alt="Stackly Logo">
+            </div>
+            <div class="db-mobile-avatar user-avatar">LP</div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="db-sidebar">
+            <button class="db-sidebar-close" aria-label="Close Sidebar"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div style="overflow-y: auto; height: 100%; width: 100%;">
+                <a href="index.html" class="sidebar-logo"><img src="images/logo.webp" alt="Stackly Logo"></a>
+                
+                <div class="sidebar-section-title">Consensus Node</div>
+                <nav class="sidebar-menu">
+                    <a href="studio-portal.html" class="sidebar-link"><i class="fa-solid fa-chart-pie"></i> LP Overview</a>
+                    <a href="portfolio-holdings.html" class="sidebar-link"><i class="fa-solid fa-server"></i> Active Staking</a>
+                    <a href="asset-allocation.html" class="sidebar-link"><i class="fa-solid fa-scale-balanced"></i> Swap Allocations</a>
+                    <a href="advisory-schedule.html" class="sidebar-link"><i class="fa-solid fa-calendar-check"></i> Sync Telemetry</a>
+                </nav>
+
+                <div class="sidebar-section-title" style="margin-top: 1.5rem;">Node Security</div>
+                <nav class="sidebar-menu">
+                    <a href="fiduciary-booking.html" class="sidebar-link active"><i class="fa-solid fa-file-shield"></i> Slashing Audits</a>
+                </nav>
+
+                <div class="sidebar-section-title" style="margin-top: 1.5rem;">Yield Simulator</div>
+                <nav class="sidebar-menu">
+                    <a href="roi-calculator.html" class="sidebar-link"><i class="fa-solid fa-gauge-high"></i> APY Calculator</a>
+                    <a href="tax-harvesting.html" class="sidebar-link"><i class="fa-solid fa-shield-halved"></i> Gas Optimization</a>
+                </nav>
+                
+                <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass);">
+                    <a href="login.html" class="sidebar-link" style="color: var(--accent-light);" onclick="localStorage.clear();"><i class="fa-solid fa-right-from-bracket"></i> Disconnect Wallet</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- SIDEBAR MOBILE OVERLAY -->
+        <div class="db-sidebar-overlay"></div>
+
+        <!-- MAIN DASHBOARD CONTENT -->
+        <main class="db-main">
+            
+            <!-- Welcome Hero -->
+            <div class="db-welcome-hero reveal-element">
+                <h1>Slashing & Security Audits</h1>
+                <p>Telemetry audit records of hardware signing transactions, failover clusters, and anti-double-signing policies.</p>
+            </div>
+
+            <!-- Audit Log listings -->
+            <div class="panel-box reveal-element">
+                <div class="panel-box-header">
+                    <h3 class="panel-box-title">Validator Compliance Log</h3>
+                </div>
+                <table class="db-table">
+                    <thead>
+                        <tr>
+                            <th>Audit Timestamp</th>
+                            <th>Validator Client</th>
+                            <th>Verification Check</th>
+                            <th>Status Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-light-value">2026-07-27 10:24:18</td>
+                            <td>Solana Validator Pool #1</td>
+                            <td>HSM Signing Key Isolation Check</td>
+                            <td><span class="badge-status status-active">Pass</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-light-value">2026-07-26 14:15:30</td>
+                            <td>Ethereum Validator Node #42</td>
+                            <td>Double-Sign Database Anti-Collision Run</td>
+                            <td><span class="badge-status status-active">Pass</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-light-value">2026-07-25 09:30:12</td>
+                            <td>Cosmos IBC Relayer Node</td>
+                            <td>Multi-Sig Parameter Threshold Verification</td>
+                            <td><span class="badge-status status-active">Pass</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
