@@ -3,20 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stackly Web3 Staking | The Sovereign Validation Layer</title>
-  <meta name="description" content="Institutional Web3 validator operators deploying bare-metal hardware security modules and APY yield compounders.">
+  <title>Stackly Web3 | The Sovereign Staking Layer</title>
+  <meta name="description" content="Institutional validation networks and secure cryptography Relayer nodes.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
   <!-- Navigation -->
@@ -46,9 +42,9 @@
     </div>
   </nav>
 
-  <!-- Hero Split Section -->
-  <section class="hero-split-section" id="hero" style="padding-top: 12rem; padding-bottom: 6rem; background: radial-gradient(circle at top right, rgba(6, 182, 212, 0.12) 0%, rgba(3, 7, 18, 1) 70%); overflow: hidden;">
-    <div class="container grid-2col" style="align-items: center;">
+  <!-- Full-Screen Blockchain Particle Hero -->
+  <section class="hero-split-section" id="hero" style="padding-top: 12rem; padding-bottom: 6rem; background: radial-gradient(circle at center, rgba(6, 182, 212, 0.15) 0%, rgba(2, 6, 23, 1) 70%); position: relative; overflow: hidden; min-height: 85vh; display: flex; align-items: center;">
+    <div class="container" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 2;">
       <!-- Left Content -->
       <div class="hero-content-left reveal-left" style="text-align: left;">
         <span class="section-tag gold-tag" style="margin-bottom: 1.5rem; display: inline-flex;"><i class="fa-solid fa-shield-halved"></i> Institutional Node Operator</span>
@@ -59,33 +55,16 @@
           <a href="404.html" class="btn btn-gold btn-lg">Deploy Node Sync <i class="fa-solid fa-arrow-right"></i></a>
           <a href="404.html" class="btn btn-outline btn-lg">Explore Yield Pools</a>
         </div>
-
-        <!-- Mini Stats Row -->
-        <div style="display: flex; gap: 2rem; border-top: 1px solid var(--border); padding-top: 1.5rem; flex-wrap: wrap;">
-          <div>
-            <h4 style="font-size: 1.5rem; color: var(--cyan); font-weight: 700; font-family: monospace;">99.99%</h4>
-            <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Uptime SLA</p>
-          </div>
-          <div>
-            <h4 style="font-size: 1.5rem; color: var(--cyan); font-weight: 700; font-family: monospace;">$1.28B+</h4>
-            <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Value Locked</p>
-          </div>
-          <div>
-            <h4 style="font-size: 1.5rem; color: var(--cyan); font-weight: 700; font-family: monospace;">15+</h4>
-            <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">L1 Networks</p>
-          </div>
-        </div>
       </div>
 
       <!-- Right Visual: Dashboard Console -->
-      <div class="hero-content-right reveal-right animate-float" style="position: relative;">
-        <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(37, 99, 235, 0.25); box-shadow: var(--shadow-cyan); background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border-radius: 12px; border: 1px solid var(--border);">
+      <div class="hero-content-right reveal-right animate-float">
+        <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(6, 182, 212, 0.2); box-shadow: var(--shadow-cyan); background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border-radius: 12px; border: 1px solid var(--border);">
           <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
             <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);"><i class="fa-solid fa-terminal" style="color: var(--gold); margin-right: 0.5rem;"></i> Validator_Node_01</span>
             <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600;">ACTIVE</span>
           </div>
           
-          <!-- Network Load Bar -->
           <div style="margin-bottom: 1.25rem;">
             <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.4rem;">
               <span>Consensus Load</span>
@@ -96,7 +75,6 @@
             </div>
           </div>
 
-          <!-- Latency / Health -->
           <div class="grid-2col" style="gap: 1.25rem; margin-bottom: 1.5rem;">
             <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
               <span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Telemetry Ping</span>
@@ -108,11 +86,9 @@
             </div>
           </div>
 
-          <!-- Block proposals logs -->
           <div style="background: #020617; border-radius: 8px; padding: 1rem; font-family: monospace; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.6; border: 1px solid rgba(255,255,255,0.05);">
             <p style="color: var(--gold);"><span style="color: var(--text-muted);">[OK]</span> Proposal Block #48190123 Sync Complete</p>
             <p><span style="color: var(--text-muted);">[OK]</span> HSM validator signature verified</p>
-            <p><span style="color: var(--text-muted);">[OK]</span> Heartbeat response latency: 8.5ms</p>
           </div>
         </div>
       </div>
@@ -120,21 +96,21 @@
   </section>
 
   <!-- Consensus Node Performance Hub -->
-  <section class="stats-section" style="background: rgba(11, 19, 41, 0.6); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 0;">
+  <section class="stats-section" style="background: linear-gradient(90deg, rgba(11, 19, 41, 0.85) 0%, rgba(2, 6, 23, 0.95) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 0;">
     <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
-      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(37, 99, 235, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
         <div style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">99.99%</div>
         <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Consensus Uptime SLA</div>
       </div>
-      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(37, 99, 235, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
         <div style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">$1.28B+</div>
         <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Total Value Locked</div>
       </div>
-      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(37, 99, 235, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
         <div style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">15+</div>
         <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Supported L1 Chains</div>
       </div>
-      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(37, 99, 235, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
         <div style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0%</div>
         <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Slashing Incidents</div>
       </div>
@@ -142,7 +118,7 @@
   </section>
 
   <!-- Non-Custodial Staking Protocol -->
-  <section class="about section" id="about" style="padding: 6rem 0; background: radial-gradient(circle at center left, rgba(37, 99, 235, 0.08) 0%, rgba(3, 7, 18, 1) 60%);">
+  <section class="about section" id="about" style="padding: 6rem 0; background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.08) 0%, rgba(2, 6, 23, 1) 60%);">
     <div class="container grid-2col" style="gap: 4rem; align-items: center;">
       <div class="about-img reveal-left">
         <img src="images/about.webp" alt="Staking Telemetry Console" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-cyan);">
@@ -173,7 +149,7 @@
   </section>
 
   <!-- EVM & Solidity Auditing Suite -->
-  <section class="services section" id="services" style="background: linear-gradient(180deg, #030712 0%, #0b1329 100%); padding: 6rem 0;">
+  <section class="services section" id="services" style="background: linear-gradient(180deg, #020617 0%, #0b1329 100%); padding: 6rem 0; border-top: 1px solid var(--border);">
     <div class="container">
       <div class="section-header reveal">
         <p class="section-subtitle">Developer Suite</p>
@@ -183,19 +159,16 @@
       </div>
 
       <div class="grid-3col reveal-element" style="gap: 2rem; margin-top: 3rem;">
-        <!-- Service 1 -->
         <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
           <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-shield-halved" style="font-size: 1.5rem;"></i></div>
           <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">Vulnerability Scanning</h3>
           <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6;">Automated bytecode checks detect reentrancy bugs, integer overflows, and compiler warning alerts.</p>
         </div>
-        <!-- Service 2 -->
         <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
           <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-code" style="font-size: 1.5rem;"></i></div>
           <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">Gas Optimization Vaults</h3>
           <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6;">Refactoring compilation pipelines to reduce deployment and validator proposer block execution fees.</p>
         </div>
-        <!-- Service 3 -->
         <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
           <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-bolt" style="font-size: 1.5rem;"></i></div>
           <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">MEV Relay Optimization</h3>
@@ -206,7 +179,7 @@
   </section>
 
   <!-- Governance voting Console Section -->
-  <section class="governance-section section" id="governance" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(217, 119, 6, 0.05) 0%, rgba(3, 7, 18, 1) 70%);">
+  <section class="governance-section section" id="governance" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(217, 119, 6, 0.06) 0%, rgba(2, 6, 23, 1) 70%); border-top: 1px solid var(--border);">
     <div class="container">
       <div class="section-header reveal">
         <p class="section-subtitle">Consensus Decisions</p>
@@ -216,7 +189,6 @@
       </div>
 
       <div class="grid-3col reveal-element" style="gap: 2rem; margin-top: 3rem;">
-        <!-- Proposal 1 -->
         <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.2); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
@@ -238,7 +210,6 @@
           </div>
         </div>
 
-        <!-- Proposal 2 -->
         <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.2); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
@@ -260,7 +231,6 @@
           </div>
         </div>
 
-        <!-- Proposal 3 -->
         <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.2); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
@@ -286,7 +256,7 @@
   </section>
 
   <!-- Live Telemetry Terminal Section -->
-  <section class="telemetry-section section" id="telemetry" style="padding: 6rem 0; background: #030712;">
+  <section class="telemetry-section section" id="telemetry" style="padding: 6rem 0; background: #020617; border-top: 1px solid var(--border);">
     <div class="container">
       <div class="section-header reveal">
         <p class="section-subtitle">Node Telemetry</p>
@@ -296,7 +266,6 @@
       </div>
 
       <div class="grid-3col reveal-element" style="gap: 2rem; margin-top: 3rem;">
-        <!-- Server 1 -->
         <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.2); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
             <span style="font-weight: 700; color: var(--text-primary); font-size: 1.1rem;"><i class="fa-solid fa-server" style="color: var(--gold); margin-right: 0.5rem;"></i> Node_US_East</span>
@@ -308,8 +277,6 @@
             <li style="display: flex; justify-content: space-between;"><span>Active Signatures:</span> <strong style="color: var(--text-primary);">14,802 / sec</strong></li>
           </ul>
         </div>
-
-        <!-- Server 2 -->
         <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.2); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
             <span style="font-weight: 700; color: var(--text-primary); font-size: 1.1rem;"><i class="fa-solid fa-server" style="color: var(--gold); margin-right: 0.5rem;"></i> Node_EU_West</span>
@@ -321,8 +288,6 @@
             <li style="display: flex; justify-content: space-between;"><span>Active Signatures:</span> <strong style="color: var(--text-primary);">28,452 / sec</strong></li>
           </ul>
         </div>
-
-        <!-- Server 3 -->
         <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.2); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
             <span style="font-weight: 700; color: var(--text-primary); font-size: 1.1rem;"><i class="fa-solid fa-server" style="color: var(--gold); margin-right: 0.5rem;"></i> Node_AP_South</span>
@@ -338,22 +303,21 @@
     </div>
   </section>
 
-  <!-- Interactive Validator Staking APY Calculator -->
-  <section class="pricing section" id="pricing" style="padding: 6rem 0; background: linear-gradient(135deg, rgba(11, 19, 41, 0.9) 0%, rgba(3, 7, 18, 0.9) 100%);">
+  <!-- Staking APY Calculator Section -->
+  <section class="pricing section" id="pricing" style="padding: 6rem 0; background: linear-gradient(135deg, rgba(11, 19, 41, 0.9) 0%, rgba(2, 6, 23, 0.9) 100%); border-top: 1px solid var(--border);">
     <div class="container">
       <div class="section-header reveal">
         <p class="section-subtitle">Simulator Hub</p>
-        <h2 class="section-title">Interactive Yield Calculator</h2>
+        <h2 class="section-title">Interactive Yield APY Calculator</h2>
         <div class="line line-center"></div>
-        <p class="section-desc">Drag the slider and select a validator pool to calculate your projected staking APY returns.</p>
+        <p class="section-desc">Simulate staking allocations to estimate annual rewards and gas margins.</p>
       </div>
       
       <div class="glass-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 3rem; margin-top: 3rem; border-color: rgba(6, 182, 212, 0.2); border-radius: 12px; border: 1px solid var(--border);">
-        <!-- Left: Controls -->
         <div style="display: flex; flex-direction: column; gap: 2rem;">
           <div>
             <label style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">
-              <span>Staking Allocation</span>
+              <span>Staking Capital</span>
               <span style="color: var(--cyan);"><span id="calc-val-label">$50,000</span> USD</span>
             </label>
             <input type="range" id="calc-slider" min="1000" max="500000" step="5000" value="50000" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; background: rgba(255,255,255,0.05);">
@@ -371,7 +335,6 @@
           <a href="404.html" class="btn btn-gold btn-lg w-full" style="text-align: center;">Delegate Capital Sync <i class="fa-solid fa-calculator" style="margin-left: 0.5rem;"></i></a>
         </div>
 
-        <!-- Right: Outputs -->
         <div style="background: #020617; padding: 2rem; border-radius: 8px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between;">
           <div style="display: flex; flex-direction: column; gap: 1.5rem;">
             <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
@@ -390,7 +353,6 @@
         </div>
       </div>
     </div>
-
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const slider = document.getElementById('calc-slider');
@@ -424,8 +386,8 @@
     </script>
   </section>
 
-  <!-- CTA / Newsletter Section -->
-  <section class="cta-section" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(37, 99, 235, 0.06) 0%, rgba(3, 7, 18, 1) 70%); border-top: 1px solid var(--border);">
+  <!-- CTA Section with animated particles background style -->
+  <section class="cta-section" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(37, 99, 235, 0.06) 0%, rgba(2, 6, 23, 1) 70%); border-top: 1px solid var(--border);">
     <div class="container" style="text-align: center;">
       <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-primary);">Ready to Secure On-Chain Yields?</h2>
       <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2.5rem auto; font-size: 1.1rem;">Subscribe to our validator bulletins or schedule a secure consultation link with our node relayer engineers.</p>
@@ -464,15 +426,12 @@
         <ul class="footer-links">
           <li><a href="about.html" class="footer-link">Consensus Lab</a></li>
           <li><a href="contact.html" class="footer-link">Inquire Sync</a></li>
-          <li><a href="login.html" class="footer-link">User Portal</a></li>
         </ul>
       </div>
       <div>
         <h4 class="footer-title">Legal</h4>
         <ul class="footer-links">
           <li><a href="404.html" class="footer-link">Slashing Policy</a></li>
-          <li><a href="404.html" class="footer-link">Security Disclosures</a></li>
-          <li><a href="404.html" class="footer-link">Telemetry APIs</a></li>
         </ul>
       </div>
     </div>
@@ -482,7 +441,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>
