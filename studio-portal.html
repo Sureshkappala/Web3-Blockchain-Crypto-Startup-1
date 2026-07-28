@@ -39,7 +39,7 @@
             <button class="db-sidebar-close" aria-label="Close Sidebar"><i class="fa-solid fa-xmark"></i></button>
             
             <div style="overflow-y: auto; height: 100%; width: 100%;">
-                <a href="index.html" class="sidebar-logo"><img src="images/logo.webp" alt="Stackly Logo"></a>
+                <a href="studio-portal.html" class="sidebar-logo"><img src="images/logo.webp" alt="Stackly Logo"></a>
                 
                 <div class="sidebar-section-title">Consensus Node</div>
                 <nav class="sidebar-menu">
@@ -61,7 +61,7 @@
                 </nav>
                 
                 <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass);">
-                    <a href="login.html" class="sidebar-link" style="color: var(--accent-light);" onclick="localStorage.clear();"><i class="fa-solid fa-right-from-bracket"></i> Disconnect Wallet</a>
+                    <a href="login.html" class="sidebar-link" style="color: var(--accent-light);" onclick="localStorage.clear();"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
                 </div>
             </div>
         </aside>
@@ -117,51 +117,58 @@
                 </div>
             </div>
 
-            <!-- Data Table Grid -->
-            <div class="db-grid reveal-element">
-                <!-- Left panel: Transaction Staking logs -->
-                <div class="panel-box">
-                    <div class="panel-box-header">
-                        <h3 class="panel-box-title">Validator Staking Transactions</h3>
-                    </div>
-                    <table class="db-table">
-                        <thead>
-                            <tr>
-                                <th>Protocol Asset</th>
-                                <th>Transaction Hash</th>
-                                <th>Staked Amount</th>
-                                <th>Validator Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-light-value">Ethereum Node (L staking)</td>
-                                <td>0x3a9...C481</td>
-                                <td>42.5 ETH ($152,000)</td>
-                                <td><span class="badge-status status-active">Online</span></td>
-                            </tr>
-                            <tr>
-                                <td class="text-light-value">Solana Jito-MEV Node</td>
-                                <td>0x81F...0E29</td>
-                                <td>500 SOL ($68,000)</td>
-                                <td><span class="badge-status status-active">Online</span></td>
-                            </tr>
-                            <tr>
-                                <td class="text-light-value">Cosmos IBC Relayer</td>
-                                <td>0x7D2...F202</td>
-                                <td>2,500 ATOM ($25,000)</td>
-                                <td><span class="badge-status status-active">Online</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <!-- System Logs & Actions (Borderless Feed) -->
+            <div style="margin-top: 3rem; margin-bottom: 2rem;" class="reveal-element">
+                <h3 style="font-size: 1.4rem; color: var(--text-light); margin-bottom: 2rem; font-family: var(--font-heading);"><i class="fa-solid fa-signal" style="color: var(--accent-light); margin-right: 0.6rem;"></i> Live Consensus Feed</h3>
+                
+                <div class="db-grid">
+                    <!-- Left Column: Activity List -->
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="display: flex; gap: 1.25rem; align-items: flex-start; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: rgba(37, 99, 235, 0.1); color: var(--primary-light); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; margin-top: 0.15rem;"><i class="fa-solid fa-cube"></i></div>
+                            <div style="flex-grow: 1; min-width: 0;">
+                                <h4 style="color: var(--text-light); font-size: 1rem; margin-bottom: 0.3rem; font-weight: 600; line-height: 1.35;">Block #48,190,123 Proposed Successfully</h4>
+                                <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.45;">Ethereum Node Key #42 • Just Now</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1.25rem; align-items: flex-start; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: rgba(194, 125, 56, 0.1); color: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; margin-top: 0.15rem;"><i class="fa-solid fa-bolt"></i></div>
+                            <div style="flex-grow: 1; min-width: 0;">
+                                <h4 style="color: var(--text-light); font-size: 1rem; margin-bottom: 0.3rem; font-weight: 600; line-height: 1.35;">Solana Jito-MEV Relayer Synced</h4>
+                                <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.45;">100.00% uptime SLA • 5 mins ago</p>
+                            </div>
+                        </div>
 
-                <!-- Right panel: Quick profile actions -->
-                <div class="panel-box" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
-                    <div class="db-mobile-avatar user-avatar" style="width: 80px; height: 80px; font-size: 2rem; border: 3px solid var(--border-glass);">LP</div>
-                    <h4 class="user-name">Liquidity Provider</h4>
-                    <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">Status: Connected Wallet Address</p>
-                    <a href="contact.html" class="btn btn-secondary btn-sm" style="width: 100%;"><i class="fa-solid fa-gear"></i> Sync Node Keys</a>
+                        <div style="display: flex; gap: 1.25rem; align-items: flex-start; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: rgba(168, 85, 247, 0.1); color: #a855f7; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; margin-top: 0.15rem;"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div style="flex-grow: 1; min-width: 0;">
+                                <h4 style="color: var(--text-light); font-size: 1rem; margin-bottom: 0.3rem; font-weight: 600; line-height: 1.35;">Anti-Slashing Safety Heartbeat Run</h4>
+                                <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.45;">No collision detected • 2 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Quick Action Grid -->
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <h4 style="color: var(--text-light); font-size: 1.15rem; margin-bottom: 0.5rem; font-weight: 600;">Quick Node Actions</h4>
+                        
+                        <a href="asset-allocation.html" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; padding: 1.1rem; border: 1px solid var(--border-glass); border-radius: var(--radius-sm); background: var(--bg-secondary); transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--accent-light)'" onmouseout="this.style.transform='none'; this.style.borderColor='var(--border-glass)'">
+                            <i class="fa-solid fa-scale-balanced" style="color: var(--accent-light); font-size: 1.3rem;"></i>
+                            <div>
+                                <div style="color: var(--text-light); font-weight: 600; font-size: 0.95rem;">Modify Allocation</div>
+                                <div style="color: var(--text-muted); font-size: 0.78rem; margin-top: 0.15rem;">Adjust staking percentages</div>
+                            </div>
+                        </a>
+                        
+                        <a href="advisory-schedule.html" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; padding: 1.1rem; border: 1px solid var(--border-glass); border-radius: var(--radius-sm); background: var(--bg-secondary); transition: transform 0.2s ease, border-color 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--primary-light)'" onmouseout="this.style.transform='none'; this.style.borderColor='var(--border-glass)'">
+                            <i class="fa-solid fa-calendar-check" style="color: var(--primary-light); font-size: 1.3rem;"></i>
+                            <div>
+                                <div style="color: var(--text-light); font-weight: 600; font-size: 0.95rem;">Schedule Sync</div>
+                                <div style="color: var(--text-muted); font-size: 0.78rem; margin-top: 0.15rem;">Book validator synchronization</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
 

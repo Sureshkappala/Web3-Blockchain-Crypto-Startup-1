@@ -1415,6 +1415,7 @@ img {
     height: 38px !important;
     width: auto;
     object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 .db-mobile-logo {
@@ -1427,6 +1428,7 @@ img {
     height: 32px !important;
     width: auto;
     object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 .sidebar-section-title {

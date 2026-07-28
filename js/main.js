@@ -457,6 +457,10 @@ function initDashboardRoles() {
                         <a href="roi-calculator.html" class="sidebar-link ${path === 'roi-calculator.html' ? 'active' : ''}"><i class="fa-solid fa-gauge-high"></i> APY Simulator</a>
                         <a href="tax-harvesting.html" class="sidebar-link ${path === 'tax-harvesting.html' ? 'active' : ''}"><i class="fa-solid fa-shield-halved"></i> Audit Logging</a>
                     </nav>
+                    
+                    <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass);">
+                        <a href="login.html" class="sidebar-link" style="color: var(--accent-light);" onclick="localStorage.clear();"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+                    </div>
                 `;
             }
         }
