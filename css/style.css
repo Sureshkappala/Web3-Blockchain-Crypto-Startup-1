@@ -892,3 +892,37 @@ ul {
     font-size: 0.95rem;
   }
 }
+
+/* Global Responsive Grid Utilities */
+.grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 991px) {
+  .grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2col, .grid-3col {
+    grid-template-columns: 1fr !important;
+  }
+  .grid-4col {
+    grid-template-columns: 1fr !important;
+  }
+}
