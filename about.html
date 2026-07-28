@@ -1,145 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Stackly Web3</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pages.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Stackly - Fusing quantitative data analytics with non-commission fiduciary care to build generational wealth.">
+    <title>About Stackly | Fiduciary Web3 Validator Node</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="container navbar-container">
-      <a href="index.html" class="logo">
-        <span class="logo-text">Stack<span>ly</span></span>
-      </a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link active">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="portfolio.html" class="nav-link">Ecosystem</a></li>
-        <li><a href="strategies.html" class="nav-link">Bulletins</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-        <button class="mobile-menu-btn" id="mobile-menu-btn">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Page Header -->
-  <header class="page-header">
-    <div class="container">
-      <h1 class="page-title text-gradient">Consensus Lab</h1>
-      <nav class="breadcrumb">
-        <a href="index.html">Home</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>About</span>
-      </nav>
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
     </div>
-  </header>
 
-  <!-- Validator Timeline & Story -->
-  <section class="about-story section" style="padding: 6rem 0; background: radial-gradient(circle at top, rgba(6, 182, 212, 0.1) 0%, rgba(2, 6, 23, 1) 60%);">
-    <div class="container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;">
-      <div class="about-story-img reveal-left">
-        <img src="images/about.webp" alt="Node Telemetry System" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-cyan);">
-      </div>
-      <div class="about-story-content reveal-right" style="text-align: left;">
-        <span class="section-tag gold-tag" style="margin-bottom: 1.5rem; display: inline-flex;"><i class="fa-solid fa-timeline"></i> Consensus Timeline</span>
-        <h2 style="font-size: 2.2rem; color: var(--text-primary); margin-bottom: 1.5rem;">Anti-Slashing Research Lab</h2>
-        <p style="color: var(--text-secondary); line-height: 1.75; margin-bottom: 2rem;">Stackly was founded in 2021 by a team of core developers and cryptography researchers. We realized that institutional staking was hindered by custodial risk, leading us to design the first anti-double-sign validator architecture.</p>
+    <!-- SCROLL PROGRESS & CUSTOM CURSOR -->
+    <div class="scroll-progress-container"><div class="scroll-progress-bar"></div></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                <div class="logo-text">Stackly</div>
+            </a>
+            
+            <nav class="navbar">
+                <div class="drawer-header">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                        <div class="logo-text">Stackly</div>
+                    </a>
+                    <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <div class="drawer-search">
+                    <div style="position: relative; width: 100%;">
+                        <input type="text" placeholder="Search validator chains...">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none;"></i>
+                    </div>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Bulletins</a></li>
+                    <li><a href="portfolio.html">Ecosystem</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-mobile-cta">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="404.html" class="btn btn-primary">Deploy Node Sync</a>
+                </div>
+                
+                <div class="drawer-contact-info">
+                    <h5>Contact Info</h5>
+                    <p><i class="fa-solid fa-phone"></i> +1 (800) 555-Stackly</p>
+                    <p><i class="fa-solid fa-envelope"></i> securesync@stackly.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Zurich, Switzerland</p>
+                </div>
+            </nav>
+            
+            <div class="nav-controls">
+                <a href="login.html" class="btn btn-secondary btn-sm" style="margin-right: 0.5rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a href="404.html" class="btn btn-primary btn-sm">Deploy Node Sync</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. SUBPAGE HERO -->
+    <section class="hero-section" id="hero" style="min-height: 48vh; padding-top: 10rem; padding-bottom: 3rem; text-align: center;">
+        <div class="container">
+            <span class="section-tag gold-tag"><i class="fa-solid fa-signature"></i> Who We Are</span>
+            <h1 style="font-size: clamp(2.2rem, 4vw, 3.5rem); margin-bottom: 1rem;">Fusing Bare-Metal Consensus & <span style="background: var(--gradient-hybrid); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Cryptographic Security</span></h1>
+            <p style="color: var(--text-muted); max-width: 680px; margin: 0 auto; font-size: 1.05rem; line-height: 1.75;">Meet the validator operators, solidity auditing leads, relayer engineers, and yield analysts maintaining node safety.</p>
+        </div>
+    </section>
+
+    <!-- 2. WHO WE ARE DETAILED -->
+    <section style="padding: 3rem 0 5rem 0;">
+        <div class="container about-grid">
+            <div class="about-visual" style="height: 100%;">
+                <div style="height: 100%; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-glass); position: relative;">
+                    <img src="images/about.webp" alt="Stackly Validator Operations Room" class="img-fixed-feature" style="height: 100%; width: 100%; object-fit: cover; display: block;">
+                </div>
+                <div class="about-floating-experience float-element" style="position: absolute; bottom: -15px; right: -15px; z-index: 2;">
+                    <h3>15+</h3>
+                    <p>L1 Chains Live</p>
+                </div>
+            </div>
+            
+            <div class="about-content" style="text-align: left;">
+                <span class="section-tag"><i class="fa-solid fa-bezier-curve"></i> Our Fiduciary Approach</span>
+                <h2 style="font-size: 2.25rem; margin-bottom: 1rem; color: var(--text-light);">Symmetric Security & <span style="color: var(--primary);">Sustainable Staking Yield</span></h2>
+                <p style="color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7;">We structure validator nodes with a focus on low-latency block proposals, hardware security keys, and anti-slashing thresholds.</p>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">By blending quantitative risk algorithms with bare-metal Switzerland servers, HSM vault signing keys, and MEV boost relays, we offer institutional delegators pure trustless rewards.</p>
+                
+                <div class="about-pillars">
+                  <div class="pillar-card">
+                    <i class="fa-solid fa-shield-halved" style="color: var(--primary); font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                    <div>
+                      <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Security First</h4>
+                      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Every node signature blueprint balances hardware safety modules and signature relayers.</p>
+                    </div>
+                  </div>
+                  <div class="pillar-card">
+                    <i class="fa-solid fa-vault" style="color: var(--accent); font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                    <div>
+                      <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Non-Custodial Retainer</h4>
+                      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">100% fee-only validation services with zero custody of delegation keys.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. INVESTMENT & SOURCING PHILOSOPHY -->
+    <section style="background-color: var(--bg-secondary); padding: 6rem 0;">
+        <div class="container grid-2col" style="align-items: center;">
+            <div style="text-align: left;">
+                <span class="section-tag gold-tag"><i class="fa-solid fa-seedling"></i> Institutional Access</span>
+                <h2 style="font-size: 2.25rem; margin-bottom: 1.25rem; color: var(--text-light);">Decentralized Validator <span style="color: var(--accent);">Infrastructure</span></h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.75;">We partner with Tier-1 bare-metal data centers, global fiber networks, and decentralized ventures to host high-performance relayer node clusters.</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <div style="background: rgba(16, 185, 129, 0.1); padding: 0.85rem; border-radius: 50%; color: var(--primary);"><i class="fa-solid fa-bolt"></i></div>
+                        <div>
+                            <h4 style="color: var(--text-light); margin-bottom: 0.3rem;">MEV-Boost Fee Relays</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Automated priority fee collection loops rebalance earnings to maximize staking APY.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <div style="background: rgba(245, 158, 11, 0.1); padding: 0.85rem; border-radius: 50%; color: var(--accent);"><i class="fa-solid fa-server"></i></div>
+                        <div>
+                            <h4 style="color: var(--text-light); margin-bottom: 0.3rem;">Bare-Metal Co-location</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Server nodes distributed across Zurich, Germany, and Singapore networks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="height: 100%; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-glass);">
+                <img src="images/market.webp" alt="Validator Monitoring Dashboard" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. LEADERSHIP TEAM SECTION -->
+    <section style="padding: 6rem 0;" id="leadership">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span class="section-tag"><i class="fa-solid fa-users"></i> Cryptographic Council</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-light);">Meet the Validator <span style="color: var(--primary);">Operators</span></h2>
+                <p style="color: var(--text-muted);">Collaborate directly with our senior managing partners and relayer engineering teams.</p>
+            </div>
+            
+            <div class="leadership-grid">
+                <div class="glass-card" style="display: flex; align-items: center; gap: 2rem; text-align: left;">
+                    <img src="images/advisor1.webp" alt="Marcus Vance Relayer CIO" class="img-fixed-avatar">
+                    <div>
+                        <h4 style="font-size: 1.3rem; color: var(--text-light); margin-bottom: 0.2rem;">Marcus Vance</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem;">Chief Infrastructure Operator</p>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Marcus directs our low-latency validator server configurations and bare-metal nodes connectivitySwiss lab.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card" style="display: flex; align-items: center; gap: 2rem; text-align: left;">
+                    <img src="images/advisor2.webp" alt="Sarah Jenkins Auditor Lead" class="img-fixed-avatar">
+                    <div>
+                        <h4 style="font-size: 1.3rem; color: var(--text-light); margin-bottom: 0.2rem;">Sarah Jenkins</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem;">Auditing & Smart Contract Director</p>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Sarah leads gas optimization analysis, compiler auditing, and HSM hardware validation keys deployment.</p>
+                    </div>
+                </div>
+            </div>.</p>
+            </div>
+            
+            <div class="leadership-grid">
+                <div class="glass-card" style="display: flex; align-items: center; gap: 2rem;">
+                    <img src="images/advisor1.webp" alt="Marcus Vance CIO" class="img-fixed-avatar">
+                    <div>
+                        <h4 style="font-size: 1.3rem; color: var(--text-light); margin-bottom: 0.2rem;">Marcus Vance, CFA</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem;">Chief Investment Officer</p>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">With over 16 years in quantitative asset management, Marcus directs our global macro equity strategies and downside risk algorithms.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card" style="display: flex; align-items: center; gap: 2rem;">
+                    <img src="images/advisor2.webp" alt="Sarah Jenkins CFP" class="img-fixed-avatar">
+                    <div>
+                        <h4 style="font-size: 1.3rem; color: var(--text-light); margin-bottom: 0.2rem;">Sarah Jenkins, CFP®</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem;">Managing Director - Private Wealth</p>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Sarah leads tax structuring, estate trusts, and multi-generational family office wealth transition across North America.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+                    <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                    <div class="logo-text">Stackly</div>
+                </a>
+                <p>Stackly Web3 Validator Node is a premier fiduciary wealth management firm dedicated to capital growth, downside risk mitigation, and multi-generational family estate preservation.</p>
+                <div class="footer-social-row">
+                    <a href="404.html" class="social-fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404.html" class="social-x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" class="social-in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" class="social-ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Bulletins</a></li>
+                    <li><a href="portfolio.html">Ecosystem</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Core Validator Node</a></li>
+                    <li><a href="services.html">Sovereign Fiduciary Staking</a></li>
+                    <li><a href="services.html">EVM Gas Optimization</a></li>
+                    <li><a href="services.html">Multi-Sig DAO Treasury</a></li>
+                    <li><a href="services.html">Telemetry API Integrations</a></li>
+                    <li><a href="services.html">Slashing Protection SLAs</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">Subscribe to receive network validator updates, MEV audits, and testnet schedules.</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
         
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-          <div style="border-left: 2px solid var(--gold); padding-left: 1.5rem; position: relative;">
-            <span style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase;">2021 - Genesis</span>
-            <h4 style="font-size: 1.05rem; color: var(--text-primary); margin: 0.25rem 0;">Validator Node Launch</h4>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Deployed bare-metal consensus nodes running on dedicated network servers in Zurich.</p>
-          </div>
-          <div style="border-left: 2px solid var(--gold); padding-left: 1.5rem; position: relative;">
-            <span style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase;">2023 - Scaling</span>
-            <h4 style="font-size: 1.05rem; color: var(--text-primary); margin: 0.25rem 0;">HSM Integration</h4>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Integrated hardware signature keys to reject custody of delegator keys.</p>
-          </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Stackly. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Consensus Council & Devs -->
-  <section class="team section" style="padding: 6rem 0; background: rgba(11, 19, 41, 0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-subtitle">Consensus Engineers</p>
-        <h2 class="section-title">Cryptographic Council</h2>
-        <div class="line line-center"></div>
-        <p class="section-desc">DevSecOps and solidity auditing leads maintaining node validator safety limits.</p>
-      </div>
+    <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
 
-      <div class="grid-3col reveal-element" style="gap: 2rem; margin-top: 3rem;">
-        <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.15); text-align: center; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <img src="images/advisor1.webp" alt="Marcus Vance" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid var(--gold);">
-          <h4 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.25rem;">Marcus Vance</h4>
-          <span style="font-size: 0.8rem; color: var(--gold); text-transform: uppercase; font-weight: 700;">Infrastructure Relayer Lead</span>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; line-height: 1.5;">Former Ethereum relayer researcher configuring low-latency node networks.</p>
-        </div>
-        <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.15); text-align: center; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <img src="images/advisor2.webp" alt="Sarah Jenkins" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid var(--gold);">
-          <h4 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.25rem;">Sarah Jenkins</h4>
-          <span style="font-size: 0.8rem; color: var(--gold); text-transform: uppercase; font-weight: 700;">Solidity Auditing Lead</span>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; line-height: 1.5;">Smart contract vulnerability lead checking gas limits and reentrancy bugs.</p>
-        </div>
-        <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.15); text-align: center; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <img src="images/advisor1.webp" alt="David Ross" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid var(--gold);">
-          <h4 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.25rem;">David Ross</h4>
-          <span style="font-size: 0.8rem; color: var(--gold); text-transform: uppercase; font-weight: 700;">Yield Strategist</span>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; line-height: 1.5;">Analyzing validator priority fee ratios and gas-rebalancing yields.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
-          <span class="logo-text">Stack<span>ly</span></span>
-        </a>
-        <p class="footer-desc">Securing decentralized block production through institutional-grade validator networks.</p>
-      </div>
-      <div>
-        <h4 class="footer-title">Validation</h4>
-        <ul class="footer-links">
-          <li><a href="portfolio.html" class="footer-link">Active Validators</a></li>
-          <li><a href="services.html" class="footer-link">Delegation Tiers</a></li>
-          <li><a href="strategies.html" class="footer-link">Audit Bulletins</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-title">Platform</h4>
-        <ul class="footer-links">
-          <li><a href="about.html" class="footer-link">Consensus Lab</a></li>
-          <li><a href="contact.html" class="footer-link">Inquire Sync</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-title">Legal</h4>
-        <ul class="footer-links">
-          <li><a href="404.html" class="footer-link">Slashing Policy</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

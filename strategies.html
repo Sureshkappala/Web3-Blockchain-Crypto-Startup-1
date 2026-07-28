@@ -1,99 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security Bulletins | Stackly Web3</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pages.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Execution Roadmap & Investment Process - How Stackly systematically models risk, allocates liquidity, and harvests tax gains.">
+    <title>Investment Bulletins & Execution Roadmap | Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="container navbar-container">
-      <a href="index.html" class="logo">
-        <span class="logo-text">Stack<span>ly</span></span>
-      </a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="portfolio.html" class="nav-link">Ecosystem</a></li>
-        <li><a href="strategies.html" class="nav-link active">Bulletins</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-        <button class="mobile-menu-btn" id="mobile-menu-btn">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Page Header -->
-  <header class="page-header">
-    <div class="container">
-      <h1 class="page-title text-gradient">Security Bulletins</h1>
-      <nav class="breadcrumb">
-        <a href="index.html">Home</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Bulletins</span>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Security Bulletins Redesign -->
-  <section class="blog-grid-section section" style="padding: 6rem 0; background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.1) 0%, rgba(2, 6, 23, 1) 60%);">
-    <div class="container">
-      
-      <div class="grid-3col reveal-element" style="gap: 2rem;">
-        <!-- Card 1 -->
-        <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold); font-weight: 700; letter-spacing: 1px; display: block; margin-bottom: 0.75rem;">UPGRADE ANALYSIS</span>
-            <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 1rem;"><a href="404.html" style="color: inherit; text-decoration: none;">Ethereum EVM Pectra Validation</a></h3>
-            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem;">How EIP-7702 validator signatures change the execution logic of delegated hot keys.</p>
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">
-            <span>June 20, 2026</span>
-            <a href="404.html" style="color: var(--gold); text-decoration: none; font-weight: 700;">Read Bulletin <i class="fa-solid fa-arrow-right" style="margin-left: 0.25rem;"></i></a>
-          </div>
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes preloader-icon"></i>
         </div>
-
-        <!-- Card 2 -->
-        <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold); font-weight: 700; letter-spacing: 1px; display: block; margin-bottom: 0.75rem;">SECURITY VULNERABILITY</span>
-            <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 1rem;"><a href="404.html" style="color: inherit; text-decoration: none;">Solidity Compiler Bug Disclosure</a></h3>
-            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem;">Vulnerability analysis on compiler optimization bytecodes causing local storage leaks.</p>
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">
-            <span>May 15, 2026</span>
-            <a href="404.html" style="color: var(--gold); text-decoration: none; font-weight: 700;">Read Bulletin <i class="fa-solid fa-arrow-right" style="margin-left: 0.25rem;"></i></a>
-          </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
         </div>
-
-        <!-- Card 3 -->
-        <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold); font-weight: 700; letter-spacing: 1px; display: block; margin-bottom: 0.75rem;">YIELD AUDIT</span>
-            <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 1rem;"><a href="404.html" style="color: inherit; text-decoration: none;">Jito-Solana MEV Client Audit</a></h3>
-            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem;">Performance analytics comparing Jito block priority fee allocations on transaction bundles.</p>
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">
-            <span>April 28, 2026</span>
-            <a href="404.html" style="color: var(--gold); text-decoration: none; font-weight: 700;">Read Bulletin <i class="fa-solid fa-arrow-right" style="margin-left: 0.25rem;"></i></a>
-          </div>
-        </div>
-      </div>
+        <div class="preloader-percentage">0%</div>
     </div>
-  </section>
 
-  <script src="js/main.js"></script>
+    <!-- SCROLL PROGRESS & CUSTOM CURSOR -->
+    <div class="scroll-progress-container"><div class="scroll-progress-bar"></div></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                <div class="logo-text">Stackly</div>
+            </a>
+            
+            <nav class="navbar">
+                <div class="drawer-header">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                        <div class="logo-text">Stackly</div>
+                    </a>
+                    <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <div class="drawer-search">
+                    <div style="position: relative; width: 100%;">
+                        <input type="text" placeholder="Search roadmap...">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none;"></i>
+                    </div>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html" class="active">Bulletins</a></li>
+                    <li><a href="portfolio.html">Ecosystem</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-mobile-cta">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="404.html" class="btn btn-primary">Deploy Node Sync</a>
+                </div>
+            </nav>
+            
+            <div class="nav-controls">
+                <a href="login.html" class="btn btn-secondary btn-sm" style="margin-right: 0.5rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a href="404.html" class="btn btn-primary btn-sm">Deploy Node Sync</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. SUBPAGE HERO -->
+    <section class="hero-section" id="hero" style="min-height: 48vh; padding-top: 10rem; padding-bottom: 3rem; text-align: center;">
+        <div class="container">
+            <span class="section-tag gold-tag"><i class="fa-solid fa-route"></i> Execution Roadmap</span>
+            <h1 style="font-size: clamp(2.2rem, 4vw, 3.5rem); margin-bottom: 1rem;">Investment Process & <span style="background: var(--gradient-hybrid); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Roadmap</span></h1>
+            <p style="color: var(--text-muted); max-width: 680px; margin: 0 auto; font-size: 1.05rem; line-height: 1.75;">How we systematically audit portfolios, engineer risk-hedged models, deploy private liquidity, and continuously harvest tax alpha.</p>
+        </div>
+    </section>
+
+    <!-- 2. TIMELINE PHASES SECTION -->
+    <section style="padding: 3rem 0 6rem 0;">
+        <div class="container" style="display: flex; flex-direction: column; gap: 5rem;">
+            
+            <!-- Phase 1 -->
+            <div class="grid-2col">
+                <div class="glass-card" style="padding: 0; overflow: hidden; height: 360px;">
+                    <img src="images/hero.webp" alt="Phase 1 Quantitative Modeling" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div>
+                    <span class="section-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> Phase I</span>
+                    <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem 0;">Portfolio Audit & <span style="color: var(--primary);">Risk Modeling</span></h2>
+                    <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">We begin with an exhaustive stress-test audit of your current assets. Our quantitative algorithms analyze correlation vectors, hidden fee drag, and tail-risk exposure under 50+ historical crash scenarios.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; color: var(--text-muted); font-size: 0.9rem;">
+                        <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Downside Drawdown & Correlation Stress Testing</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Fee & Hidden Expense Ratio Drag Analysis</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Tax-Liability Audit & Asset Location Blueprint</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="grid-2col">
+                <div style="order: 2;">
+                    <div class="glass-card" style="padding: 0; overflow: hidden; height: 360px;">
+                        <img src="images/market.webp" alt="Phase 2 Asset Allocation" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                <div style="order: 1;">
+                    <span class="section-tag gold-tag"><i class="fa-solid fa-sliders"></i> Phase II</span>
+                    <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem 0;">Asset & <span style="color: var(--accent);">Liquidity Deployment</span></h2>
+                    <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">We construct your customized multi-asset model. Capital is deployed across global equities, sovereign credit, and high-yield private debt pools to generate consistent risk-adjusted returns.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; color: var(--text-muted); font-size: 0.9rem;">
+                        <li><i class="fa-solid fa-circle-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Sovereign Debt & Private Credit Pool Entry</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Institutional Equity Factor Tilts</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Custodian Asset Isolation & Escrow Setup</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="grid-2col">
+                <div class="glass-card" style="padding: 0; overflow: hidden; height: 360px;">
+                    <img src="images/portfolio.webp" alt="Phase 3 Tax Harvesting & Rebalancing" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div>
+                    <span class="section-tag"><i class="fa-solid fa-arrows-rotate"></i> Phase III</span>
+                    <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem 0;">Tax Harvesting & <span style="color: var(--primary);">Dynamic Rebalancing</span></h2>
+                    <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">Our automated tax-loss engine continuously scans portfolio positions to harvest capital losses daily, offsetting taxable gains while preserving market upside.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; color: var(--text-muted); font-size: 0.9rem;">
+                        <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Daily Automated Tax-Loss Harvesting</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Algorithmic Volatility Rebalancing</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Encrypted Portal Performance Reporting</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. SERVICE LEVEL COMMITMENTS -->
+    <section style="background-color: var(--bg-secondary); padding: 6rem 0;">
+        <div class="container grid-2col">
+            <div>
+                <span class="section-tag gold-tag"><i class="fa-solid fa-handshake"></i> Service Guarantees</span>
+                <h2 style="font-size: 2.2rem; margin-bottom: 1.25rem;">Our Fiduciary Service Level <span style="color: var(--accent);">Commitments</span></h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.75;">We believe in absolute transparency. Unlike legacy brokerages that mail static quarterly PDF statements, our model provides 24/7 real-time portal monitoring and direct managing advisor access.</p>
+                <p style="color: var(--text-muted); line-height: 1.75;">From Day 1, you receive direct communication channels with your assigned CFA®/CFP® managing partner, bypassing general call centers completely.</p>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="glass-card" style="display: flex; gap: 1.25rem; align-items: flex-start;">
+                    <div style="background: rgba(16, 185, 129, 0.1); padding: 0.85rem; border-radius: var(--radius-sm); color: var(--primary); font-size: 1.25rem;"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 0.3rem;">Real-Time Encrypted Portal</h4>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);">Track daily asset performance, dividend distributions, and tax alpha harvested from any device.</p>
+                    </div>
+                </div>
+                <div class="glass-card" style="display: flex; gap: 1.25rem; align-items: flex-start;">
+                    <div style="background: rgba(245, 158, 11, 0.1); padding: 0.85rem; border-radius: var(--radius-sm); color: var(--accent); font-size: 1.25rem;"><i class="fa-solid fa-user-shield"></i></div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 0.3rem;">Direct Fiduciary Partner Access</h4>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);">Sync directly with senior chartered wealth directors without middlemen or retail sales agents.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+                    <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                    <div class="logo-text">Stackly</div>
+                </a>
+                <p>Stackly Web3 Validator Node is a premier fiduciary wealth management firm dedicated to capital growth, downside risk mitigation, and multi-generational family estate preservation.</p>
+                <div class="footer-social-row">
+                    <a href="404.html" class="social-fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404.html" class="social-x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" class="social-in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" class="social-ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Bulletins</a></li>
+                    <li><a href="portfolio.html">Ecosystem</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Core Validator Node</a></li>
+                    <li><a href="services.html">Sovereign Fiduciary Staking</a></li>
+                    <li><a href="services.html">EVM Gas Optimization</a></li>
+                    <li><a href="services.html">Multi-Sig DAO Treasury</a></li>
+                    <li><a href="services.html">Telemetry API Integrations</a></li>
+                    <li><a href="services.html">Slashing Protection SLAs</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">Subscribe to receive network validator updates, MEV audits, and testnet schedules.</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Stackly. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

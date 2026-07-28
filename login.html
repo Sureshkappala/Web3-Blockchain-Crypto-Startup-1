@@ -1,152 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Stackly Web3 Staking</title>
-  <meta name="description" content="Login to your Stackly Web3 Staking account.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/auth.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Client Portal Login - Secure encrypted portal access for Stackly clients and advisors.">
+    <title>Login | Stackly Web3 Validator Node</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="auth-page">
-  <div class="auth-container">
-    <div class="auth-left">
-      <div class="auth-brand">
-        <a href="index.html" class="logo">
-          <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
-          <span class="logo-text">Stack<span>ly</span></span>
-        </a>
-      </div>
-      <div class="auth-image">
-        <img src="images/hero.webp" alt="protocol engineerure">
-        <div class="auth-overlay"></div>
-        <div class="auth-quote">
-          <p>"protocol engineerure should speak of its time and place, but yearn for timelessness."</p>
-          <span>— Frank Gehry</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="auth-right">
-      <div class="auth-form-wrapper">
-        <div class="back-button">
-          <a href="index.html" class="btn btn-outline btn-sm">
-            <i class="fas fa-arrow-left"></i> Back to Home
-          </a>
-        </div>
-        <h1 class="auth-title">Welcome Back</h1>
-        <p class="auth-subtitle">Sign in to access your account</p>
-        
-        <!-- Role Selection -->
-        <div class="role-selection">
-          <label class="role-option">
-            <input type="radio" name="role" value="client" checked>
-            <div class="role-card">
-              <div class="role-icon">
-                <i class="fas fa-user"></i>
-              </div>
-              <span class="role-name">Client</span>
-            </div>
-          </label>
-          <label class="role-option">
-            <input type="radio" name="role" value="admin">
-            <div class="role-card">
-              <div class="role-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <span class="role-name">Admin</span>
-            </div>
-          </label>
-        </div>
-        
-        <form id="login-form" class="auth-form">
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <div class="input-with-icon">
-              <i class="fas fa-envelope"></i>
-              <input type="email" class="form-input" placeholder="Enter your email" required>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label class="form-label">Password</label>
-            <div class="input-with-icon">
-              <i class="fas fa-lock"></i>
-              <input type="password" class="form-input" placeholder="Enter your password" required>
-              <button type="button" class="toggle-password">
-                <i class="fas fa-eye"></i>
-              </button>
-            </div>
-          </div>
-          
-          <div class="form-options">
-            <label class="remember-me">
-              <input type="checkbox">
-              <span>Remember me</span>
-            </label>
-            <a href="404.html" class="forgot-link">Forgot password?</a>
-          </div>
-          
-          <button type="submit" class="btn btn-gold btn-lg w-full">
-            <i class="fas fa-sign-in-alt"></i> Sign In
-          </button>
-        </form>
-        
-        <div class="auth-divider">
-          <span>Or continue with</span>
-        </div>
-        
-        <div class="social-login">
-          <a href="404.html" class="social-btn google">
-            <i class="fab fa-google"></i> Google
-          </a>
-          <a href="404.html" class="social-btn linkedin">
-            <i class="fab fa-linkedin-in"></i> LinkedIn
-          </a>
-        </div>
-        
-        <div class="auth-footer">
-          <p>Don't have an account? <a href="register.html">Sign up</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+<body style="background-color: var(--bg-primary); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; padding: 2rem 1rem;">
 
-  <script>
-    // Toggle password visibility
-    document.querySelector('.toggle-password').addEventListener('click', function() {
-      const input = this.parentElement.querySelector('input');
-      const icon = this.querySelector('i');
-      
-      if (input.type === 'password') {
-        input.type = 'text';
-        icon.classList.remove('fa-eye');
-        icon.classList.add('fa-eye-slash');
-      } else {
-        input.type = 'password';
-        icon.classList.remove('fa-eye-slash');
-        icon.classList.add('fa-eye');
-      }
-    });
-    
-    // Form submission
-    document.getElementById('login-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const role = document.querySelector('input[name="role"]:checked').value;
-      
-      if (role === 'admin') {
-        
-         window.location.href = 'admindashbord.html';
-      } else {
-        
-         window.location.href = 'user.html';
-      }
-    });
-  </script>
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- BACK TO HOME BUTTON -->
+    <a href="index.html" class="back-to-home-btn"><i class="fa-solid fa-house"></i> Back to Home</a>
+
+    <!-- LOGIN CONTAINER -->
+    <div class="container" style="max-width: 440px; padding: 0; width: 100%;">
+        <div class="glass-card" style="padding: 2.75rem 2.25rem; text-align: center; border-right: 4px solid #b58a63;">
+            
+            <!-- LOGO & HEADING -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 38px; margin: 0 auto 1.25rem auto;">
+                <h2 style="font-size: 2rem; margin-bottom: 0.4rem; color: var(--text-light); font-family: serif;">Welcome Back</h2>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Access your client portal or design dashboard.</p>
+            </div>
+
+            <!-- FORM -->
+            <form id="login-form" style="text-align: left;">
+                
+                <!-- EMAIL FIELD WITH ICON -->
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-envelope" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <input type="email" id="login-email" placeholder="john@example.com" style="padding-left: 2.75rem;" required>
+                    </div>
+                </div>
+
+                <!-- PASSWORD FIELD WITH LOCK & EYE ICON -->
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-lock" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <input type="password" id="login-password" placeholder="••••••••" style="padding-left: 2.75rem; padding-right: 2.75rem;" required>
+                        <button type="button" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer;" onclick="togglePassword()">
+                            <i class="fa-solid fa-eye" id="pwd-eye-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ROLE SELECT FIELD WITH USER ICON -->
+                <div class="form-group">
+                    <label for="login-role">Select Role</label>
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-user" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <select id="login-role" style="padding-left: 2.75rem;">
+                            <option value="" disabled selected>Select Role</option>
+                            <option value="client">Private Investor / Family Office</option>
+                            <option value="advisor">Managing Fiduciary Advisor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- REMEMBER ME & FORGOT PASSWORD ROW -->
+                <div class="login-remember-row">
+                    <label class="remember-label">
+                        <input type="checkbox"> Remember Me
+                    </label>
+                    <a href="contact.html" class="forgot-link">Forgot Password?</a>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem; font-size: 1.05rem; border-radius: var(--radius-sm); background: #b58a63 !important; color: #000 !important; border: none; font-weight: 700; text-shadow: none;">Access Portal</button>
+
+            </form>
+
+            <!-- BOTTOM REGISTER LINK -->
+            <div style="text-align: center; margin-top: 1.75rem; font-size: 0.85rem; color: var(--text-muted);">
+                Don't have a design account? <a href="register.html" style="color: #10b981; font-weight: 700;">Register Here</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        function togglePassword() {
+            const field = document.getElementById('login-password');
+            const icon = document.getElementById('pwd-eye-icon');
+            if (field.type === 'password') {
+                field.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const role = document.getElementById('login-role').value || 'client';
+
+            // Password complexity check
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+            if (!passwordRegex.test(password)) {
+                window.showCustomAlert('Password must be at least 8 characters long and contain a combination of uppercase, lowercase, digits, and symbols.', 'error');
+                return;
+            }
+
+            localStorage.setItem('loggedInUserName', email.split('@')[0].toUpperCase());
+            localStorage.setItem('loggedInUserRole', role);
+            window.showCustomAlert('Authentication Approved! Redirecting to Portfolio Dashboard...', 'success');
+            setTimeout(() => {
+                window.location.href = 'studio-portal.html';
+            }, 1800);
+        });
+    </script>
 </body>
 </html>

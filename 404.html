@@ -1,165 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Page Not Found | Stackly Web3 Staking</title>
-  <meta name="description" content="The page you are looking for could not be found.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .error-page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--background);
-      padding: 2rem;
-      text-align: center;
-    }
-    
-    .error-content {
-      max-width: 600px;
-    }
-    
-    .error-code {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(8rem, 20vw, 15rem);
-      font-weight: 700;
-      line-height: 1;
-      background: var(--gradient-gold);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
-      animation: float 3s ease-in-out infinite;
-    }
-    
-    .error-title {
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    
-    .error-text {
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      line-height: 1.7;
-    }
-    
-    .error-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .error-illustration {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto 2rem;
-      position: relative;
-    }
-    
-    .error-illustration::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 150px;
-      height: 150px;
-      background: var(--gradient-gold);
-      border-radius: 50%;
-      opacity: 0.2;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    
-    .error-illustration i {
-      font-size: 5rem;
-      color: var(--secondary);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-    
-    @keyframes pulse {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
-      50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.1; }
-    }
-    
-    .logo-home {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 3rem;
-    }
-    
-    .logo-home .logo-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--gradient-gold);
-      border-radius: 0.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-    
-    .logo-home .logo-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
-    
-    .logo-home .logo-text span {
-      color: var(--secondary);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="404 Page Not Found - Stackly Web3 Validator Node.">
+    <title>Page Lost in Transmissions (404) | Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
-  <div class="error-page">
-    <div class="error-content">
-      <a href="index.html" class="logo-home">
-        <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
-        <span class="logo-text">Stack<span>ly</span></span>
-      </a>
-      
-      <div class="error-illustration">
-        <i class="fas fa-building"></i>
-      </div>
-      
-      <h1 class="error-code">404</h1>
-      <h2 class="error-title">Page Not Found</h2>
-      <p class="error-text">
-        The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
-      </p>
-      
-      <div class="error-actions">
-        <a href="index.html" class="btn btn-gold btn-lg">
-          <i class="fas fa-home"></i> Back to Home
-        </a>
-        <a href="contact.html" class="btn btn-outline btn-lg">
-          <i class="fas fa-envelope"></i> Contact Us
-        </a>
-      </div>
+<body style="background-color: var(--bg-primary); min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;">
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
     </div>
-  </div>
+
+    <!-- 404 ERROR CARD CONTAINER -->
+    <div class="container" style="max-width: 520px; padding: 2rem 1rem;">
+        <div class="glass-card" style="padding: 3.5rem 2.5rem; text-align: center; border-color: rgba(217, 119, 6, 0.25); box-shadow: var(--shadow-glow-accent);">
+            
+            <!-- GIANT 404 NUMBER WITH TEXT EFFECT -->
+            <div style="position: relative; display: inline-block; margin-bottom: 1.5rem;">
+                <h1 style="font-size: 7rem; font-weight: 900; line-height: 1; margin: 0; color: #d97706; text-shadow: 4px 4px 0px rgba(16, 185, 129, 0.2); letter-spacing: -0.04em;">404</h1>
+            </div>
+
+            <!-- BADGE -->
+            <div>
+                <span class="section-tag gold-tag" style="margin-bottom: 1.25rem;"><i class="fa-solid fa-triangle-exclamation"></i> ERROR 404</span>
+            </div>
+
+            <!-- TITLE & SUBTITLE -->
+            <h2 style="font-size: 2.1rem; margin-bottom: 1rem; color: var(--text-light);">Page Lost in Transmissions</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 2.25rem;">We can't seem to find the page you're looking for. The link may be broken, or the page has been moved. Let's get you back on track.</p>
+
+            <!-- ACTION BUTTONS ROW -->
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="btn btn-gold" style="padding: 0.85rem 1.6rem;"><i class="fa-solid fa-house"></i> Back to Home</a>
+                <button onclick="window.history.back()" class="btn btn-secondary" style="padding: 0.85rem 1.6rem; cursor: pointer;"><i class="fa-solid fa-arrow-left"></i> Go Back</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

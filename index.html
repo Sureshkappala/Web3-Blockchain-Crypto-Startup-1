@@ -1,504 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stackly Web3 | The Sovereign Staking Layer</title>
-  <meta name="description" content="Institutional validation networks and secure cryptography Relayer nodes.">
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly Web3 Validator Node - Premier fiduciary wealth management, institutional asset allocation, tax optimization, and family office services.">
+    <title>Stackly | Luxury Fiduciary Private Wealth Advisory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="preloader-circle-wrap">
-      <div class="preloader-circle"></div>
-      <i class="fa-solid fa-cubes preloader-icon"></i>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
     </div>
-    <div class="preloader-percentage">0%</div>
-  </div>
 
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress-container">
-    <div class="scroll-progress-bar"></div>
-  </div>
+    <!-- SCROLL PROGRESS BAR & CUSTOM CURSOR -->
+    <div class="scroll-progress-container"><div class="scroll-progress-bar"></div></div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
 
-  <!-- Custom Cursor -->
-  <div class="custom-cursor"></div>
-  <div class="custom-cursor-dot"></div>
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                <div class="logo-text">Stackly</div>
+            </a>
+            
+            <nav class="navbar">
+                <div class="drawer-header">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                        <div class="logo-text">Stackly</div>
+                    </a>
+                    <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <div class="drawer-search">
+                    <div style="position: relative; width: 100%;">
+                        <input type="text" placeholder="Search validator chains...">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none;"></i>
+                    </div>
+                </div>
 
-  <!-- Navigation / Header -->
-  <header class="header" id="navbar">
-    <div class="container header-container">
-      <a href="index.html" class="logo">
-        <span class="logo-text">Stack<span>ly</span></span>
-      </a>
-      
-      <nav class="navbar">
-        <div class="drawer-header">
-          <a href="index.html" class="logo">
-            <span class="logo-text">Stack<span>ly</span></span>
-          </a>
-          <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        
-        <div class="drawer-search">
-          <div style="position: relative; width: 100%;">
-            <input type="text" placeholder="Search validator chains...">
-            <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
-          </div>
-        </div>
-
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="portfolio.html" class="nav-link">Ecosystem</a></li>
-          <li><a href="strategies.html" class="nav-link">Bulletins</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        
-        <div class="nav-mobile-cta">
-          <a href="login.html" class="btn btn-secondary">Login</a>
-          <a href="404.html" class="btn btn-gold">Deploy Node Sync</a>
-        </div>
-        
-        <div class="drawer-contact-info">
-          <h5>Relayer Coordinates</h5>
-          <p><i class="fa-solid fa-network-wired"></i> Ping Address: nodes.stackly.eth</p>
-          <p><i class="fa-solid fa-envelope"></i> securesync@stackly.com</p>
-          <p><i class="fa-solid fa-location-dot"></i> Zurich, Switzerland</p>
-        </div>
-      </nav>
-      
-      <div class="nav-controls">
-        <a href="login.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-        <a href="404.html" class="btn btn-gold btn-sm">Deploy Node Sync</a>
-        <button class="menu-toggle" aria-label="Toggle Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Full-Screen Blockchain Particle Hero -->
-  <section class="hero-split-section" id="hero" style="padding-top: 12rem; padding-bottom: 6rem; background: radial-gradient(circle at center, rgba(6, 182, 212, 0.15) 0%, rgba(2, 6, 23, 1) 70%); position: relative; overflow: hidden; min-height: 85vh; display: flex; align-items: center;">
-    <div class="container" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 2;">
-      <!-- Left Content -->
-      <div class="hero-content-left reveal-left" style="text-align: left;">
-        <span class="section-tag gold-tag" style="margin-bottom: 1.5rem; display: inline-flex;"><i class="fa-solid fa-shield-halved"></i> Institutional Node Operator</span>
-        <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem); line-height: 1.15; margin-bottom: 1.5rem; color: var(--text-primary);">Optimize Staking,<br><span class="text-gradient">Secure On-Chain Capital</span></h1>
-        <p class="hero-desc" style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.75;">We deploy bare-metal validator hardware, verify smart contract security audits, and execute automated gas rebalancing loops to maximize yields while guaranteeing slashing protection.</p>
-        
-        <div class="hero-actions" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
-          <a href="404.html" class="btn btn-gold btn-lg">Deploy Node Sync <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="404.html" class="btn btn-outline btn-lg">Explore Yield Pools</a>
-        </div>
-      </div>
-
-      <!-- Right Visual: Dashboard Console with strategy color toggle dots -->
-      <div class="hero-content-right reveal-right animate-float" style="position: relative;">
-        <!-- Floating Glass Badges -->
-        <div class="floating-hero-badge badge-yield anim-pulse" style="position: absolute; top: 30%; right: -25px; background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(6, 182, 212, 0.3); border-radius: 8px; padding: 0.6rem 1rem; box-shadow: var(--shadow-cyan); z-index: 10;">
-          <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; line-height: 1.2;">Target Yield</span>
-          <span style="font-size: 1.1rem; color: #10B981; font-weight: 800; line-height: 1.2;" id="hero-apy-label">4.5% APY</span>
-        </div>
-        <div class="floating-hero-badge badge-risk anim-float" style="position: absolute; bottom: 30%; left: -25px; background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(217, 119, 6, 0.3); border-radius: 8px; padding: 0.6rem 1rem; box-shadow: var(--shadow-gold); z-index: 10; animation-delay: 2s;">
-          <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; line-height: 1.2;">Commission</span>
-          <span style="font-size: 1.1rem; color: #f59e0b; font-weight: 800; line-height: 1.2;" id="hero-commission-label">2.5% fee</span>
-        </div>
-
-        <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(6, 182, 212, 0.2); box-shadow: var(--shadow-cyan); background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border-radius: 12px; border: 1px solid var(--border);">
-          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
-            <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);"><i class="fa-solid fa-terminal" style="color: var(--gold); margin-right: 0.5rem;"></i> Validator_Node_01</span>
-            <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600;">ACTIVE</span>
-          </div>
-          
-          <div style="margin-bottom: 1.25rem;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.4rem;">
-              <span>Consensus Load</span>
-              <span>42%</span>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Bulletins</a></li>
+                    <li><a href="portfolio.html">Ecosystem</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-mobile-cta">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="404.html" class="btn btn-primary">Deploy Node Sync</a>
+                </div>
+                
+                <div class="drawer-contact-info">
+                    <h5>Contact Info</h5>
+                    <p><i class="fa-solid fa-phone"></i> +1 (800) 555-Stackly</p>
+                    <p><i class="fa-solid fa-envelope"></i> securesync@stackly.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Zurich, Switzerland</p>
+                </div>
+            </nav>
+            
+            <div class="nav-controls">
+                <a href="login.html" class="btn btn-secondary btn-sm" style="margin-right: 0.5rem;"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a href="404.html" class="btn btn-primary btn-sm">Deploy Node Sync</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
-            <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden;">
-              <div style="width: 42%; height: 100%; background: var(--gradient-blue);"></div>
-            </div>
-          </div>
-
-          <div class="grid-2col" style="gap: 1.25rem; margin-bottom: 1.5rem;">
-            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
-              <span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Selected Model</span>
-              <span style="font-size: 1.05rem; color: var(--text-primary); font-weight: 700;" id="hero-strategy-label">Ethereum L1 Node</span>
-            </div>
-            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
-              <span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Telemetry Ping</span>
-              <span style="font-size: 1.2rem; color: var(--text-primary); font-weight: 700; font-family: monospace;">8.5ms</span>
-            </div>
-          </div>
-
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1rem;">
-            <span style="font-size: 0.75rem; color: var(--text-secondary);">Toggle Network:</span>
-            <!-- Interactive Color toggles -->
-            <div style="display: flex; gap: 0.75rem;">
-              <div class="hero-color-toggle-dot" style="background-color: var(--cyan); width: 14px; height: 14px; border-radius: 50%; cursor: pointer;" onclick="document.getElementById('hero-strategy-label').textContent='Ethereum L1 Node'; document.getElementById('hero-apy-label').textContent='4.5% APY'; document.getElementById('hero-commission-label').textContent='2.5% fee';"></div>
-              <div class="hero-color-toggle-dot" style="background-color: var(--primary); width: 14px; height: 14px; border-radius: 50%; cursor: pointer;" onclick="document.getElementById('hero-strategy-label').textContent='Solana validator'; document.getElementById('hero-apy-label').textContent='6.8% APY'; document.getElementById('hero-commission-label').textContent='5.0% fee';"></div>
-              <div class="hero-color-toggle-dot" style="background-color: var(--gold); width: 14px; height: 14px; border-radius: 50%; cursor: pointer;" onclick="document.getElementById('hero-strategy-label').textContent='Cosmos IBC Node'; document.getElementById('hero-apy-label').textContent='14.2% APY'; document.getElementById('hero-commission-label').textContent='8.0% fee';"></div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Consensus Node Performance Hub -->
-  <section class="stats-section" style="background: linear-gradient(90deg, rgba(11, 19, 41, 0.85) 0%, rgba(2, 6, 23, 0.95) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 0;">
-    <div class="container grid-4col" style="text-align: center;">
-      <div class="counter-item">
-        <h3 class="counter-value" data-target="99" style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0</h3>
-        <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Consensus Uptime (%)</p>
-      </div>
-      <div class="counter-item">
-        <h3 class="counter-value" data-target="1280" style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0</h3>
-        <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Total Value Locked ($M)</p>
-      </div>
-      <div class="counter-item">
-        <h3 class="counter-value" data-target="15" style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0</h3>
-        <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Supported L1 Chains</p>
-      </div>
-      <div class="counter-item">
-        <h3 class="counter-value" data-target="14800" style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0</h3>
-        <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Signatures Per Second</p>
-      </div>
-    </div>
-  </section>
+    <!-- 1. HERO SECTION (2-COLUMN EQUAL HEIGHT) -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="hero-grid-2col">
+                
+                <!-- LEFT CONTENT BOX -->
+                <div class="hero-left-box">
+                    <div>
+                        <span class="section-tag gold-tag"><i class="fa-solid fa-shield-halved"></i> Institutional Node Operator</span>
+                        <h1 class="hero-title">Optimize Staking, <span class="text-gradient">Secure On-Chain Capital</span></h1>
+                        <p class="hero-description">We deploy bare-metal validator hardware, verify smart contract security audits, and execute automated gas rebalancing loops to maximize yields while guaranteeing slashing protection.</p>
+                        <div class="hero-actions">
+                            <a href="404.html" class="btn btn-gold">Deploy Node Sync <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="404.html" class="btn btn-secondary">Explore Yield Pools</a>
+                        </div>
+                    </div>
+                    <div class="hero-stats-row">
+                        <div class="hero-stat-item">
+                            <h4 class="counter-value" data-target="99">99.9%</h4>
+                            <p>Uptime SLA</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h4 class="counter-value" data-target="1280">$1.28B+</h4>
+                            <p>Value Locked</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h4 class="counter-value" data-target="15">15+</h4>
+                            <p>L1 Networks</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- RIGHT CARD FRAME (SAME HEIGHT) -->
+                <div class="hero-right-card anim-float" style="position: relative;">
+                    <!-- Floating Glass Badges -->
+                    <div class="floating-hero-badge badge-yield anim-pulse" style="position: absolute; top: 30%; right: -25px; background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(6, 182, 212, 0.3); border-radius: 8px; padding: 0.6rem 1rem; box-shadow: var(--shadow-cyan); z-index: 10;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; line-height: 1.2;">Target Yield</span>
+                        <span style="font-size: 1.1rem; color: #10B981; font-weight: 800; line-height: 1.2;" id="hero-apy-label">4.5% APY</span>
+                    </div>
+                    <div class="floating-hero-badge badge-risk anim-float" style="position: absolute; bottom: 30%; left: -25px; background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(217, 119, 6, 0.3); border-radius: 8px; padding: 0.6rem 1rem; box-shadow: var(--shadow-gold); z-index: 10; animation-delay: 2s;">
+                        <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; line-height: 1.2;">Commission</span>
+                        <span style="font-size: 1.1rem; color: #f59e0b; font-weight: 800; line-height: 1.2;" id="hero-commission-label">2.5% fee</span>
+                    </div>
+                    
+                    <div class="hero-right-card-header">
+                        <h4>Validator Node Telemetry</h4>
+                        <div class="hero-live-badge">
+                            <div class="hero-live-dot"></div> Live Analytics
+                        </div>
+                    </div>
 
-  <!-- Non-Custodial Staking Protocol -->
-  <section class="about section" id="about" style="padding: 6rem 0; background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.08) 0%, rgba(2, 6, 23, 1) 60%);">
-    <div class="container grid-2col" style="gap: 4rem; align-items: center;">
-      <div class="about-img reveal-left">
-        <img src="images/about.webp" alt="Staking Telemetry Console" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-cyan);">
-      </div>
-      <div class="about-content reveal-right" style="text-align: left;">
-        <span class="section-tag gold-tag" style="margin-bottom: 1.5rem; display: inline-flex;"><i class="fa-solid fa-microchip"></i> Node Specifications</span>
-        <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem; color: var(--text-primary);">Non-Custodial Keys & Safety Vaults</h2>
-        <p class="section-desc" style="text-align: left; margin-bottom: 2rem; color: var(--text-secondary); font-size: 1rem; line-height: 1.75;">Stackly operates under rigorous non-custodial validation models. We eliminate delegation risk by rejecting custody of user private signature keys, focusing entirely on trustless hardware-signing vaults.</p>
-        
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-          <div style="display: flex; gap: 1rem; align-items: flex-start;">
-            <div style="background: rgba(37, 99, 235, 0.1); padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); color: var(--cyan);"><i class="fa-solid fa-key" style="font-size: 1.25rem;"></i></div>
+                    <div class="hero-visual-frame" style="padding: 2rem; background: rgba(2, 6, 23, 0.5); border-radius: 12px; margin: 1.5rem 0;">
+                        <div style="display: flex; flex-direction: column; gap: 1rem; text-align: left;">
+                          <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.4rem;">
+                              <span>Consensus Load</span>
+                              <span>42%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden;">
+                              <div style="width: 42%; height: 100%; background: var(--gradient-primary);"></div>
+                            </div>
+                          </div>
+                          <div class="grid-2col" style="gap: 1rem;">
+                            <div style="background: rgba(255,255,255,0.02); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-glass);">
+                              <span style="font-size: 0.65rem; color: var(--text-muted); display: block;">Ping Latency</span>
+                              <span style="font-size: 1rem; color: var(--text-light); font-weight: 700; font-family: monospace;">8.5ms</span>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.02); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-glass);">
+                              <span style="font-size: 0.65rem; color: var(--text-muted); display: block;">Active Model</span>
+                              <span style="font-size: 0.9rem; color: var(--text-light); font-weight: 700;" id="hero-strategy-label">Ethereum L1 Node</span>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-right-card-footer">
+                        <div class="hero-right-card-footer-info">
+                            <h5>Selected Chain</h5>
+                            <h4 id="hero-strategy-label2">Ethereum Validator</h4>
+                        </div>
+                        <div class="hero-color-toggles">
+                            <div class="hero-color-toggle-dot" style="background-color: var(--cyan);" title="Ethereum" onclick="document.getElementById('hero-strategy-label').textContent='Ethereum L1 Node'; document.getElementById('hero-strategy-label2').textContent='Ethereum Validator'; document.getElementById('hero-apy-label').textContent='4.5% APY'; document.getElementById('hero-commission-label').textContent='2.5% fee';"></div>
+                            <div class="hero-color-toggle-dot" style="background-color: var(--primary);" title="Solana" onclick="document.getElementById('hero-strategy-label').textContent='Solana Validator'; document.getElementById('hero-strategy-label2').textContent='Solana Validator'; document.getElementById('hero-apy-label').textContent='6.8% APY'; document.getElementById('hero-commission-label').textContent='5.0% fee';"></div>
+                            <div class="hero-color-toggle-dot" style="background-color: var(--gold);" title="Cosmos" onclick="document.getElementById('hero-strategy-label').textContent='Cosmos IBC Relayer'; document.getElementById('hero-strategy-label2').textContent='Cosmos IBC Relayer'; document.getElementById('hero-apy-label').textContent='14.2% APY'; document.getElementById('hero-commission-label').textContent='8.0% fee';"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" style="background-color: var(--bg-secondary);">
+        <div class="container grid-2col" style="align-items: center;">
+            <div class="reveal-element" style="height: 100%;">
+                <div style="height: 100%; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-glass); position: relative;">
+                    <img src="images/about.webp" alt="Stackly Validator Operations" class="img-fixed-feature" style="height: 100%; width: 100%; object-fit: cover; display: block;">
+                </div>
+            </div>
+            <div class="reveal-element" style="text-align: left;">
+                <span class="section-tag gold-tag"><i class="fa-solid fa-microchip"></i> Node Specifications</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-light);">Non-Custodial Keys & Safety Vaults</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.75;">Stackly operates under rigorous non-custodial validation models. We eliminate delegation risk by rejecting custody of user private signature keys, focusing entirely on trustless hardware-signing vaults.</p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Hardware Security Modules (HSM) certified FIPS 140-2 Level 3</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Anti-Double-Sign Safeguards block proposals under 2ms</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Real-Time Telemetry Dashboard track metrics continuously</li>
+                </ul>
+                <a href="about.html" class="btn btn-secondary">Read Full Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section id="services">
+        <div class="container" style="text-align: center; margin-bottom: 4rem;">
+            <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Developer Suite</span>
+            <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-light);">EVM Security Audits & Logs</h2>
+            <p style="color: var(--text-muted);">Deploy and verify smart contract code safety with our scanning tools and testnet simulators.</p>
+        </div>
+        <div class="container grid-3col">
+            <div class="glass-card reveal-element" style="text-align: left;">
+                <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-shield-halved" style="font-size: 1.5rem;"></i></div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">Vulnerability Scanning</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Automated bytecode checks detect reentrancy bugs, integer overflows, and compiler warning alerts.</p>
+                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Strategy</a>
+            </div>
+            
+            <div class="glass-card reveal-element" style="transition-delay: 150ms; text-align: left;">
+                <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-code" style="font-size: 1.5rem;"></i></div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">Gas Optimization Vaults</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Refactoring compilation pipelines to reduce deployment and validator proposer block execution fees.</p>
+                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Strategy</a>
+            </div>
+            
+            <div class="glass-card reveal-element" style="transition-delay: 300ms; text-align: left;">
+                <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-bolt" style="font-size: 1.5rem;"></i></div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">MEV Relay Optimization</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Customized block ordering bundles executing transaction sequencing swaps to extract maximal value.</p>
+                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Strategy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ANIMATED STATS COUNTERS -->
+    <section class="stats-counter-section" style="padding: 5rem 0;">
+        <div class="container grid-4col" style="text-align: center;">
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="15000">0</h3>
+                <p>Validator Uptime (%)</p>
+            </div>
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="50">0</h3>
+                <p>Total Value Locked ($M)</p>
+            </div>
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="15">0</h3>
+                <p>Years Ecosystem</p>
+            </div>
+            <div class="counter-item">
+                <h3 class="counter-value" data-target="1280">0</h3>
+                <p>Signatures Per Second</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONSULTATION TIMETABLE SCHEDULE -->
+    <section id="schedule">
+        <div class="container" style="text-align: center; margin-bottom: 4rem;">
+            <span class="section-tag"><i class="fa-solid fa-calendar-check"></i> Relayer Timetable</span>
+            <h2 style="font-size: 2.5rem; color: var(--text-light);">Validator Maintenance Timetable</h2>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Weekly scheduled upgrades and testnet relays audits coordinate board.</p>
+        </div>
+        <div class="container" style="max-width: 900px;">
+            <div class="schedule-tabs">
+                <button class="btn btn-secondary btn-sm" onclick="alert('Monday: Node_US_East memory check (9 AM), backup keys rotation (2 PM).')">Mon</button>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Tuesday: Solana client v1.18 deployment (10 AM), load testing (4 PM).')">Tue</button>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Wednesday: EVM gas relay tweaks (11 AM), audit report checks (3 PM).')">Wed</button>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Thursday: Bare-metal Swiss node disk optimization (9 AM).')">Thu</button>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Friday: Yield pool APY parameter revisions (10 AM).')">Fri</button>
+            </div>
+            <div class="glass-card" style="padding: 2.5rem; text-align: left;">
+                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-glass);">
+                    <span>09:00 AM - 10:30 AM</span>
+                    <span style="font-weight: 700; color: var(--primary);">Low-Latency Network Relayer Audit</span>
+                    <span>Marcus Vance, Relayer Lead</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-glass);">
+                    <span>02:00 PM - 03:30 PM</span>
+                    <span style="font-weight: 700; color: var(--primary);">Compiler Bug Bytecode Check</span>
+                    <span>Sarah Jenkins, Auditor Lead</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 1rem 0;">
+                    <span>05:00 PM - 06:30 PM</span>
+                    <span style="font-weight: 700; color: var(--primary);">Dynamic Staking Yield Projections</span>
+                    <span>David Ross, Yield Strategist</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. COMPOUND INTEREST / ROI CALCULATOR -->
+    <section style="background-color: var(--bg-secondary);">
+        <div class="container grid-2col" style="align-items: center;">
+            <div class="calc-box reveal-element" style="text-align: left;">
+                <span class="section-tag gold-tag"><i class="fa-solid fa-calculator"></i> Reward Engine</span>
+                <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-light);">Staking Reward Projection Model</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Calculate long-term compound validator returns based on delegation size, monthly staking additions, and protocol rates.</p>
+                <form onsubmit="event.preventDefault(); window.calculateStakingGrowth();">
+                    <div class="form-group">
+                        <label for="calc-principal-input">Initial Delegation Capital ($)</label>
+                        <input type="number" id="calc-principal-input" value="250000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-monthly-input">Monthly Staking Additions ($)</label>
+                        <input type="number" id="calc-monthly-input" value="2500" required>
+                    </div>
+                    <div class="grid-2col" style="gap: 1rem; margin-bottom: 0;">
+                        <div class="form-group">
+                            <label for="calc-rate-input">Validator APY Return (%)</label>
+                            <input type="number" id="calc-rate-input" value="9.5" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="calc-years-input">Horizon (Years)</label>
+                            <input type="number" id="calc-years-input" value="15" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 1rem;">Project Rewards Yield</button>
+                </form>
+            </div>
+            
+            <div class="reveal-element" style="text-align: left;">
+                <div class="glass-card" style="margin-bottom: 1.5rem;">
+                    <h4 style="font-size: 1.2rem; color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-chart-line"></i> Yield Projection Results</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Validator compound calculation executing dynamic compound reward intervals.</p>
+                    <div style="border-top: 1px solid var(--border-glass); padding-top: 1rem;">
+                        <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Estimated Total Rewards Value</span>
+                        <h2 style="font-size: 2.2rem; color: var(--text-light); font-weight: 700;" id="calc-result-display">$250,000.00</h2>
+                    </div>
+                </div>
+                <img src="images/portfolio.webp" alt="Growth Projection Chart" class="img-fixed-feature" style="border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CALL TO ACTION SECTION -->
+    <section style="padding: 6rem 0; background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 70%), var(--bg-primary);">
+        <div class="container" style="max-width: 960px;">
+            <div class="glass-card reveal-element" style="padding: 4rem 3rem; text-align: center; border-color: rgba(6, 182, 212, 0.25); box-shadow: var(--shadow-glow-primary); border-radius: var(--radius-lg); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(217, 119, 6, 0.15); filter: blur(40px); border-radius: 50%;"></div>
+                
+                <span class="section-tag gold-tag" style="margin-bottom: 1.5rem;"><i class="fa-solid fa-gem"></i> Institutional Node Operator</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); line-height: 1.25; margin-bottom: 1rem; font-weight: 800; color: var(--text-light);">Ready to Secure & <span class="text-gradient">Optimize Your Legacy?</span></h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin: 0 auto 2.5rem auto;">Request a confidential validator audit and custom yield efficiency roadmap with a managing relayer advisor today.</p>
+                
+                <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-gold" style="padding: 0.95rem 2rem;"><i class="fa-solid fa-calendar-days" style="margin-right: 0.5rem;"></i> Deploy Node Sync</a>
+                    <a href="services.html" class="btn btn-secondary" style="padding: 0.95rem 2rem;"><i class="fa-solid fa-compass" style="margin-right: 0.5rem;"></i> Explore Yield Pools</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+                    <img src="images/logo.webp" alt="Stackly Logo" class="logo-img">
+                    <div class="logo-text">Stackly</div>
+                </a>
+                <p>Stackly Web3 Validator Node is a premier fiduciary wealth management firm dedicated to capital growth, downside risk mitigation, and multi-generational family estate preservation.</p>
+                <div class="footer-social-row">
+                    <a href="404.html" class="social-fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404.html" class="social-x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" class="social-in" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" class="social-ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
             <div>
-              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Hardware Security Modules (HSM)</h4>
-              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Validator signature keys are housed inside certified FIPS 140-2 Level 3 hardware vaults to prevent theft.</p>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="strategies.html">Bulletins</a></li>
+                    <li><a href="portfolio.html">Ecosystem</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
             </div>
-          </div>
-          <div style="display: flex; gap: 1rem; align-items: flex-start;">
-            <div style="background: rgba(37, 99, 235, 0.1); padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); color: var(--cyan);"><i class="fa-solid fa-ban" style="font-size: 1.25rem;"></i></div>
+            
             <div>
-              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Anti-Double-Sign Safeguards</h4>
-              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Custom signature-relayer databases block double-sign block proposals under 2ms latency offsets.</p>
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Core Validator Node</a></li>
+                    <li><a href="services.html">Sovereign Fiduciary Staking</a></li>
+                    <li><a href="services.html">EVM Gas Optimization</a></li>
+                    <li><a href="services.html">Multi-Sig DAO Treasury</a></li>
+                    <li><a href="services.html">Telemetry API Integrations</a></li>
+                    <li><a href="services.html">Slashing Protection SLAs</a></li>
+                </ul>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EVM & Solidity Auditing Suite -->
-  <section class="services section" id="services" style="background: linear-gradient(180deg, #020617 0%, #0b1329 100%); padding: 6rem 0; border-top: 1px solid var(--border);">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-subtitle">Developer Suite</p>
-        <h2 class="section-title">EVM Security Audits & Logs</h2>
-        <div class="line line-center"></div>
-        <p class="section-desc">Deploy and verify smart contract code safety with our scanning tools and testnet simulators.</p>
-      </div>
-
-      <div class="grid-3col reveal-element" style="gap: 2rem; margin-top: 3rem;">
-        <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-shield-halved" style="font-size: 1.5rem;"></i></div>
-          <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">Vulnerability Scanning</h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6;">Automated bytecode checks detect reentrancy bugs, integer overflows, and compiler warning alerts.</p>
-        </div>
-        <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-code" style="font-size: 1.5rem;"></i></div>
-          <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">Gas Optimization Vaults</h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6;">Refactoring compilation pipelines to reduce deployment and validator proposer block execution fees.</p>
-        </div>
-        <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-bolt" style="font-size: 1.5rem;"></i></div>
-          <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem;">MEV Relay Optimization</h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6;">Customized block ordering bundles executing transaction sequencing swaps to extract maximal value.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Governance voting Console Section -->
-  <section class="governance-section section" id="governance" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(217, 119, 6, 0.06) 0%, rgba(2, 6, 23, 1) 70%); border-top: 1px solid var(--border);">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-subtitle">Consensus Decisions</p>
-        <h2 class="section-title">Decentralized Governance Board</h2>
-        <div class="line line-center"></div>
-        <p class="section-desc">Review and delegate voting weight to active validator network upgrades and proposal metrics.</p>
-      </div>
-
-      <div class="grid-3col reveal-element" style="gap: 2rem; margin-top: 3rem;">
-        <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.2); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold); font-weight: 700; letter-spacing: 1px;">Proposal #84</span>
-              <span class="badge-status status-active" style="background: rgba(212, 175, 55, 0.15); color: var(--gold); padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600;">VOTING</span>
+            
+            <div>
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">Subscribe to receive network validator updates, MEV audits, and testnet schedules.</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
             </div>
-            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 1rem;">EVM Blob Gas Optimization</h3>
-            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem;">Upgrades the validator block builder relay to automatically bundle blob transactions during high congestion.</p>
-          </div>
-          <div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
-              <span>Yes: 84.5%</span>
-              <span>No: 15.5%</span>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Stackly. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
             </div>
-            <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; margin-bottom: 1.5rem;">
-              <div style="width: 84.5%; height: 100%; background: var(--gradient-blue);"></div>
-            </div>
-            <a href="404.html" class="btn btn-outline btn-sm w-full">Delegate Votes</a>
-          </div>
         </div>
+    </footer>
 
-        <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.2); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold); font-weight: 700; letter-spacing: 1px;">Proposal #83</span>
-              <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600;">PASSED</span>
-            </div>
-            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 1rem;">Jito-Solana client upgrade</h3>
-            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem;">Deploying version 1.18 Jito binaries across all Asian and European server co-location node clusters.</p>
-          </div>
-          <div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
-              <span>Yes: 99.2%</span>
-              <span>No: 0.8%</span>
-            </div>
-            <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; margin-bottom: 1.5rem;">
-              <div style="width: 99.2%; height: 100%; background: var(--gradient-blue);"></div>
-            </div>
-            <a href="404.html" class="btn btn-outline btn-sm w-full" style="pointer-events: none; opacity: 0.5;">Closed</a>
-          </div>
-        </div>
+    <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
 
-        <div class="glass-card" style="padding: 2.25rem; border-color: rgba(6, 182, 212, 0.2); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold); font-weight: 700; letter-spacing: 1px;">Proposal #82</span>
-              <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600;">PASSED</span>
-            </div>
-            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 1rem;">Anti-Slashing Vault V2</h3>
-            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem;">Deploying hardware security modules (HSM) keys that automatically sever signature relays in under 5ms if drift is detected.</p>
-          </div>
-          <div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
-              <span>Yes: 94.8%</span>
-              <span>No: 5.2%</span>
-            </div>
-            <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; margin-bottom: 1.5rem;">
-              <div style="width: 94.8%; height: 100%; background: var(--gradient-blue);"></div>
-            </div>
-            <a href="404.html" class="btn btn-outline btn-sm w-full" style="pointer-events: none; opacity: 0.5;">Closed</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Live Telemetry Terminal Section -->
-  <section class="telemetry-section section" id="telemetry" style="padding: 6rem 0; background: #020617; border-top: 1px solid var(--border);">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-subtitle">Node Telemetry</p>
-        <h2 class="section-title">Global Validation Server Clusters</h2>
-        <div class="line line-center"></div>
-        <p class="section-desc">Monitor hardware stats, active signature loads, and ping latency metrics across our global validator nodes.</p>
-      </div>
-
-      <div class="grid-3col reveal-element" style="gap: 2rem; margin-top: 3rem;">
-        <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.2); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-            <span style="font-weight: 700; color: var(--text-primary); font-size: 1.1rem;"><i class="fa-solid fa-server" style="color: var(--gold); margin-right: 0.5rem;"></i> Node_US_East</span>
-            <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600;">ONLINE</span>
-          </div>
-          <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.65rem;">
-            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 0.5rem;"><span>Ping Latency:</span> <strong style="color: var(--text-primary);">8.5ms</strong></li>
-            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 0.5rem;"><span>Memory Load:</span> <strong style="color: var(--text-primary);">34%</strong></li>
-            <li style="display: flex; justify-content: space-between;"><span>Active Signatures:</span> <strong style="color: var(--text-primary);">14,802 / sec</strong></li>
-          </ul>
-        </div>
-        <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.2); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-            <span style="font-weight: 700; color: var(--text-primary); font-size: 1.1rem;"><i class="fa-solid fa-server" style="color: var(--gold); margin-right: 0.5rem;"></i> Node_EU_West</span>
-            <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600;">ONLINE</span>
-          </div>
-          <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.65rem;">
-            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 0.5rem;"><span>Ping Latency:</span> <strong style="color: var(--text-primary);">12.1ms</strong></li>
-            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 0.5rem;"><span>Memory Load:</span> <strong style="color: var(--text-primary);">41%</strong></li>
-            <li style="display: flex; justify-content: space-between;"><span>Active Signatures:</span> <strong style="color: var(--text-primary);">28,452 / sec</strong></li>
-          </ul>
-        </div>
-        <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.2); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-            <span style="font-weight: 700; color: var(--text-primary); font-size: 1.1rem;"><i class="fa-solid fa-server" style="color: var(--gold); margin-right: 0.5rem;"></i> Node_AP_South</span>
-            <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600;">ONLINE</span>
-          </div>
-          <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.65rem;">
-            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 0.5rem;"><span>Ping Latency:</span> <strong style="color: var(--text-primary);">24.8ms</strong></li>
-            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 0.5rem;"><span>Memory Load:</span> <strong style="color: var(--text-primary);">28%</strong></li>
-            <li style="display: flex; justify-content: space-between;"><span>Active Signatures:</span> <strong style="color: var(--text-primary);">8,459 / sec</strong></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Relayer Maintenance / Upgrade Timetable -->
-  <section class="schedule-section section" id="schedule" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(37, 99, 235, 0.05) 0%, rgba(2, 6, 23, 1) 70%); border-top: 1px solid var(--border);">
-    <div class="container" style="text-align: center; margin-bottom: 4rem;">
-      <span class="section-tag"><i class="fa-solid fa-calendar-check"></i> Relayer Timetable</span>
-      <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">Validator Maintenance Timetable</h2>
-      <p style="color: var(--text-secondary); margin-top: 0.5rem;">Weekly scheduled upgrades and testnet relays audits coordinate board.</p>
-    </div>
-    <div class="container" style="max-width: 900px;">
-      <div class="schedule-tabs">
-        <button class="btn btn-secondary btn-sm" onclick="alert('Monday: Node_US_East memory check (9 AM), backup keys rotation (2 PM).')">Mon</button>
-        <button class="btn btn-secondary btn-sm" onclick="alert('Tuesday: Solana client v1.18 deployment (10 AM), load testing (4 PM).')">Tue</button>
-        <button class="btn btn-secondary btn-sm" onclick="alert('Wednesday: EVM gas relay tweaks (11 AM), audit report checks (3 PM).')">Wed</button>
-        <button class="btn btn-secondary btn-sm" onclick="alert('Thursday: Bare-metal Swiss node disk optimization (9 AM).')">Thu</button>
-        <button class="btn btn-secondary btn-sm" onclick="alert('Friday: Yield pool APY parameter revisions (10 AM).')">Fri</button>
-      </div>
-      <div class="glass-card" style="padding: 2.5rem; border-color: rgba(6, 182, 212, 0.15); border-radius: 12px; border: 1px solid var(--border);">
-        <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
-          <span>09:00 AM - 10:30 AM</span>
-          <span style="font-weight: 700; color: var(--cyan);">Low-Latency Network Relayer Audit</span>
-          <span>Marcus Vance, Relayer Lead</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
-          <span>02:00 PM - 03:30 PM</span>
-          <span style="font-weight: 700; color: var(--cyan);">Compiler Bug Bytecode Check</span>
-          <span>Sarah Jenkins, Auditor Lead</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; padding: 1rem 0;">
-          <span>05:00 PM - 06:30 PM</span>
-          <span style="font-weight: 700; color: var(--cyan);">Dynamic Staking Yield Projections</span>
-          <span>David Ross, Strategist</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Staking Compound Reward Calculator Section -->
-  <section class="calculator-horizon-section section" style="padding: 6rem 0; background: linear-gradient(135deg, rgba(11, 19, 41, 0.9) 0%, rgba(2, 6, 23, 0.9) 100%); border-top: 1px solid var(--border);">
-    <div class="container grid-2col">
-      <div class="calc-box reveal-element">
-        <span class="section-tag gold-tag"><i class="fa-solid fa-calculator"></i> Reward Engine</span>
-        <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary);">Staking Reward Projection Model</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Calculate long-term compound validator returns based on delegation size, monthly staking additions, and protocol rates.</p>
-        <form onsubmit="event.preventDefault(); window.calculateStakingGrowth();">
-          <div class="form-group">
-            <label for="calc-principal-input">Initial Delegation Capital ($)</label>
-            <input type="number" id="calc-principal-input" value="250000" required>
-          </div>
-          <div class="form-group">
-            <label for="calc-monthly-input">Monthly Staking Additions ($)</label>
-            <input type="number" id="calc-monthly-input" value="2500" required>
-          </div>
-          <div class="grid-2col" style="gap: 1rem; margin-bottom: 0;">
-            <div class="form-group">
-              <label for="calc-rate-input">Validator APY Return (%)</label>
-              <input type="number" id="calc-rate-input" value="9.5" step="0.1" required>
-            </div>
-            <div class="form-group">
-              <label for="calc-years-input">Horizon (Years)</label>
-              <input type="number" id="calc-years-input" value="15" required>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 1rem;">Project Rewards Yield</button>
-        </form>
-      </div>
-      
-      <div class="reveal-element" style="display: flex; flex-direction: column; justify-content: space-between;">
-        <div class="glass-card" style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 1.2rem; color: var(--cyan); margin-bottom: 0.5rem;"><i class="fa-solid fa-chart-line"></i> Yield Projection Results</h4>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Validator compound calculation executing dynamic compound reward intervals.</p>
-          <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem;">
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Estimated Total Rewards Value</span>
-            <h2 style="font-size: 2.2rem; color: var(--text-primary); font-weight: 700;" id="calc-result-display">$250,000.00</h2>
-          </div>
-        </div>
-        <img src="images/portfolio.webp" alt="Growth Projection Chart" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-cyan);">
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(37, 99, 235, 0.06) 0%, rgba(2, 6, 23, 1) 70%); border-top: 1px solid var(--border);">
-    <div class="container" style="text-align: center;">
-      <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-primary);">Ready to Secure On-Chain Yields?</h2>
-      <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2.5rem auto; font-size: 1.1rem;">Subscribe to our validator bulletins or schedule a secure consultation link with our node relayer engineers.</p>
-      
-      <form class="footer-newsletter-form" style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
-        <input type="email" placeholder="Your Email Address" required style="flex: 1; min-width: 250px; padding: 0.85rem 1.25rem; border-radius: 6px; background: #020617; border: 1px solid var(--border); color: var(--text-primary); font-size: 0.95rem; outline: none;">
-        <button type="submit" class="btn btn-gold">Subscribe</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
-          <span class="logo-text">Stack<span>ly</span></span>
-        </a>
-        <p class="footer-desc">Securing decentralized block production through institutional-grade validator networks.</p>
-        <div class="footer-socials">
-          <a href="#" class="footer-social-btn"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="footer-social-btn"><i class="fab fa-github"></i></a>
-          <a href="#" class="footer-social-btn"><i class="fab fa-discord"></i></a>
-        </div>
-      </div>
-      <div>
-        <h4 class="footer-title">Validation</h4>
-        <ul class="footer-links">
-          <li><a href="portfolio.html" class="footer-link">Active Validators</a></li>
-          <li><a href="services.html" class="footer-link">Delegation Tiers</a></li>
-          <li><a href="strategies.html" class="footer-link">Audit Bulletins</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-title">Platform</h4>
-        <ul class="footer-links">
-          <li><a href="about.html" class="footer-link">Consensus Lab</a></li>
-          <li><a href="contact.html" class="footer-link">Inquire Sync</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-title">Legal</h4>
-        <ul class="footer-links">
-          <li><a href="404.html" class="footer-link">Slashing Policy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Stackly Web3. All rights reserved.</p>
-      <p>Institutional Staking Provider</p>
-    </div>
-  </footer>
-
-  <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
-
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

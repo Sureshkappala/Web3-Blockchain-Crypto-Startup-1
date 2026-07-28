@@ -1,150 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register - Stackly Web3 Staking</title>
-  <meta name="description" content="Create your Stackly Web3 Staking account.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/auth.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create Account - Register for Stackly client portal access or partner profile.">
+    <title>Create Account | Stackly Web3 Validator Node</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="auth-page">
-  <div class="auth-container">
-    <div class="auth-left">
-      <div class="auth-brand">
-        <a href="index.html" class="logo">
-          <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
-          <span class="logo-text">Stack<span>ly</span></span>
-        </a>
-      </div>
-      <div class="auth-image">
-        <img src="images/hero.webp" alt="protocol engineerure">
-        <div class="auth-overlay"></div>
-        <div class="auth-quote">
-          <p>"Form follows function - that has been misunderstood. Form and function should be one."</p>
-          <span>— Frank Lloyd Wright</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="auth-right">
-      <div class="auth-form-wrapper">
-        <h1 class="auth-title">Create Account</h1>
-        <p class="auth-subtitle">Join Stackly Web3 Staking today</p>
-        
-        <form id="register-form" class="auth-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">First Name</label>
-              <div class="input-with-icon">
-                <i class="fas fa-user"></i>
-                <input type="text" class="form-input" placeholder="John" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Last Name</label>
-              <div class="input-with-icon">
-                <i class="fas fa-user"></i>
-                <input type="text" class="form-input" placeholder="Doe" required>
-              </div>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <div class="input-with-icon">
-              <i class="fas fa-envelope"></i>
-              <input type="email" class="form-input" placeholder="john@example.com" required>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label class="form-label">Phone Number</label>
-            <div class="input-with-icon">
-              <i class="fas fa-phone"></i>
-              <input type="tel" class="form-input" placeholder="+1 (234) 567-890">
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label class="form-label">Password</label>
-            <div class="input-with-icon">
-              <i class="fas fa-lock"></i>
-              <input type="password" class="form-input" placeholder="Create a password" required>
-              <button type="button" class="toggle-password">
-                <i class="fas fa-eye"></i>
-              </button>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label class="form-label">Confirm Password</label>
-            <div class="input-with-icon">
-              <i class="fas fa-lock"></i>
-              <input type="password" class="form-input" placeholder="Confirm your password" required>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label class="terms-checkbox">
-              <input type="checkbox" required>
-              <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
-            </label>
-          </div>
-          
-          <button type="submit" class="btn btn-gold btn-lg w-full">
-            <i class="fas fa-user-plus"></i> Create Account
-          </button>
-        </form>
-        
-        <div class="auth-divider">
-          <span>Or sign up with</span>
-        </div>
-        
-        <div class="social-login">
-         <a href="404.html" class="social-btn google">
-            <i class="fab fa-google"></i> Google
-          </a>
-          <a href="404.html" class="social-btn linkedin">
-            <i class="fab fa-linkedin-in"></i> LinkedIn
-          </a>
-        </div>
-        
-        <div class="auth-footer">
-          <p>Already have an account? <a href="login.html">Sign in</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+<body style="background-color: var(--bg-primary); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; padding: 2rem 1rem;">
 
-  <script>
-    // Toggle password visibility
-    document.querySelector('.toggle-password').addEventListener('click', function() {
-      const input = this.parentElement.querySelector('input');
-      const icon = this.querySelector('i');
-      
-      if (input.type === 'password') {
-        input.type = 'text';
-        icon.classList.remove('fa-eye');
-        icon.classList.add('fa-eye-slash');
-      } else {
-        input.type = 'password';
-        icon.classList.remove('fa-eye-slash');
-        icon.classList.add('fa-eye');
-      }
-    });
-    
-    // Form submission
-    document.getElementById('register-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Account created successfully! Welcome to Stackly Web3 Staking.');
-      window.location.href = 'login.html';
-    });
-  </script>
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-circle-wrap">
+            <div class="preloader-circle"></div>
+            <i class="fa-solid fa-cubes preloader-icon"></i>
+        </div>
+        <div class="preloader-logo">
+            <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 48px;">
+        </div>
+        <div class="preloader-percentage">0%</div>
+    </div>
+
+    <!-- BACK TO HOME BUTTON -->
+    <a href="index.html" class="back-to-home-btn"><i class="fa-solid fa-house"></i> Back to Home</a>
+
+    <!-- REGISTER CONTAINER -->
+    <div class="container" style="max-width: 520px; padding: 0; width: 100%;">
+        <div class="glass-card" style="padding: 2.75rem 2.25rem; text-align: center; border-right: 4px solid #b58a63;">
+            
+            <!-- LOGO & HEADING -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <img src="images/logo.webp" alt="Stackly Logo" class="logo-img" style="height: 38px; margin: 0 auto 1.25rem auto;">
+                <h2 style="font-size: 2rem; margin-bottom: 0.4rem; color: var(--text-light); font-family: serif;">Create Account</h2>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Register your client portal or agency partner profile.</p>
+            </div>
+
+            <!-- FORM -->
+            <form id="register-form" style="text-align: left;">
+                
+                <!-- FULL NAME -->
+                <div class="form-group">
+                    <label for="reg-name">Full Name</label>
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-user" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <input type="text" id="reg-name" placeholder="John Doe" style="padding-left: 2.75rem;" required>
+                    </div>
+                </div>
+
+                <!-- EMAIL & PHONE (2-COL GRID) -->
+                <div class="form-grid-2col">
+                    <div class="form-group">
+                        <label for="reg-email">Email Address</label>
+                        <div style="position: relative;">
+                            <i class="fa-solid fa-envelope" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                            <input type="email" id="reg-email" placeholder="john@example.com" style="padding-left: 2.75rem;" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-phone">Phone Number</label>
+                        <div style="position: relative;">
+                            <i class="fa-solid fa-phone" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                            <input type="tel" id="reg-phone" placeholder="1234567890" style="padding-left: 2.75rem;" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASSWORD & CONFIRM PASSWORD (2-COL GRID) -->
+                <div class="form-grid-2col">
+                    <div class="form-group">
+                        <label for="reg-pwd">Password</label>
+                        <div style="position: relative;">
+                            <i class="fa-solid fa-lock" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                            <input type="password" id="reg-pwd" placeholder="••••••••" style="padding-left: 2.75rem; padding-right: 2.5rem;" required>
+                            <button type="button" style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer;" onclick="togglePwd('reg-pwd', 'eye-pwd1')">
+                                <i class="fa-solid fa-eye" id="eye-pwd1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-pwd-confirm">Confirm Password</label>
+                        <div style="position: relative;">
+                            <i class="fa-solid fa-lock" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                            <input type="password" id="reg-pwd-confirm" placeholder="••••••••" style="padding-left: 2.75rem; padding-right: 2.5rem;" required>
+                            <button type="button" style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer;" onclick="togglePwd('reg-pwd-confirm', 'eye-pwd2')">
+                                <i class="fa-solid fa-eye" id="eye-pwd2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SELECT ROLE FIELD -->
+                <div class="form-group">
+                    <label for="reg-role">Select Role</label>
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-user-tag" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <select id="reg-role" style="padding-left: 2.75rem;" required>
+                            <option value="" disabled selected>Select Role</option>
+                            <option value="client">Private Investor / Family Office</option>
+                            <option value="advisor">Managing Fiduciary Advisor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- TERMS CHECKBOX -->
+                <div style="margin-bottom: 1.5rem; font-size: 0.85rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); cursor: pointer; text-transform: none; font-weight: 500;">
+                        <input type="checkbox" style="width: auto;" required> I agree to the <a href="404.html" style="color: var(--accent); font-weight: 600;">Terms & Conditions</a>
+                    </label>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem; font-size: 1.05rem; border-radius: var(--radius-sm); background: #b58a63 !important; color: #000 !important; border: none; font-weight: 700; text-shadow: none;">Register Account</button>
+
+            </form>
+
+            <!-- BOTTOM LOGIN LINK -->
+            <div style="text-align: center; margin-top: 1.75rem; font-size: 0.85rem; color: var(--text-muted);">
+                Already have an account? <a href="login.html" style="color: #10b981; font-weight: 700;">Login Here</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Real-time input filtering to block digits in name and non-digits in phone
+        document.getElementById('reg-name').addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+
+        document.getElementById('reg-phone').addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
+        function togglePwd(fieldId, eyeId) {
+            const field = document.getElementById(fieldId);
+            const icon = document.getElementById(eyeId);
+            if (field.type === 'password') {
+                field.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        document.getElementById('register-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('reg-name').value;
+            const phone = document.getElementById('reg-phone').value;
+            const pwd = document.getElementById('reg-pwd').value;
+            const confirm = document.getElementById('reg-pwd-confirm').value;
+            const role = document.getElementById('reg-role').value || 'client';
+
+            // Name check (letters & spaces only)
+            const nameRegex = /^[a-zA-Z\s]+$/;
+            if (!nameRegex.test(name)) {
+                window.showCustomAlert('Full Name must contain only letters.', 'error');
+                return;
+            }
+
+            // Phone check (digits only)
+            const phoneRegex = /^[0-9]+$/;
+            if (!phoneRegex.test(phone)) {
+                window.showCustomAlert('Phone Number must contain only digits.', 'error');
+                return;
+            }
+
+            // Password complexity check
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+            if (!passwordRegex.test(pwd)) {
+                window.showCustomAlert('Password must be at least 8 characters long and contain a combination of uppercase, lowercase, digits, and symbols.', 'error');
+                return;
+            }
+
+            if (pwd !== confirm) {
+                window.showCustomAlert('Passwords do not match. Please re-enter passwords.', 'error');
+                return;
+            }
+
+            localStorage.setItem('loggedInUserName', name.toUpperCase());
+            localStorage.setItem('loggedInUserRole', role);
+            window.showCustomAlert('Account Created Successfully! Redirecting to Portfolio Dashboard...', 'success');
+            setTimeout(() => {
+                window.location.href = 'studio-portal.html';
+            }, 1800);
+        });
+    </script>
 </body>
 </html>
