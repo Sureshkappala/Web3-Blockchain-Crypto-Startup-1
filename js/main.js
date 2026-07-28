@@ -364,8 +364,7 @@ function initFormValidations() {
                 return;
             }
 
-            window.showCustomAlert("Secure Broadcast complete! Your node consultation request has been dispatched to our consensus advisory team.", "success");
-            contactForm.reset();
+            window.location.href = '404.html';
         });
     }
 
@@ -373,8 +372,7 @@ function initFormValidations() {
     newsletterForms.forEach(form => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            window.showCustomAlert("Subscribed! You will receive our weekly protocol yield forecasts and security audit logs.", "success");
-            form.reset();
+            window.location.href = '404.html';
         });
     });
 }
