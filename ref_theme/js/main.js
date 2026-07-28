@@ -10,16 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroSlider();
   initTestimonialSlider();
   initSmoothScroll();
-
-  // Redirect mock form submissions (e.g. newsletter) to 404.html
-  document.querySelectorAll('form').forEach(form => {
-    if (form.id !== 'login-form' && form.id !== 'register-form' && form.id !== 'contact-form') {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        window.location.href = '404.html';
-      });
-    }
-  });
 });
 
 /* ========================================

@@ -3,73 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Stackly Web3 Staking</title>
-  <meta name="description" content="Login to your Stackly Web3 Staking account.">
+  <title>Register - Stackly Architecture</title>
+  <meta name="description" content="Create your Stackly Architecture account.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/auth.css">
 </head>
 <body class="auth-page">
   <div class="auth-container">
     <div class="auth-left">
       <div class="auth-brand">
-        <a href="index.html" class="logo">
-          <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
+        <a href="../index.html" class="logo">
+          <img src="../images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
           <span class="logo-text">Stack<span>ly</span></span>
         </a>
       </div>
       <div class="auth-image">
-        <img src="images/auth-bg.webp" alt="Architecture">
+        <img src="../images/auth-bg.webp" alt="Architecture">
         <div class="auth-overlay"></div>
         <div class="auth-quote">
-          <p>"Architecture should speak of its time and place, but yearn for timelessness."</p>
-          <span>— Frank Gehry</span>
+          <p>"Form follows function - that has been misunderstood. Form and function should be one."</p>
+          <span>— Frank Lloyd Wright</span>
         </div>
       </div>
     </div>
     
     <div class="auth-right">
       <div class="auth-form-wrapper">
-        <div class="back-button">
-          <a href="index.html" class="btn btn-outline btn-sm">
-            <i class="fas fa-arrow-left"></i> Back to Home
-          </a>
-        </div>
-        <h1 class="auth-title">Welcome Back</h1>
-        <p class="auth-subtitle">Sign in to access your account</p>
+        <h1 class="auth-title">Create Account</h1>
+        <p class="auth-subtitle">Join Stackly Architecture today</p>
         
-        <!-- Role Selection -->
-        <div class="role-selection">
-          <label class="role-option">
-            <input type="radio" name="role" value="client" checked>
-            <div class="role-card">
-              <div class="role-icon">
+        <form id="register-form" class="auth-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <div class="input-with-icon">
                 <i class="fas fa-user"></i>
+                <input type="text" class="form-input" placeholder="John" required>
               </div>
-              <span class="role-name">Client</span>
             </div>
-          </label>
-          <label class="role-option">
-            <input type="radio" name="role" value="admin">
-            <div class="role-card">
-              <div class="role-icon">
-                <i class="fas fa-shield-alt"></i>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <div class="input-with-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" class="form-input" placeholder="Doe" required>
               </div>
-              <span class="role-name">Admin</span>
             </div>
-          </label>
-        </div>
-        
-        <form id="login-form" class="auth-form">
+          </div>
+          
           <div class="form-group">
             <label class="form-label">Email Address</label>
             <div class="input-with-icon">
               <i class="fas fa-envelope"></i>
-              <input type="email" class="form-input" placeholder="Enter your email" required>
+              <input type="email" class="form-input" placeholder="john@example.com" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <div class="input-with-icon">
+              <i class="fas fa-phone"></i>
+              <input type="tel" class="form-input" placeholder="+1 (234) 567-890">
             </div>
           </div>
           
@@ -77,32 +75,39 @@
             <label class="form-label">Password</label>
             <div class="input-with-icon">
               <i class="fas fa-lock"></i>
-              <input type="password" class="form-input" placeholder="Enter your password" required>
+              <input type="password" class="form-input" placeholder="Create a password" required>
               <button type="button" class="toggle-password">
                 <i class="fas fa-eye"></i>
               </button>
             </div>
           </div>
           
-          <div class="form-options">
-            <label class="remember-me">
-              <input type="checkbox">
-              <span>Remember me</span>
+          <div class="form-group">
+            <label class="form-label">Confirm Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input type="password" class="form-input" placeholder="Confirm your password" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="terms-checkbox">
+              <input type="checkbox" required>
+              <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
             </label>
-            <a href="404.html" class="forgot-link">Forgot password?</a>
           </div>
           
           <button type="submit" class="btn btn-gold btn-lg w-full">
-            <i class="fas fa-sign-in-alt"></i> Sign In
+            <i class="fas fa-user-plus"></i> Create Account
           </button>
         </form>
         
         <div class="auth-divider">
-          <span>Or continue with</span>
+          <span>Or sign up with</span>
         </div>
         
         <div class="social-login">
-          <a href="404.html" class="social-btn google">
+         <a href="404.html" class="social-btn google">
             <i class="fab fa-google"></i> Google
           </a>
           <a href="404.html" class="social-btn linkedin">
@@ -111,7 +116,7 @@
         </div>
         
         <div class="auth-footer">
-          <p>Don't have an account? <a href="register.html">Sign up</a></p>
+          <p>Already have an account? <a href="login.html">Sign in</a></p>
         </div>
       </div>
     </div>
@@ -135,17 +140,10 @@
     });
     
     // Form submission
-    document.getElementById('login-form').addEventListener('submit', function(e) {
+    document.getElementById('register-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      const role = document.querySelector('input[name="role"]:checked').value;
-      
-      if (role === 'admin') {
-        
-         window.location.href = 'admindashbord.html';
-      } else {
-        
-         window.location.href = 'user.html';
-      }
+      alert('Account created successfully! Welcome to Stackly Architecture.');
+      window.location.href = 'login.html';
     });
   </script>
 </body>
