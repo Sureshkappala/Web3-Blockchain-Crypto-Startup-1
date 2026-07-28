@@ -1,12 +1,9 @@
-/* ========================================
-   STACKLY WEB3 STARTUP - GLOBAL JAVASCRIPT ENGINE
-======================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
     initPreloader();
     initCustomCursor();
     initScrollEffects();
     initNavbarDrawer();
+    initRevealAnimations();
     initCompoundCalculator();
 });
 
@@ -128,7 +125,7 @@ function initScrollEffects() {
         });
     }
 
-    // Initialize stats counters on scroll
+    // Initialize stats counters on scroll (fallback scroll listener)
     const counters = document.querySelectorAll('.counter-value');
     const speed = 200;
     let triggered = false;
@@ -230,4 +227,48 @@ function initCompoundCalculator() {
         const finalVal = compoundPrincipal + compoundAnnuity;
         display.textContent = '$' + finalVal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
     };
+}
+
+/* ========================================
+   6. REVEAL ANIMATIONS & COUNTERS
+======================================== */
+function initRevealAnimations() {
+    const revealElements = document.querySelectorAll('.reveal-element, .reveal-left, .reveal-right');
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    revealElements.forEach(elem => revealObserver.observe(elem));
+
+    const counterElements = document.querySelectorAll('.counter-value');
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = parseInt(entry.target.getAttribute('data-target')) || 0;
+                let current = 0;
+                const increment = Math.max(1, Math.ceil(target / 40));
+                const interval = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(interval);
+                    }
+                    entry.target.textContent = (target >= 1000) ? current.toLocaleString() : current;
+                }, 25);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counterElements.forEach(elem => counterObserver.observe(elem));
 }
