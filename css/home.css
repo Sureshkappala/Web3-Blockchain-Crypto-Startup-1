@@ -966,3 +966,32 @@
     font-size: 1rem;
   }
 }
+
+/* Hero Split Section Styling & Mobile Overrides */
+.hero-split-section .container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .hero-split-section .container {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+    text-align: center !important;
+  }
+  .hero-content-left {
+    text-align: center !important;
+  }
+  .hero-actions {
+    justify-content: center !important;
+  }
+  .hero-split-section {
+    padding-top: 8rem !important;
+    padding-bottom: 4rem !important;
+  }
+  .hero-content-left div {
+    justify-content: center !important;
+  }
+}
