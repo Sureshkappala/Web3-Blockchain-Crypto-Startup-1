@@ -3,378 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Stackly Web3 Staking</title>
-  <meta name="description" content="Explore our supported validator network telemetry of award-winning network validator pools from around the world.">
-  
-  <!-- Fonts -->
+  <title>Ecosystem | Stackly Web3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
-    <div class="navbar-container">
+    <div class="container navbar-container">
       <a href="index.html" class="logo">
-        <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
         <span class="logo-text">Stack<span>ly</span></span>
       </a>
-      
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="portfolio.html" class="nav-link active">Projects</a></li>
-        <li><a href="strategies.html" class="nav-link">Blog</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Ecosystem</a></li>
+        <li><a href="strategies.html" class="nav-link">Bulletins</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-      
       <div class="nav-actions">
         <a href="login.html" class="btn btn-outline btn-sm">Login</a>
         <button class="mobile-menu-btn" id="mobile-menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
   <!-- Page Header -->
-  <section class="page-header">
-    <div class="page-header-overlay"></div>
+  <header class="page-header">
     <div class="container">
-      <div class="page-header-content">
-        <p class="page-subtitle">Our Portfolio</p>
-        <h1 class="page-title">Featured Projects</h1>
-        <div class="breadcrumb">
-          <a href="index.html">Home</a>
-          <span>/</span>
-          <span>Projects</span>
+      <h1 class="page-title text-gradient">Supported Ecosystems</h1>
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Ecosystem</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Ecosystem Grids Redesign -->
+  <section class="projects-grid-section section" style="padding: 6rem 0;">
+    <div class="container">
+      
+      <div class="grid-3col reveal-element" style="gap: 2rem;">
+        <!-- Node Card 1 -->
+        <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600; display: inline-block; margin-bottom: 1rem;">ACTIVE NODE</span>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;"><i class="fa-brands fa-ethereum" style="color: var(--cyan); margin-right: 0.5rem;"></i> Ethereum Validator</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem;">Running bare-metal validator relays in Frankfurt cluster. Yield rewards optimized via Flashbots MEV builder relay.</p>
+          </div>
+          <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+            <li style="display: flex; justify-content: space-between;"><span>Consensus Ping:</span> <strong style="color: var(--text-primary);">8.5ms</strong></li>
+            <li style="display: flex; justify-content: space-between;"><span>Proposed Height:</span> <strong style="color: var(--text-primary);">#4,901,842</strong></li>
+            <li style="display: flex; justify-content: space-between;"><span>Staked Value:</span> <strong style="color: var(--cyan);">$480M USD</strong></li>
+          </ul>
+        </div>
+        <!-- Node Card 2 -->
+        <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600; display: inline-block; margin-bottom: 1rem;">ACTIVE NODE</span>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-network-wired" style="color: var(--cyan); margin-right: 0.5rem;"></i> Solana Validation</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem;">Co-located validator node utilizing Jito-Solana client. Active double-sign security monitoring safeguards validator signature relays.</p>
+          </div>
+          <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+            <li style="display: flex; justify-content: space-between;"><span>Consensus Ping:</span> <strong style="color: var(--text-primary);">6.2ms</strong></li>
+            <li style="display: flex; justify-content: space-between;"><span>Proposed Height:</span> <strong style="color: var(--text-primary);">#184,902,112</strong></li>
+            <li style="display: flex; justify-content: space-between;"><span>Staked Value:</span> <strong style="color: var(--cyan);">$320M USD</strong></li>
+          </ul>
+        </div>
+        <!-- Node Card 3 -->
+        <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600; display: inline-block; margin-bottom: 1rem;">ACTIVE NODE</span>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-cubes" style="color: var(--cyan); margin-right: 0.5rem;"></i> Cosmos IBC Relayer</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.5rem;">Validator node securing multi-chain hubs. Programmatic hardware relays guarantee anti-slashing thresholds.</p>
+          </div>
+          <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+            <li style="display: flex; justify-content: space-between;"><span>Consensus Ping:</span> <strong style="color: var(--text-primary);">12.5ms</strong></li>
+            <li style="display: flex; justify-content: space-between;"><span>Proposed Height:</span> <strong style="color: var(--text-primary);">#14,921,802</strong></li>
+            <li style="display: flex; justify-content: space-between;"><span>Staked Value:</span> <strong style="color: var(--cyan);">$140M USD</strong></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Projects Filter -->
-    <section class="projects-filter section">
-      <div class="container">
-        <div class="filter-tabs">
-         <a href="#" class="filter-tab active" data-filter="all">All Projects</a>
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Grid -->
-    <section class="projects-grid-section section">
-      <div class="container">
-        <div class="projects-grid-full">
-          <!-- Project 1 -->
-          <div class="project-card-full residential">
-            <div class="project-image">
-              <img src="images/success.webp" alt="Horizon Tower">
-              <div class="project-overlay">
-                <span class="project-category">Commercial</span>
-                <h3 class="project-title">Horizon Tower</h3>
-                <p class="project-location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
-                <a href="404.html" class="project-link">
-                  View Details <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-details">
-              <div class="project-meta">
-                <span class="meta-item"><i class="fas fa-calendar"></i> 2024</span>
-                <span class="meta-item"><i class="fas fa-ruler-combined"></i> 50,000 sq ft</span>
-                <span class="meta-item"><i class="fas fa-clock"></i> 18 months</span>
-              </div>
-              <p class="project-description">
-                A modern telemetry cluster featuring double-sign protection elements and innovative protocol engineerural solutions for urban living.
-              </p>
-              <div class="project-features">
-                <span class="feature-tag">Sustainable Design</span>
-                <span class="feature-tag">Mixed-Use</span>
-                <span class="feature-tag">Smart Building</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="project-card-full residential">
-            <div class="project-image">
-              <img src="images/market.webp" alt="Villa Serenity">
-              <div class="project-overlay">
-                <span class="project-category">Residential</span>
-                <h3 class="project-title">Villa Serenity</h3>
-                <p class="project-location"><i class="fas fa-map-marker-alt"></i> Malibu, USA</p>
-                <a href="404.html" class="project-link">
-                  View Details <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-details">
-              <div class="project-meta">
-                <span class="meta-item"><i class="fas fa-calendar"></i> 2023</span>
-                <span class="meta-item"><i class="fas fa-ruler-combined"></i> 8,500 sq ft</span>
-                <span class="meta-item"><i class="fas fa-clock"></i> 12 months</span>
-              </div>
-              <p class="project-description">
-                A luxurious beachfront residence that seamlessly blends indoor and outdoor living with panoramic ocean views.
-              </p>
-              <div class="project-features">
-                <span class="feature-tag">Luxury Living</span>
-                <span class="feature-tag">Oceanfront</span>
-                <span class="feature-tag">Modern Design</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project-card-full cultural">
-            <div class="project-image">
-              <img src="images/portfolio.webp" alt="Art Museum">
-              <div class="project-overlay">
-                <span class="project-category">Cultural</span>
-                <h3 class="project-title">Contemporary Art Museum</h3>
-                <p class="project-location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
-                <a href="404.html" class="project-link">
-                  View Details <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-details">
-              <div class="project-meta">
-                <span class="meta-item"><i class="fas fa-calendar"></i> 2023</span>
-                <span class="meta-item"><i class="fas fa-ruler-combined"></i> 25,000 sq ft</span>
-                <span class="meta-item"><i class="fas fa-clock"></i> 24 months</span>
-              </div>
-              <p class="project-description">
-                A cutting-edge museum space designed to showcase contemporary art with flexible exhibition areas and natural lighting.
-              </p>
-              <div class="project-features">
-                <span class="feature-tag">Cultural Heritage</span>
-                <span class="feature-tag">Flexible Spaces</span>
-                <span class="feature-tag">Natural Light</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div class="project-card-full hospitality">
-            <div class="project-image">
-              <img src="images/success.webp" alt="Azure Resort">
-              <div class="project-overlay">
-                <span class="project-category">Hospitality</span>
-                <h3 class="project-title">Azure Resort & Spa</h3>
-                <p class="project-location"><i class="fas fa-map-marker-alt"></i> Maldives</p>
-                <a href="404.html" class="project-link">
-                  View Details <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-details">
-              <div class="project-meta">
-                <span class="meta-item"><i class="fas fa-calendar"></i> 2024</span>
-                <span class="meta-item"><i class="fas fa-ruler-combined"></i> 15,000 sq ft</span>
-                <span class="meta-item"><i class="fas fa-clock"></i> 16 months</span>
-              </div>
-              <p class="project-description">
-                An eco-luxury resort featuring overwater villas and sustainable design integrated with the natural environment.
-              </p>
-              <div class="project-features">
-                <span class="feature-tag">Eco-Luxury</span>
-                <span class="feature-tag">Overwater Villas</span>
-                <span class="feature-tag">Sustainability</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="project-card-full office">
-            <div class="project-image">
-              <img src="images/about.webp" alt="Tech Hub">
-              <div class="project-overlay">
-                <span class="project-category">Office</span>
-                <h3 class="project-title">Innovation Tech Hub</h3>
-                <p class="project-location"><i class="fas fa-map-marker-alt"></i> Singapore</p>
-                <a href="404.html" class="project-link">
-                  View Details <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-details">
-              <div class="project-meta">
-                <span class="meta-item"><i class="fas fa-calendar"></i> 2024</span>
-                <span class="meta-item"><i class="fas fa-ruler-combined"></i> 35,000 sq ft</span>
-                <span class="meta-item"><i class="fas fa-clock"></i> 14 months</span>
-              </div>
-              <p class="project-description">
-                A collaborative workspace designed for tech innovation with flexible layouts and state-of-the-art facilities.
-              </p>
-              <div class="project-features">
-                <span class="feature-tag">Tech Workspace</span>
-                <span class="feature-tag">Flexible Design</span>
-                <span class="feature-tag">Modern Amenities</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="project-card-full commercial">
-            <div class="project-image">
-              <img src="images/about.webp" alt="Urban Plaza">
-              <div class="project-overlay">
-                <span class="project-category">Commercial</span>
-                <h3 class="project-title">Urban Plaza Complex</h3>
-                <p class="project-location"><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</p>
-                <a href="404.html" class="project-link">
-                  View Details <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-details">
-              <div class="project-meta">
-                <span class="meta-item"><i class="fas fa-calendar"></i> 2023</span>
-                <span class="meta-item"><i class="fas fa-ruler-combined"></i> 75,000 sq ft</span>
-                <span class="meta-item"><i class="fas fa-clock"></i> 22 months</span>
-              </div>
-              <p class="project-description">
-                A mixed-use development combining retail, office, and residential spaces in the heart of the city.
-              </p>
-              <div class="project-features">
-                <span class="feature-tag">Mixed-Use</span>
-                <span class="feature-tag">Urban Design</span>
-                <span class="feature-tag">Sustainable</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="cta-overlay"></div>
-      <div class="container">
-        <div class="cta-content reveal">
-          <h2 class="cta-title">Ready to Start Your Project?</h2>
-          <p class="cta-desc">
-            Let's discuss your vision and create something extraordinary together.
-          </p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-gold btn-lg">
-              Start a Project <i class="fas fa-arrow-right"></i>
-            </a>
-            <a href="services.html" class="btn btn-outline btn-lg">
-              Our Services
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="footer-logo">
-            <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
-            <span class="logo-text">Stack<span>ly</span></span>
-          </a>
-          <p class="footer-desc">
-            Creating timeless consensus protocols that inspire and transform the way people live, work, and experience the world.
-          </p>
-          <div class="footer-social">
-            <a href="404.html" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-pinterest"></i></a>
-          </div>
-        </div>
-        
-        <div class="footer-column">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="services.html" class="footer-link">Services</a></li>
-            <li><a href="portfolio.html" class="footer-link">Projects</a></li>
-            <li><a href="strategies.html" class="footer-link">Blog</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-column">
-          <h4 class="footer-title">Services</h4>
-          <ul class="footer-links">
-            <li><a href="services.html" class="footer-link">consensus delegation</a></li>
-            <li><a href="services.html" class="footer-link">Interior Design</a></li>
-            <li><a href="services.html" class="footer-link">Landscape Design</a></li>
-            <li><a href="services.html" class="footer-link">Urban Planning</a></li>
-            <li><a href="services.html" class="footer-link">Consultation</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-column">
-          <h4 class="footer-title">Contact</h4>
-          <ul class="footer-links">
-            <li><a href="contact.html" class="footer-link">Get in Touch</a></li>
-            <li><span class="footer-link"><i class="fas fa-map-marker-alt"></i> 123 Design Ave, NY 10001</span></li>
-            <li><span class="footer-link"><i class="fas fa-phone"></i> +1 (234) 567-890</span></li>
-            <li><span class="footer-link"><i class="fas fa-envelope"></i> info@stackly.com</span></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p class="footer-copyright">© 2026 Stackly Web3 Staking. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="404.html">Privacy Policy</a>
-          <a href="404.html">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
-  <script>
-    // Project filter functionality
-    const filterTabs = document.querySelectorAll('.filter-tab');
-    const projectCards = document.querySelectorAll('.project-card-full');
-
-    filterTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Remove active class from all tabs
-        filterTabs.forEach(t => t.classList.remove('active'));
-        // Add active class to clicked tab
-        tab.classList.add('active');
-
-        const filter = tab.dataset.filter;
-
-        projectCards.forEach(card => {
-          if (filter === 'all' || card.classList.contains(filter)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>

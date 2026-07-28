@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Stackly Web3 Staking</title>
-  <meta name="description" content="Explore our comprehensive validator staking modules - from design to completion.">
-  
+  <title>Delegation Tiers | Stackly Web3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,18 +12,18 @@
   <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar" id="navbar">
-    <div class="navbar-container">
+    <div class="container navbar-container">
       <a href="index.html" class="logo">
-        <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
         <span class="logo-text">Stack<span>ly</span></span>
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link active">Services</a></li>
-        <li><a href="portfolio.html" class="nav-link">Projects</a></li>
-        <li><a href="strategies.html" class="nav-link">Blog</a></li>
+        <li><a href="portfolio.html" class="nav-link">Ecosystem</a></li>
+        <li><a href="strategies.html" class="nav-link">Bulletins</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-actions">
@@ -37,223 +35,140 @@
     </div>
   </nav>
 
-  <main>
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="page-header-bg"></div>
-      <div class="container">
-        <div class="page-header-content reveal">
-          <p class="page-subtitle">What We Do</p>
-          <h1 class="page-title">Our <span class="text-gradient">Services</span></h1>
-          <nav class="breadcrumb">
-            <a href="index.html">Home</a>
-            <i class="fas fa-chevron-right"></i>
-            <span>Services</span>
-          </nav>
-        </div>
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title text-gradient">Delegation Tiers</h1>
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Services</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Delegation Tiers -->
+  <section class="services-pricing section" style="padding: 6rem 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Delegation Tiers</p>
+        <h2 class="section-title">Validator Delegation Modules</h2>
+        <div class="line line-center"></div>
+        <p class="section-desc">Flexible staking modules customized for protocol treasuries and LPs.</p>
       </div>
-    </section>
 
-    <!-- Services Grid -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-subtitle">Comprehensive Solutions</p>
-          <h2 class="section-title">protocol engineerure & Design Services</h2>
-          <div class="line line-center"></div>
-          <p class="section-desc">
-            From initial concept to final construction, we provide end-to-end validator staking modules tailored to your vision.
-          </p>
+      <div class="grid-3col reveal-element" style="gap: 2rem; margin-top: 3rem;">
+        <!-- Tier 1 -->
+        <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(6, 182, 212, 0.15); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+          <div>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Core Validator</h3>
+            <div style="font-size: 1.8rem; font-weight: 700; color: var(--cyan); margin-bottom: 1.5rem; font-family: monospace;">2.5% Fee</div>
+            <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.5rem;"></i> Native delegation support</li>
+              <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.5rem;"></i> 99.9% uptime SLA</li>
+              <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.5rem;"></i> Non-custodial keys</li>
+            </ul>
+          </div>
+          <a href="404.html" class="btn btn-outline btn-sm w-full" style="margin-top: 2rem;">Delegate Now</a>
         </div>
 
-        <div class="services-detailed">
-          <div class="service-detail-card reveal stagger-1">
-            <div class="service-detail-image">
-              <img src="images/hero.webp" alt="consensus delegation">
-            </div>
-            <div class="service-detail-content">
-              <div class="service-icon-large">
-                <i class="fas fa-building"></i>
-              </div>
-              <h3>consensus delegation</h3>
-              <p>Our consensus delegation services encompass everything from initial sketches to detailed construction documents. We create innovative, functional, and aesthetically pleasing designs that meet your specific needs and exceed expectations.</p>
-              <ul class="service-features-list">
-                <li><i class="fas fa-check"></i> Conceptual Design</li>
-                <li><i class="fas fa-check"></i> Schematic Design</li>
-                <li><i class="fas fa-check"></i> Design Development</li>
-                <li><i class="fas fa-check"></i> Construction Documents</li>
-                <li><i class="fas fa-check"></i> 3D Visualization</li>
-              </ul>
-              <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-            </div>
+        <!-- Tier 2 -->
+        <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(6, 182, 212, 0.15); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+          <div>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Sovereign Fiduciary</h3>
+            <div style="font-size: 1.8rem; font-weight: 700; color: var(--cyan); margin-bottom: 1.5rem; font-family: monospace;">5.0% Fee</div>
+            <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.5rem;"></i> Native delegation support</li>
+              <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.5rem;"></i> 99.9% uptime SLA</li>
+              <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.5rem;"></i> Flashbots relay building</li>
+            </ul>
           </div>
-
-          <div class="service-detail-card reverse reveal stagger-2">
-            <div class="service-detail-image">
-              <img src="images/market.webp" alt="Interior Design">
-            </div>
-            <div class="service-detail-content">
-              <div class="service-icon-large">
-                <i class="fas fa-couch"></i>
-              </div>
-              <h3>Interior Design</h3>
-              <p>Transform your interior spaces with our expert design team. We create harmonious environments that reflect your personality while maximizing functionality and comfort.</p>
-              <ul class="service-features-list">
-                <li><i class="fas fa-check"></i> Space Planning</li>
-                <li><i class="fas fa-check"></i> Material Selection</li>
-                <li><i class="fas fa-check"></i> Furniture Design</li>
-                <li><i class="fas fa-check"></i> Lighting Design</li>
-                <li><i class="fas fa-check"></i> Custom Millwork</li>
-              </ul>
-              <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-            </div>
-          </div>
-
-          <div class="service-detail-card reveal stagger-3">
-            <div class="service-detail-image">
-              <img src="images/portfolio.webp" alt="Landscape Design">
-            </div>
-            <div class="service-detail-content">
-              <div class="service-icon-large">
-                <i class="fas fa-tree"></i>
-              </div>
-              <h3>Landscape Design</h3>
-              <p>Our landscape protocol engineerure services create outdoor spaces that complement your protocol engineerure and enhance the natural environment. From gardens to urban plazas, we design sustainable landscapes.</p>
-              <ul class="service-features-list">
-                <li><i class="fas fa-check"></i> Site Analysis</li>
-                <li><i class="fas fa-check"></i> Garden Design</li>
-                <li><i class="fas fa-check"></i> Hardscape Planning</li>
-                <li><i class="fas fa-check"></i> Irrigation Systems</li>
-                <li><i class="fas fa-check"></i> Native Plant Selection</li>
-              </ul>
-              <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-            </div>
-          </div>
-
-          <div class="service-detail-card reverse reveal stagger-4">
-            <div class="service-detail-image">
-              <img src="images/success.webp" alt="Urban Planning">
-            </div>
-            <div class="service-detail-content">
-              <div class="service-icon-large">
-                <i class="fas fa-city"></i>
-              </div>
-              <h3>Urban Planning</h3>
-              <p>We develop comprehensive urban plans that balance growth with sustainability. Our approach considers community needs, environmental impact, and long-term viability.</p>
-              <ul class="service-features-list">
-                <li><i class="fas fa-check"></i> Master Planning</li>
-                <li><i class="fas fa-check"></i> Zoning Analysis</li>
-                <li><i class="fas fa-check"></i> Feasibility Studies</li>
-                <li><i class="fas fa-check"></i> Community Engagement</li>
-                <li><i class="fas fa-check"></i> Infrastructure Planning</li>
-              </ul>
-              <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="section process-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-subtitle">How We Work</p>
-          <h2 class="section-title">Our Design Process</h2>
-          <div class="line line-center"></div>
+          <a href="404.html" class="btn btn-gold btn-sm w-full" style="margin-top: 2rem;">Delegate Now</a>
         </div>
 
-        <div class="process-steps">
-          <div class="process-step reveal stagger-1">
-            <div class="step-number">01</div>
-            <div class="step-icon"><i class="fas fa-comments"></i></div>
-            <h4>Discovery</h4>
-            <p>We begin by understanding your vision, requirements, and goals through in-depth consultations.</p>
+        <!-- Tier 3 -->
+        <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(6, 182, 212, 0.15); display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+          <div>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Enterprise Multi-Sig</h3>
+            <div style="font-size: 1.8rem; font-weight: 700; color: var(--cyan); margin-bottom: 1.5rem; font-family: monospace;">8.0% Fee</div>
+            <ul style="list-style: none; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.5rem;"></i> Native delegation support</li>
+              <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.5rem;"></i> 99.99% uptime SLA</li>
+              <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.5rem;"></i> Slashing insurance protection</li>
+            </ul>
           </div>
-          <div class="process-step reveal stagger-2">
-            <div class="step-number">02</div>
-            <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
-            <h4>Concept</h4>
-            <p>Our team develops initial concepts and sketches that capture the essence of your project.</p>
-          </div>
-          <div class="process-step reveal stagger-3">
-            <div class="step-number">03</div>
-            <div class="step-icon"><i class="fas fa-drafting-compass"></i></div>
-            <h4>Design</h4>
-            <p>We refine the concept into detailed designs with 3D visualizations and material selections.</p>
-          </div>
-          <div class="process-step reveal stagger-4">
-            <div class="step-number">04</div>
-            <div class="step-icon"><i class="fas fa-hard-hat"></i></div>
-            <h4>Build</h4>
-            <p>We oversee construction to ensure the design is executed to the highest standards.</p>
-          </div>
+          <a href="404.html" class="btn btn-outline btn-sm w-full" style="margin-top: 2rem;">Delegate Now</a>
         </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="cta-overlay"></div>
-      <div class="container">
-        <div class="cta-content reveal">
-          <h2 class="cta-title">Ready to Start Your Project?</h2>
-          <p class="cta-desc">Contact us today for a free consultation and let's bring your vision to life.</p>
-          <a href="contact.html" class="btn btn-gold btn-lg">Schedule Consultation</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="footer-logo">
-            <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
-            <span class="logo-text">Stack<span>ly</span></span>
-          </a>
-          <p class="footer-desc">Creating timeless consensus protocols.</p>
-          <div class="footer-social">
-            <a href="404.html" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-        <div class="footer-column">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="about.html" class="footer-link">About</a></li>
-            <li><a href="services.html" class="footer-link">Services</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4 class="footer-title">Services</h4>
-          <ul class="footer-links">
-            <li><a href="404.html" class="footer-link">protocol engineerure</a></li>
-            <li><a href="404.html" class="footer-link">Interior</a></li>
-            <li><a href="404.html" class="footer-link">Landscape</a></li>
-            <li><a href="404.html" class="footer-link">Planning</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4 class="footer-title">Contact</h4>
-          <ul class="footer-links">
-            <li><span class="footer-link"><i class="fas fa-phone"></i> +1 (234) 567-890</span></li>
-            <li><span class="footer-link"><i class="fas fa-envelope"></i> info@stackly.com</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright">© 2026 Stackly Web3 Staking. All rights reserved.</p>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- Interactive Telemetry Console -->
+  <section class="services-details section" style="padding: 6rem 0; background: rgba(11, 19, 41, 0.4); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Real-Time Monitor</p>
+        <h2 class="section-title">Active Validator Telemetry Panel</h2>
+        <div class="line line-center"></div>
+        <p class="section-desc">Observe the live block height proposal queue and validator signature load telemetry details.</p>
+      </div>
+
+      <div class="glass-card" style="padding: 3rem 2rem; border-color: rgba(6, 182, 212, 0.2); margin-top: 3rem; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+        <div class="grid-2col" style="gap: 3rem; align-items: center;">
+          <div style="text-align: left;">
+            <span class="badge-status status-active" style="background: rgba(22, 163, 74, 0.15); color: #10b981; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; display: inline-block; margin-bottom: 1.5rem;">DEVNET STABLE</span>
+            <h3 style="font-size: 1.8rem; color: var(--text-primary); margin-bottom: 1rem;">Validator Node Console</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Deploy mock transaction loads to test signature Relayer failover speeds and anti-double-sign vault pings.</p>
+            
+            <div style="display: flex; gap: 1rem;">
+              <button class="btn btn-gold btn-sm" id="btn-trigger-block">Simulate Block Proposal</button>
+              <a href="404.html" class="btn btn-outline btn-sm">Export API Keys</a>
+            </div>
+          </div>
+          
+          <div style="background: #020617; border-radius: 8px; border: 1px solid var(--border); padding: 2rem; font-family: monospace; font-size: 0.8rem; color: var(--text-secondary); min-height: 250px; text-align: left; overflow: hidden; position: relative;">
+            <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
+              <span style="color: var(--text-primary); font-weight: 700;">Live Proposer Logs</span>
+              <span style="color: var(--gold);" id="block-counter">Block #1409214</span>
+            </div>
+            <div id="console-logs-box" style="display: flex; flex-direction: column; gap: 0.5rem; line-height: 1.6;">
+              <p style="color: #10b981;"><span style="color: var(--text-muted);">[18:22:15]</span> HSM Signature Relay Active</p>
+              <p><span style="color: var(--text-muted);">[18:22:18]</span> Proposed Block validator signature verified</p>
+              <p><span style="color: var(--text-muted);">[18:22:20]</span> Block payload synced successfully</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('btn-trigger-block');
+        const logsBox = document.getElementById('console-logs-box');
+        const blockCounter = document.getElementById('block-counter');
+        let height = 1409214;
+
+        if (btn && logsBox && blockCounter) {
+          btn.addEventListener('click', () => {
+            height += 1;
+            blockCounter.textContent = 'Block #' + height;
+            
+            const now = new Date().toTimeString().split(' ')[0];
+            const newLog = document.createElement('p');
+            newLog.style.color = '#d97706';
+            newLog.innerHTML = '<span style="color: #64748b;">[' + now + ']</span> Block #' + height + ' proposed & signatures verified (latency: 6.2ms)';
+            
+            logsBox.appendChild(newLog);
+            
+            // Keep logs trimmed
+            if (logsBox.children.length > 5) {
+              logsBox.removeChild(logsBox.firstChild);
+            }
+          });
+        }
+      });
+    </script>
+  </section>
 
   <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
 </body>
 </html>

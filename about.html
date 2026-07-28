@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consensus Advisory - Stackly Web3 Staking</title>
-  <meta name="description" content="Learn about Stackly Web3 Staking - Our story, mission, and the team behind our award-winning designs.">
-  
+  <title>About Us | Stackly Web3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,18 +12,18 @@
   <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar" id="navbar">
-    <div class="navbar-container">
+    <div class="container navbar-container">
       <a href="index.html" class="logo">
-        <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
         <span class="logo-text">Stack<span>ly</span></span>
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="about.html" class="nav-link active">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="portfolio.html" class="nav-link">Projects</a></li>
-        <li><a href="strategies.html" class="nav-link">Blog</a></li>
+        <li><a href="portfolio.html" class="nav-link">Ecosystem</a></li>
+        <li><a href="strategies.html" class="nav-link">Bulletins</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-actions">
@@ -37,256 +35,111 @@
     </div>
   </nav>
 
-  <main>
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="page-header-bg"></div>
-      <div class="container">
-        <div class="page-header-content reveal">
-          <p class="page-subtitle">Consensus Advisory</p>
-          <h1 class="page-title">Our <span class="text-gradient">Story</span></h1>
-          <nav class="breadcrumb">
-            <a href="index.html">Home</a>
-            <i class="fas fa-chevron-right"></i>
-            <span>About</span>
-          </nav>
-        </div>
-      </div>
-    </section>
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title text-gradient">Consensus Lab</h1>
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>About</span>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Story Section -->
-    <section class="section">
-      <div class="container">
-        <div class="story-grid">
-          <div class="story-image reveal-left">
-            <img src="images/about.webp" alt="Validator Infrastructure Story">
+  <!-- Validator Timeline & Story -->
+  <section class="about-story section" style="padding: 6rem 0;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;">
+      <div class="about-story-img reveal-left">
+        <img src="images/about.webp" alt="Node Telemetry System" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-cyan);">
+      </div>
+      <div class="about-story-content reveal-right" style="text-align: left;">
+        <span class="section-tag gold-tag" style="margin-bottom: 1.5rem; display: inline-flex;"><i class="fa-solid fa-timeline"></i> Consensus Timeline</span>
+        <h2 style="font-size: 2.2rem; color: var(--text-primary); margin-bottom: 1.5rem;">Anti-Slashing Research Lab</h2>
+        <p style="color: var(--text-secondary); line-height: 1.75; margin-bottom: 2rem;">Stackly was founded in 2021 by a team of core developers and cryptography researchers. We realized that institutional staking was hindered by custodial risk, leading us to design the first anti-double-sign validator architecture.</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div style="border-left: 2px solid var(--gold); padding-left: 1.5rem; position: relative;">
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase;">2021 - Genesis</span>
+            <h4 style="font-size: 1.05rem; color: var(--text-primary); margin: 0.25rem 0;">Validator Node Launch</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Deployed bare-metal consensus nodes running on dedicated network servers in Zurich.</p>
           </div>
-          <div class="story-content reveal-right">
-            <p class="section-subtitle">Since 1999</p>
-            <h2 class="section-title">Building Dreams for Over 25 Years</h2>
-            <div class="line"></div>
-            <p class="story-text">
-              Stackly Web3 Staking began as a small studio with a big vision: to create spaces that inspire and transform. Founded by visionary consensus nodes core dev consensus researchers, our firm has grown from a two-person operation to a globally recognized design powerhouse.
-            </p>
-            <p class="story-text">
-              Our journey has been marked by innovation, sustainability, and an unwavering commitment to excellence. From residential homes to commercial landmarks, each project tells a unique story of collaboration, creativity, and craftsmanship.
-            </p>
-            <div class="story-stats">
-              <div class="story-stat">
-                <span class="stat-num">25+</span>
-                <span class="stat-label">Years Experience</span>
-              </div>
-              <div class="story-stat">
-                <span class="stat-num">350+</span>
-                <span class="stat-label">Projects Done</span>
-              </div>
-              <div class="story-stat">
-                <span class="stat-num">48</span>
-                <span class="stat-label">Awards Won</span>
-              </div>
-            </div>
+          <div style="border-left: 2px solid var(--gold); padding-left: 1.5rem; position: relative;">
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--gold); text-transform: uppercase;">2023 - Scaling</span>
+            <h4 style="font-size: 1.05rem; color: var(--text-primary); margin: 0.25rem 0;">HSM Integration</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Integrated hardware signature keys to reject custody of delegator keys.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Mission & Vision -->
-    <section class="section mission-section">
-      <div class="container">
-        <div class="mv-grid">
-          <div class="mv-card reveal-left">
-            <div class="mv-icon">
-              <i class="fas fa-bullseye"></i>
-            </div>
-            <h3 class="mv-title">Our Mission</h3>
-            <p class="mv-text">
-              To create validator models that harmonize with their environment, enhance human experience, and stand the test of time. We believe in sustainable practices that respect both nature and community.
-            </p>
-            <ul class="mv-list">
-              <li><i class="fas fa-check"></i> Sustainable design practices</li>
-              <li><i class="fas fa-check"></i> Client-centered approach</li>
-              <li><i class="fas fa-check"></i> Innovation in every project</li>
-            </ul>
-          </div>
-          <div class="mv-card reveal-right">
-            <div class="mv-icon">
-              <i class="fas fa-eye"></i>
-            </div>
-            <h3 class="mv-title">Our Vision</h3>
-            <p class="mv-text">
-              To be the world's most innovative and sustainable protocol engineerure firm, recognized for creating spaces that inspire generations and contribute positively to the built environment.
-            </p>
-            <ul class="mv-list">
-              <li><i class="fas fa-check"></i> Global design leadership</li>
-              <li><i class="fas fa-check"></i> Environmental stewardship</li>
-              <li><i class="fas fa-check"></i> Community empowerment</li>
-            </ul>
-          </div>
+  <!-- Consensus Council & Devs -->
+  <section class="team section" style="padding: 6rem 0; background: rgba(11, 19, 41, 0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Consensus Engineers</p>
+        <h2 class="section-title">Cryptographic Council</h2>
+        <div class="line line-center"></div>
+        <p class="section-desc">DevSecOps and solidity auditing leads maintaining node validator safety limits.</p>
+      </div>
+
+      <div class="grid-3col reveal-element" style="gap: 2rem; margin-top: 3rem;">
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.15); text-align: center; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+          <img src="images/advisor1.webp" alt="Marcus Vance" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid var(--gold);">
+          <h4 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.25rem;">Marcus Vance</h4>
+          <span style="font-size: 0.8rem; color: var(--gold); text-transform: uppercase; font-weight: 700;">Infrastructure Relayer Lead</span>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; line-height: 1.5;">Former Ethereum relayer researcher configuring low-latency node networks.</p>
+        </div>
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.15); text-align: center; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+          <img src="images/advisor2.webp" alt="Sarah Jenkins" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid var(--gold);">
+          <h4 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.25rem;">Sarah Jenkins</h4>
+          <span style="font-size: 0.8rem; color: var(--gold); text-transform: uppercase; font-weight: 700;">Solidity Auditing Lead</span>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; line-height: 1.5;">Smart contract vulnerability lead checking gas limits and reentrancy bugs.</p>
+        </div>
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(6, 182, 212, 0.15); text-align: center; background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
+          <img src="images/advisor1.webp" alt="David Ross" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid var(--gold);">
+          <h4 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.25rem;">David Ross</h4>
+          <span style="font-size: 0.8rem; color: var(--gold); text-transform: uppercase; font-weight: 700;">Yield Strategist</span>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; line-height: 1.5;">Analyzing validator priority fee ratios and gas-rebalancing yields.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Team Section -->
-    <section class="section team-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-subtitle">Consensus Engineers</p>
-          <h2 class="section-title">Meet The Experts</h2>
-          <div class="line line-center"></div>
-          <p class="section-desc">
-            Our talented team of consensus nodes, designers, and planners bring diverse expertise and creative vision to every project.
-          </p>
-        </div>
-
-        <div class="team-grid">
-          <div class="team-card reveal stagger-1">
-            <div class="team-image">
-              <img src="images/advisor1.webp" alt="Team Member">
-              <div class="team-social">
-                <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
-                <a href="404.html"><i class="fab fa-twitter"></i></a>
-              </div>
-            </div>
-            <div class="team-info">
-              <h4>John Stackly</h4>
-              <span>Founder & CEO</span>
-            </div>
-          </div>
-
-          <div class="team-card reveal stagger-2">
-            <div class="team-image">
-              <img src="images/advisor2.webp" alt="Team Member">
-              <div class="team-social">
-                <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
-                <a href="404.html"><i class="fab fa-twitter"></i></a>
-              </div>
-            </div>
-            <div class="team-info">
-              <h4>Sarah Stackly</h4>
-              <span>Creative Director</span>
-            </div>
-          </div>
-
-          <div class="team-card reveal stagger-3">
-            <div class="team-image">
-              <img src="images/advisor1.webp" alt="Team Member">
-              <div class="team-social">
-                <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
-                <a href="404.html"><i class="fab fa-twitter"></i></a>
-              </div>
-            </div>
-            <div class="team-info">
-              <h4>Michael Chen</h4>
-              <span>Lead protocol engineer</span>
-            </div>
-          </div>
-
-          <div class="team-card reveal stagger-4">
-            <div class="team-image">
-              <img src="images/advisor2.webp" alt="Team Member">
-              <div class="team-social">
-                <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
-                <a href="404.html"><i class="fab fa-twitter"></i></a>
-              </div>
-            </div>
-            <div class="team-info">
-              <h4>Emily Davis</h4>
-              <span>Interior Designer</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section class="section awards-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-subtitle">Recognition</p>
-          <h2 class="section-title">Awards & Honors</h2>
-          <div class="line line-center"></div>
-        </div>
-
-        <div class="awards-grid">
-          <div class="award-card reveal stagger-1">
-            <div class="award-year">2025</div>
-            <h4>Best Commercial Design</h4>
-            <p>American Institute of consensus nodes</p>
-          </div>
-          <div class="award-card reveal stagger-2">
-            <div class="award-year">2024</div>
-            <h4>Sustainable protocol engineerure Award</h4>
-            <p>Green Building Council</p>
-          </div>
-          <div class="award-card reveal stagger-3">
-            <div class="award-year">2023</div>
-            <h4>Excellence in Residential Design</h4>
-            <p>protocol engineerure Digest</p>
-          </div>
-          <div class="award-card reveal stagger-4">
-            <div class="award-year">2022</div>
-            <h4>Innovation in Urban Planning</h4>
-            <p>Urban Land Institute</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="footer-logo">
-            <img src="images/logo_gold.webp" alt="Stackly Logo" class="logo-img">
-            <span class="logo-text">Stack<span>ly</span></span>
-          </a>
-          <p class="footer-desc">Creating timeless consensus protocols that inspire and transform.</p>
-          <div class="footer-social">
-            <a href="404.html" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="404.html" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-        <div class="footer-column">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="about.html" class="footer-link">About</a></li>
-            <li><a href="services.html" class="footer-link">Services</a></li>
-            <li><a href="portfolio.html" class="footer-link">Projects</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4 class="footer-title">Services</h4>
-          <ul class="footer-links">
-            <li><a href="services.html" class="footer-link">protocol engineerure</a></li>
-            <li><a href="services.html" class="footer-link">Interior Design</a></li>
-            <li><a href="services.html" class="footer-link">Landscape</a></li>
-            <li><a href="services.html" class="footer-link">Consultation</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4 class="footer-title">Contact</h4>
-          <ul class="footer-links">
-            <li><a href="contact.html" class="footer-link">Get in Touch</a></li>
-            <li><span class="footer-link"><i class="fas fa-phone"></i> +1 (234) 567-890</span></li>
-            <li><span class="footer-link"><i class="fas fa-envelope"></i> info@stackly.com</span></li>
-          </ul>
-        </div>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
+          <span class="logo-text">Stack<span>ly</span></span>
+        </a>
+        <p class="footer-desc">Securing decentralized block production through institutional-grade validator networks.</p>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright">© 2026 Stackly Web3 Staking. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="404.html">Privacy Policy</a>
-          <a href="404.html">Terms of Service</a>
-        </div>
+      <div>
+        <h4 class="footer-title">Validation</h4>
+        <ul class="footer-links">
+          <li><a href="portfolio.html" class="footer-link">Active Validators</a></li>
+          <li><a href="services.html" class="footer-link">Delegation Tiers</a></li>
+          <li><a href="strategies.html" class="footer-link">Audit Bulletins</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Platform</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link">Consensus Lab</a></li>
+          <li><a href="contact.html" class="footer-link">Inquire Sync</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="404.html" class="footer-link">Slashing Policy</a></li>
+        </ul>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
 </body>
 </html>
