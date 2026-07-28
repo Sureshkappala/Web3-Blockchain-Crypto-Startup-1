@@ -15,32 +15,77 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="container navbar-container">
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-circle-wrap">
+      <div class="preloader-circle"></div>
+      <i class="fa-solid fa-cubes preloader-icon"></i>
+    </div>
+    <div class="preloader-percentage">0%</div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Navigation / Header -->
+  <header class="header" id="navbar">
+    <div class="container header-container">
       <a href="index.html" class="logo">
         <span class="logo-text">Stack<span>ly</span></span>
       </a>
       
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="portfolio.html" class="nav-link">Ecosystem</a></li>
-        <li><a href="strategies.html" class="nav-link">Bulletins</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
+      <nav class="navbar">
+        <div class="drawer-header">
+          <a href="index.html" class="logo">
+            <span class="logo-text">Stack<span>ly</span></span>
+          </a>
+          <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <div class="drawer-search">
+          <div style="position: relative; width: 100%;">
+            <input type="text" placeholder="Search validator chains...">
+            <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+          </div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link">Ecosystem</a></li>
+          <li><a href="strategies.html" class="nav-link">Bulletins</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="nav-mobile-cta">
+          <a href="login.html" class="btn btn-secondary">Login</a>
+          <a href="404.html" class="btn btn-gold">Deploy Node Sync</a>
+        </div>
+        
+        <div class="drawer-contact-info">
+          <h5>Relayer Coordinates</h5>
+          <p><i class="fa-solid fa-network-wired"></i> Ping Address: nodes.stackly.eth</p>
+          <p><i class="fa-solid fa-envelope"></i> securesync@stackly.com</p>
+          <p><i class="fa-solid fa-location-dot"></i> Zurich, Switzerland</p>
+        </div>
+      </nav>
       
-      <div class="nav-actions">
-        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
-        <button class="mobile-menu-btn" id="mobile-menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="nav-controls">
+        <a href="login.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        <a href="404.html" class="btn btn-gold btn-sm">Deploy Node Sync</a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- Full-Screen Blockchain Particle Hero -->
   <section class="hero-split-section" id="hero" style="padding-top: 12rem; padding-bottom: 6rem; background: radial-gradient(circle at center, rgba(6, 182, 212, 0.15) 0%, rgba(2, 6, 23, 1) 70%); position: relative; overflow: hidden; min-height: 85vh; display: flex; align-items: center;">
@@ -57,8 +102,18 @@
         </div>
       </div>
 
-      <!-- Right Visual: Dashboard Console -->
-      <div class="hero-content-right reveal-right animate-float">
+      <!-- Right Visual: Dashboard Console with strategy color toggle dots -->
+      <div class="hero-content-right reveal-right animate-float" style="position: relative;">
+        <!-- Floating Glass Badges -->
+        <div class="floating-hero-badge badge-yield anim-pulse" style="position: absolute; top: 30%; right: -25px; background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(6, 182, 212, 0.3); border-radius: 8px; padding: 0.6rem 1rem; box-shadow: var(--shadow-cyan); z-index: 10;">
+          <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; line-height: 1.2;">Target Yield</span>
+          <span style="font-size: 1.1rem; color: #10B981; font-weight: 800; line-height: 1.2;" id="hero-apy-label">4.5% APY</span>
+        </div>
+        <div class="floating-hero-badge badge-risk anim-float" style="position: absolute; bottom: 30%; left: -25px; background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(217, 119, 6, 0.3); border-radius: 8px; padding: 0.6rem 1rem; box-shadow: var(--shadow-gold); z-index: 10; animation-delay: 2s;">
+          <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; line-height: 1.2;">Commission</span>
+          <span style="font-size: 1.1rem; color: #f59e0b; font-weight: 800; line-height: 1.2;" id="hero-commission-label">2.5% fee</span>
+        </div>
+
         <div class="glass-card" style="padding: 2.5rem 2rem; border-color: rgba(6, 182, 212, 0.2); box-shadow: var(--shadow-cyan); background: rgba(11, 19, 41, 0.85); backdrop-filter: blur(12px); border-radius: 12px; border: 1px solid var(--border);">
           <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
             <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);"><i class="fa-solid fa-terminal" style="color: var(--gold); margin-right: 0.5rem;"></i> Validator_Node_01</span>
@@ -77,18 +132,23 @@
 
           <div class="grid-2col" style="gap: 1.25rem; margin-bottom: 1.5rem;">
             <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+              <span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Selected Model</span>
+              <span style="font-size: 1.05rem; color: var(--text-primary); font-weight: 700;" id="hero-strategy-label">Ethereum L1 Node</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
               <span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Telemetry Ping</span>
               <span style="font-size: 1.2rem; color: var(--text-primary); font-weight: 700; font-family: monospace;">8.5ms</span>
             </div>
-            <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
-              <span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">MEV Boost Capture</span>
-              <span style="font-size: 1.2rem; color: var(--text-primary); font-weight: 700; font-family: monospace;">+1.48 ETH</span>
-            </div>
           </div>
 
-          <div style="background: #020617; border-radius: 8px; padding: 1rem; font-family: monospace; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.6; border: 1px solid rgba(255,255,255,0.05);">
-            <p style="color: var(--gold);"><span style="color: var(--text-muted);">[OK]</span> Proposal Block #48190123 Sync Complete</p>
-            <p><span style="color: var(--text-muted);">[OK]</span> HSM validator signature verified</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1rem;">
+            <span style="font-size: 0.75rem; color: var(--text-secondary);">Toggle Network:</span>
+            <!-- Interactive Color toggles -->
+            <div style="display: flex; gap: 0.75rem;">
+              <div class="hero-color-toggle-dot" style="background-color: var(--cyan); width: 14px; height: 14px; border-radius: 50%; cursor: pointer;" onclick="document.getElementById('hero-strategy-label').textContent='Ethereum L1 Node'; document.getElementById('hero-apy-label').textContent='4.5% APY'; document.getElementById('hero-commission-label').textContent='2.5% fee';"></div>
+              <div class="hero-color-toggle-dot" style="background-color: var(--primary); width: 14px; height: 14px; border-radius: 50%; cursor: pointer;" onclick="document.getElementById('hero-strategy-label').textContent='Solana validator'; document.getElementById('hero-apy-label').textContent='6.8% APY'; document.getElementById('hero-commission-label').textContent='5.0% fee';"></div>
+              <div class="hero-color-toggle-dot" style="background-color: var(--gold); width: 14px; height: 14px; border-radius: 50%; cursor: pointer;" onclick="document.getElementById('hero-strategy-label').textContent='Cosmos IBC Node'; document.getElementById('hero-apy-label').textContent='14.2% APY'; document.getElementById('hero-commission-label').textContent='8.0% fee';"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -97,22 +157,22 @@
 
   <!-- Consensus Node Performance Hub -->
   <section class="stats-section" style="background: linear-gradient(90deg, rgba(11, 19, 41, 0.85) 0%, rgba(2, 6, 23, 0.95) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 0;">
-    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
-      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-        <div style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">99.99%</div>
-        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Consensus Uptime SLA</div>
+    <div class="container grid-4col" style="text-align: center;">
+      <div class="counter-item">
+        <h3 class="counter-value" data-target="99" style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0</h3>
+        <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Consensus Uptime (%)</p>
       </div>
-      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-        <div style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">$1.28B+</div>
-        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Total Value Locked</div>
+      <div class="counter-item">
+        <h3 class="counter-value" data-target="1280" style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0</h3>
+        <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Total Value Locked ($M)</p>
       </div>
-      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-        <div style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">15+</div>
-        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Supported L1 Chains</div>
+      <div class="counter-item">
+        <h3 class="counter-value" data-target="15" style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0</h3>
+        <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Supported L1 Chains</p>
       </div>
-      <div class="glass-card" style="padding: 2rem; text-align: center; border-color: rgba(6, 182, 212, 0.15); background: var(--bg-navy); border-radius: 12px; border: 1px solid var(--border);">
-        <div style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0%</div>
-        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Slashing Incidents</div>
+      <div class="counter-item">
+        <h3 class="counter-value" data-target="14800" style="font-size: 2.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; font-family: monospace;">0</h3>
+        <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px;">Signatures Per Second</p>
       </div>
     </div>
   </section>
@@ -303,90 +363,86 @@
     </div>
   </section>
 
-  <!-- Staking APY Calculator Section -->
-  <section class="pricing section" id="pricing" style="padding: 6rem 0; background: linear-gradient(135deg, rgba(11, 19, 41, 0.9) 0%, rgba(2, 6, 23, 0.9) 100%); border-top: 1px solid var(--border);">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-subtitle">Simulator Hub</p>
-        <h2 class="section-title">Interactive Yield APY Calculator</h2>
-        <div class="line line-center"></div>
-        <p class="section-desc">Simulate staking allocations to estimate annual rewards and gas margins.</p>
+  <!-- Interactive Relayer Maintenance / Upgrade Timetable -->
+  <section class="schedule-section section" id="schedule" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(37, 99, 235, 0.05) 0%, rgba(2, 6, 23, 1) 70%); border-top: 1px solid var(--border);">
+    <div class="container" style="text-align: center; margin-bottom: 4rem;">
+      <span class="section-tag"><i class="fa-solid fa-calendar-check"></i> Relayer Timetable</span>
+      <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">Validator Maintenance Timetable</h2>
+      <p style="color: var(--text-secondary); margin-top: 0.5rem;">Weekly scheduled upgrades and testnet relays audits coordinate board.</p>
+    </div>
+    <div class="container" style="max-width: 900px;">
+      <div class="schedule-tabs">
+        <button class="btn btn-secondary btn-sm" onclick="alert('Monday: Node_US_East memory check (9 AM), backup keys rotation (2 PM).')">Mon</button>
+        <button class="btn btn-secondary btn-sm" onclick="alert('Tuesday: Solana client v1.18 deployment (10 AM), load testing (4 PM).')">Tue</button>
+        <button class="btn btn-secondary btn-sm" onclick="alert('Wednesday: EVM gas relay tweaks (11 AM), audit report checks (3 PM).')">Wed</button>
+        <button class="btn btn-secondary btn-sm" onclick="alert('Thursday: Bare-metal Swiss node disk optimization (9 AM).')">Thu</button>
+        <button class="btn btn-secondary btn-sm" onclick="alert('Friday: Yield pool APY parameter revisions (10 AM).')">Fri</button>
       </div>
-      
-      <div class="glass-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 3rem; margin-top: 3rem; border-color: rgba(6, 182, 212, 0.2); border-radius: 12px; border: 1px solid var(--border);">
-        <div style="display: flex; flex-direction: column; gap: 2rem;">
-          <div>
-            <label style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">
-              <span>Staking Capital</span>
-              <span style="color: var(--cyan);"><span id="calc-val-label">$50,000</span> USD</span>
-            </label>
-            <input type="range" id="calc-slider" min="1000" max="500000" step="5000" value="50000" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; background: rgba(255,255,255,0.05);">
-          </div>
-          
-          <div>
-            <label style="display: block; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Select Staking Network</label>
-            <select id="calc-protocol" style="width: 100%; padding: 0.75rem 1rem; border-radius: 6px; background: #020617; border: 1px solid var(--border); color: var(--text-primary); font-size: 0.95rem;">
-              <option value="4.5">Ethereum Validator Node (4.5% APY)</option>
-              <option value="6.8">Solana Validation Server (6.8% APY)</option>
-              <option value="14.2">Cosmos IBC Relayer Node (14.2% APY)</option>
-            </select>
-          </div>
-          
-          <a href="404.html" class="btn btn-gold btn-lg w-full" style="text-align: center;">Delegate Capital Sync <i class="fa-solid fa-calculator" style="margin-left: 0.5rem;"></i></a>
+      <div class="glass-card" style="padding: 2.5rem; border-color: rgba(6, 182, 212, 0.15); border-radius: 12px; border: 1px solid var(--border);">
+        <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <span>09:00 AM - 10:30 AM</span>
+          <span style="font-weight: 700; color: var(--cyan);">Low-Latency Network Relayer Audit</span>
+          <span>Marcus Vance, Relayer Lead</span>
         </div>
-
-        <div style="background: #020617; padding: 2rem; border-radius: 8px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between;">
-          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
-              <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Estimated Monthly Reward</span>
-              <h3 style="font-size: 2rem; color: var(--text-primary); font-weight: 700; margin-top: 0.25rem;" id="calc-monthly">$187.50</h3>
-            </div>
-            <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
-              <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Estimated Annual Yield</span>
-              <h3 style="font-size: 2rem; color: var(--text-primary); font-weight: 700; margin-top: 0.25rem;" id="calc-annual">$2,250.00</h3>
-            </div>
-            <div>
-              <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Projected 3-Year Return</span>
-              <h3 style="font-size: 2.2rem; color: var(--gold); font-weight: 700; margin-top: 0.25rem;" id="calc-three-year">$6,750.00</h3>
-            </div>
-          </div>
+        <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <span>02:00 PM - 03:30 PM</span>
+          <span style="font-weight: 700; color: var(--cyan);">Compiler Bug Bytecode Check</span>
+          <span>Sarah Jenkins, Auditor Lead</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 1rem 0;">
+          <span>05:00 PM - 06:30 PM</span>
+          <span style="font-weight: 700; color: var(--cyan);">Dynamic Staking Yield Projections</span>
+          <span>David Ross, Strategist</span>
         </div>
       </div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const slider = document.getElementById('calc-slider');
-        const protocol = document.getElementById('calc-protocol');
-        const valLabel = document.getElementById('calc-val-label');
-        const monthlyLabel = document.getElementById('calc-monthly');
-        const annualLabel = document.getElementById('calc-annual');
-        const threeYearLabel = document.getElementById('calc-three-year');
-
-        function updateCalculator() {
-          const allocation = parseFloat(slider.value);
-          const rate = parseFloat(protocol.value) / 100;
-          
-          valLabel.textContent = '$' + allocation.toLocaleString();
-          
-          const annual = allocation * rate;
-          const monthly = annual / 12;
-          const threeYear = annual * 3;
-
-          monthlyLabel.textContent = '$' + monthly.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-          annualLabel.textContent = '$' + annual.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-          threeYearLabel.textContent = '$' + threeYear.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-        }
-
-        if (slider && protocol) {
-          slider.addEventListener('input', updateCalculator);
-          protocol.addEventListener('change', updateCalculator);
-          updateCalculator();
-        }
-      });
-    </script>
   </section>
 
-  <!-- CTA Section with animated particles background style -->
+  <!-- Staking Compound Reward Calculator Section -->
+  <section class="calculator-horizon-section section" style="padding: 6rem 0; background: linear-gradient(135deg, rgba(11, 19, 41, 0.9) 0%, rgba(2, 6, 23, 0.9) 100%); border-top: 1px solid var(--border);">
+    <div class="container grid-2col">
+      <div class="calc-box reveal-element">
+        <span class="section-tag gold-tag"><i class="fa-solid fa-calculator"></i> Reward Engine</span>
+        <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary);">Staking Reward Projection Model</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Calculate long-term compound validator returns based on delegation size, monthly staking additions, and protocol rates.</p>
+        <form onsubmit="event.preventDefault(); window.calculateStakingGrowth();">
+          <div class="form-group">
+            <label for="calc-principal-input">Initial Delegation Capital ($)</label>
+            <input type="number" id="calc-principal-input" value="250000" required>
+          </div>
+          <div class="form-group">
+            <label for="calc-monthly-input">Monthly Staking Additions ($)</label>
+            <input type="number" id="calc-monthly-input" value="2500" required>
+          </div>
+          <div class="grid-2col" style="gap: 1rem; margin-bottom: 0;">
+            <div class="form-group">
+              <label for="calc-rate-input">Validator APY Return (%)</label>
+              <input type="number" id="calc-rate-input" value="9.5" step="0.1" required>
+            </div>
+            <div class="form-group">
+              <label for="calc-years-input">Horizon (Years)</label>
+              <input type="number" id="calc-years-input" value="15" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 1rem;">Project Rewards Yield</button>
+        </form>
+      </div>
+      
+      <div class="reveal-element" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="glass-card" style="margin-bottom: 1.5rem;">
+          <h4 style="font-size: 1.2rem; color: var(--cyan); margin-bottom: 0.5rem;"><i class="fa-solid fa-chart-line"></i> Yield Projection Results</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Validator compound calculation executing dynamic compound reward intervals.</p>
+          <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem;">
+            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Estimated Total Rewards Value</span>
+            <h2 style="font-size: 2.2rem; color: var(--text-primary); font-weight: 700;" id="calc-result-display">$250,000.00</h2>
+          </div>
+        </div>
+        <img src="images/portfolio.webp" alt="Growth Projection Chart" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-cyan);">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
   <section class="cta-section" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(37, 99, 235, 0.06) 0%, rgba(2, 6, 23, 1) 70%); border-top: 1px solid var(--border);">
     <div class="container" style="text-align: center;">
       <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-primary);">Ready to Secure On-Chain Yields?</h2>
@@ -440,6 +496,8 @@
       <p>Institutional Staking Provider</p>
     </div>
   </footer>
+
+  <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
 
   <script src="js/main.js"></script>
 </body>
