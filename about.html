@@ -92,40 +92,60 @@
         </div>
     </section>
 
-    <!-- 2. WHO WE ARE DETAILED -->
-    <section style="padding: 3rem 0 5rem 0;">
-        <div class="container about-grid">
-            <div class="about-visual" style="height: 100%;">
-                <div style="height: 100%; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-glass); position: relative;">
-                    <img src="images/about.webp" alt="Stackly Validator Operations Room" class="img-fixed-feature" style="height: 100%; width: 100%; object-fit: cover; display: block;">
-                </div>
-                <div class="about-floating-experience float-element" style="position: absolute; bottom: -15px; right: -15px; z-index: 2;">
-                    <h3>15+</h3>
-                    <p>L1 Chains Live</p>
+    <!-- 2. BARE-METAL VALIDATOR HARDWARE SPECIFICATIONS -->
+    <section style="padding: 5rem 0; background: radial-gradient(circle at 10% 90%, rgba(6, 182, 212, 0.08) 0%, transparent 60%), radial-gradient(circle at 90% 10%, rgba(217, 119, 6, 0.04) 0%, transparent 60%), var(--bg-primary);">
+        <div class="container" style="text-align: center; margin-bottom: 4rem;">
+            <span class="section-tag gold-tag"><i class="fa-solid fa-server"></i> Bare-Metal Infrastructure</span>
+            <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-light);">High-Performance Validator Nodes</h2>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0.5rem auto 0 auto;">Explore the industrial-grade physical infrastructure hosting our active validators across tier-certified co-location centers.</p>
+        </div>
+        
+        <div class="container grid-3col">
+            <!-- Node 1 -->
+            <div class="glass-card reveal-element" style="text-align: left; padding: 2.25rem 1.75rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px;">
+                <div>
+                    <div style="background: rgba(6, 182, 212, 0.1); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);"><i class="fa-solid fa-server" style="font-size: 1.5rem;"></i></div>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-light);">Swiss Vault (Zurich)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 1.5rem;">FIPS 140-2 Level 3 certified bunker host configured with physical HSM key signing vaults and redundant network routers.</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-glass); padding-top: 1rem;">
+                        <li><i class="fa-solid fa-microchip" style="color: var(--cyan); margin-right: 0.5rem;"></i> Dual AMD EPYC 9654 (192 Cores)</li>
+                        <li><i class="fa-solid fa-memory" style="color: var(--cyan); margin-right: 0.5rem;"></i> 1.5TB DDR5 ECC RAM</li>
+                        <li><i class="fa-solid fa-hard-drive" style="color: var(--cyan); margin-right: 0.5rem;"></i> 30TB NVMe Gen5 SSD RAID-10</li>
+                        <li><i class="fa-solid fa-wifi" style="color: var(--cyan); margin-right: 0.5rem;"></i> 10 Gbps Redundant Peering</li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="about-content" style="text-align: left;">
-                <span class="section-tag"><i class="fa-solid fa-bezier-curve"></i> Our Fiduciary Approach</span>
-                <h2 style="font-size: 2.25rem; margin-bottom: 1rem; color: var(--text-light);">Symmetric Security & <span style="color: var(--primary);">Sustainable Staking Yield</span></h2>
-                <p style="color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7;">We structure validator nodes with a focus on low-latency block proposals, hardware security keys, and anti-slashing thresholds.</p>
-                <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">By blending quantitative risk algorithms with bare-metal Switzerland servers, HSM vault signing keys, and MEV boost relays, we offer institutional delegators pure trustless rewards.</p>
-                
-                <div class="about-pillars">
-                  <div class="pillar-card">
-                    <i class="fa-solid fa-shield-halved" style="color: var(--primary); font-size: 1.5rem; margin-top: 0.25rem;"></i>
-                    <div>
-                      <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Security First</h4>
-                      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Every node signature blueprint balances hardware safety modules and signature relayers.</p>
-                    </div>
-                  </div>
-                  <div class="pillar-card">
-                    <i class="fa-solid fa-vault" style="color: var(--accent); font-size: 1.5rem; margin-top: 0.25rem;"></i>
-                    <div>
-                      <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Non-Custodial Retainer</h4>
-                      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">100% fee-only validation services with zero custody of delegation keys.</p>
-                    </div>
-                  </div>
+            <!-- Node 2 -->
+            <div class="glass-card reveal-element" style="text-align: left; padding: 2.25rem 1.75rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; transition-delay: 150ms;">
+                <div>
+                    <div style="background: rgba(6, 182, 212, 0.1); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);"><i class="fa-solid fa-network-wired" style="font-size: 1.5rem;"></i></div>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-light);">APAC Node (Singapore)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 1.5rem;">High-frequency Solana validator client cluster co-located in Equinix SG3, deploying Jito MEV execution parameters.</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-glass); padding-top: 1rem;">
+                        <li><i class="fa-solid fa-microchip" style="color: var(--cyan); margin-right: 0.5rem;"></i> AMD EPYC 9354 (64 Cores)</li>
+                        <li><i class="fa-solid fa-memory" style="color: var(--cyan); margin-right: 0.5rem;"></i> 768GB DDR5 ECC RAM</li>
+                        <li><i class="fa-solid fa-hard-drive" style="color: var(--cyan); margin-right: 0.5rem;"></i> 15TB NVMe Gen5 SSD RAID-5</li>
+                        <li><i class="fa-solid fa-wifi" style="color: var(--cyan); margin-right: 0.5rem;"></i> 10 Gbps Low-Latency Fiber</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Node 3 -->
+            <div class="glass-card reveal-element" style="text-align: left; padding: 2.25rem 1.75rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; transition-delay: 300ms;">
+                <div>
+                    <div style="background: rgba(6, 182, 212, 0.1); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);"><i class="fa-solid fa-cubes" style="font-size: 1.5rem;"></i></div>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-light);">Ecosystem Host (Frankfurt)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 1.5rem;">Sovereign multi-chain IBC hub validator node supporting Cosmos, Avalanche, and testnet relay deployments.</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-glass); padding-top: 1rem;">
+                        <li><i class="fa-solid fa-microchip" style="color: var(--cyan); margin-right: 0.5rem;"></i> Dual Intel Xeon Gold 6430 (64 Cores)</li>
+                        <li><i class="fa-solid fa-memory" style="color: var(--cyan); margin-right: 0.5rem;"></i> 512GB DDR5 ECC RAM</li>
+                        <li><i class="fa-solid fa-hard-drive" style="color: var(--cyan); margin-right: 0.5rem;"></i> 10TB NVMe Gen5 SSD RAID-5</li>
+                        <li><i class="fa-solid fa-wifi" style="color: var(--cyan); margin-right: 0.5rem;"></i> 10 Gbps Redundant Backbone</li>
+                    </ul>
                 </div>
             </div>
         </div>
