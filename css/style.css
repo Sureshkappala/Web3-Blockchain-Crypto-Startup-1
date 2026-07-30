@@ -4,11 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    /* Color Palette - Deep Luxury Emerald & Gold Dark Mode */
-    --bg-primary: #020617;       /* Deep Forest Green Base */
-    --bg-secondary: #0b1329;     /* Moss Green Card Background */
-    --bg-tertiary: #1e293b;      /* Accent Green */
-    --bg-glass: rgba(11, 19, 41, 0.75);
+    /* Color Palette - Deep Luxury Sapphire Blue Dark Mode */
+    --bg-primary: #050a1d;       /* Deep Sapphire Blue Base */
+    --bg-secondary: #0f1837;     /* Midnight Blue Card Background */
+    --bg-tertiary: #1c2a5e;      /* Steel Blue Accent */
+    --bg-glass: rgba(15, 24, 55, 0.75);
     
     --primary: #06b6d4; /* Emerald Green */
     --primary-dark: #0284c7;
@@ -26,7 +26,7 @@
     --gradient-primary: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%);
     --gradient-gold: linear-gradient(135deg, #b55c00 0%, #b55c00 100%);
     --gradient-hybrid: linear-gradient(135deg, #06b6d4 0%, #b55c00 100%);
-    --gradient-dark: linear-gradient(180deg, #020617 0%, #0b1329 100%);
+    --gradient-dark: linear-gradient(180deg, #050a1d 0%, #0f1837 100%);
     
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
@@ -1110,7 +1110,7 @@ section:not([style*="var(--bg-secondary)"]):not([style*="var(--bg-tertiary)"]):n
    FOOTER (MATCHING STACKLY TEMPLATE & SOCIAL ICON COLORS)
    ========================================================================== */
 .footer {
-    background: radial-gradient(circle at 10% 90%, rgba(6, 182, 212, 0.08) 0%, transparent 50%), radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.05) 0%, transparent 50%), #020617;
+    background: radial-gradient(circle at 10% 90%, rgba(6, 182, 212, 0.08) 0%, transparent 50%), radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.05) 0%, transparent 50%), #050a1d;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 5rem;
 }
