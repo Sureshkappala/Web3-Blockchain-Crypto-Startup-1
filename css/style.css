@@ -1108,6 +1108,10 @@ img {
     padding-top: 5rem;
 }
 
+.footer .container {
+    max-width: 1440px !important;
+}
+
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
