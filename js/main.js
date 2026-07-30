@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     initNavbarDrawer();
     initPortalSidebar();
+    initUserSession();
     initRevealAnimations();
     initCompoundCalculator();
     initLiveTelemetryLogs();
@@ -235,6 +236,31 @@ function initPortalSidebar() {
 
     if (overlay) {
         overlay.addEventListener('click', closePortalMenu);
+    }
+}
+
+function initUserSession() {
+    const storedName = localStorage.getItem('loggedInUserName') || 'LIQUIDITY PROVIDER';
+    
+    // Update all user-name elements
+    const nameElTxt = document.querySelectorAll('.user-name');
+    nameElTxt.forEach(el => {
+        el.textContent = storedName;
+    });
+
+    // Update avatar badges (First 2 initials)
+    const avatarEl = document.querySelectorAll('.user-avatar');
+    if (avatarEl.length > 0) {
+        const parts = storedName.trim().split(/\s+/);
+        let initials = 'LP';
+        if (parts.length > 1) {
+            initials = (parts[0][0] + parts[1][0]).toUpperCase();
+        } else if (parts.length === 1 && parts[0].length > 0) {
+            initials = parts[0].substring(0, 2).toUpperCase();
+        }
+        avatarEl.forEach(el => {
+            el.textContent = initials;
+        });
     }
 }
 
