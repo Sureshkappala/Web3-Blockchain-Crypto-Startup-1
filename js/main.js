@@ -172,12 +172,14 @@ function initNavbarDrawer() {
         menuToggle.addEventListener('click', () => {
             navbar.classList.add('active');
             document.body.classList.add('menu-open');
+            document.body.style.overflowY = 'hidden';
         });
     }
 
     const closeMenu = () => {
         if (navbar) navbar.classList.remove('active');
         document.body.classList.remove('menu-open');
+        document.body.style.overflowY = 'auto';
     };
 
     if (drawerClose) {
