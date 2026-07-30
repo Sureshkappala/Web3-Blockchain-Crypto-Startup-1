@@ -219,33 +219,76 @@
         </div>
     </section>
 
-    <!-- 3. SERVICES SECTION -->
-    <section id="services">
+    <!-- 3. STAKING ECOSYSTEM HUB SECTION -->
+    <section id="services" style="background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 80%), var(--bg-primary);">
         <div class="container" style="text-align: center; margin-bottom: 4rem;">
-            <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Developer Suite</span>
-            <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-light);">EVM Security Audits & Logs</h2>
-            <p style="color: var(--text-muted);">Deploy and verify smart contract code safety with our scanning tools and testnet simulators.</p>
+            <span class="section-tag gold-tag"><i class="fa-solid fa-layer-group"></i> Active Staking Pools</span>
+            <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-light);">Ecosystem Staking Hub</h2>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0.5rem auto 0 auto;">Delegate your assets securely to our high-performance validator enclaves and start earning compounding rewards.</p>
         </div>
+        
         <div class="container grid-3col">
-            <div class="glass-card reveal-element" style="text-align: left;">
-                <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-shield-halved" style="font-size: 1.5rem;"></i></div>
-                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">Vulnerability Scanning</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Automated bytecode checks detect reentrancy bugs, integer overflows, and compiler warning alerts.</p>
-                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Strategy</a>
+            <!-- Pool 1 -->
+            <div class="glass-card reveal-element" style="text-align: left; padding: 2.5rem 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px;">
+                <div>
+                    <div style="background: rgba(6, 182, 212, 0.1); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);"><i class="fa-brands fa-ethereum" style="font-size: 1.75rem;"></i></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-light);">Ethereum Pool</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.5rem;">Secure Ethereum consensus validation with MEV boost relays and custom hardware signing vaults.</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                        <li><i class="fa-solid fa-shield" style="color: var(--cyan); margin-right: 0.5rem;"></i> Slashing insurance coverage</li>
+                        <li><i class="fa-solid fa-server" style="color: var(--cyan); margin-right: 0.5rem;"></i> 16 Active Nodes</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                        <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">APY Rate</span>
+                        <strong style="font-size: 1.3rem; color: #10b981;">4.5% APY</strong>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary btn-sm" style="width: 100%; text-align: center;">Delegate ETH</a>
+                </div>
             </div>
             
-            <div class="glass-card reveal-element" style="transition-delay: 150ms; text-align: left;">
-                <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-code" style="font-size: 1.5rem;"></i></div>
-                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">Gas Optimization Vaults</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Refactoring compilation pipelines to reduce deployment and validator proposer block execution fees.</p>
-                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Strategy</a>
+            <!-- Pool 2 -->
+            <div class="glass-card reveal-element" style="text-align: left; padding: 2.5rem 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; transition-delay: 150ms;">
+                <div>
+                    <div style="background: rgba(6, 182, 212, 0.1); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);"><i class="fa-solid fa-server" style="font-size: 1.5rem;"></i></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-light);">Solana Pool</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.5rem;">Delegate to low-latency Jito-Solana client validators running anti-double-sign parameters.</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                        <li><i class="fa-solid fa-bolt" style="color: var(--cyan); margin-right: 0.5rem;"></i> Jito MEV execution active</li>
+                        <li><i class="fa-solid fa-server" style="color: var(--cyan); margin-right: 0.5rem;"></i> 8 Active Nodes</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                        <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">APY Rate</span>
+                        <strong style="font-size: 1.3rem; color: #10b981;">6.8% APY</strong>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary btn-sm" style="width: 100%; text-align: center;">Delegate SOL</a>
+                </div>
             </div>
-            
-            <div class="glass-card reveal-element" style="transition-delay: 300ms; text-align: left;">
-                <div style="background: rgba(6, 182, 212, 0.1); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border);"><i class="fa-solid fa-bolt" style="font-size: 1.5rem;"></i></div>
-                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-light);">MEV Relay Optimization</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Customized block ordering bundles executing transaction sequencing swaps to extract maximal value.</p>
-                <a href="services.html" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Strategy</a>
+
+            <!-- Pool 3 -->
+            <div class="glass-card reveal-element" style="text-align: left; padding: 2.5rem 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; transition-delay: 300ms;">
+                <div>
+                    <div style="background: rgba(6, 182, 212, 0.1); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);"><i class="fa-solid fa-network-wired" style="font-size: 1.5rem;"></i></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-light);">Cosmos Pool</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.5rem;">Secure cross-chain validator operations running dynamic node IBC connectivity relays.</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                        <li><i class="fa-solid fa-network-wired" style="color: var(--cyan); margin-right: 0.5rem;"></i> Multi-chain IBC relays enabled</li>
+                        <li><i class="fa-solid fa-server" style="color: var(--cyan); margin-right: 0.5rem;"></i> 12 Active Nodes</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                        <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">APY Rate</span>
+                        <strong style="font-size: 1.3rem; color: #10b981;">14.2% APY</strong>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary btn-sm" style="width: 100%; text-align: center;">Delegate ATOM</a>
+                </div>
             </div>
         </div>
     </section>
