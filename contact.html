@@ -158,7 +158,7 @@
                         <label for="contact-name">Full Name</label>
                         <div style="position: relative;">
                             <i class="fa-solid fa-user" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
-                            <input type="text" id="contact-name" placeholder="John Doe" oninput="this.value = this.value.replace(/[0-9]/g, '')" pattern="[A-Za-z\s]+" title="Name must contain only letters and spaces" style="padding-left: 2.75rem;" required>
+                            <input type="text" id="contact-name" placeholder="John Doe" pattern="[A-Za-z\s]+" title="Name must contain only letters and spaces" style="padding-left: 2.75rem;" required>
                         </div>
                     </div>
 
@@ -269,5 +269,15 @@
     <button class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nameInput = document.getElementById('contact-name');
+            if (nameInput) {
+                nameInput.addEventListener('input', (e) => {
+                    e.target.value = e.target.value.replace(/[0-9]/g, '');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
