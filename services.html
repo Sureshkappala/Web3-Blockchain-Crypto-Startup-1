@@ -121,9 +121,30 @@
             </div>
 
             <!-- Row 2: Multi-Sig DAO Treasury Configurator -->
-            <div class="grid-2col" style="align-items: center; margin-bottom: 5rem;">
-                <div style="order: 2;">
-                  <div style="background: #020617; border-radius: 12px; border: 1px solid var(--border-glass); padding: 2rem; font-family: monospace; font-size: 0.82rem; color: var(--text-secondary); min-height: 270px; text-align: left; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-glow-primary);">
+            <div class="grid-2col" style="align-items: stretch; margin-bottom: 5rem;">
+                <div style="order: 1; text-align: left; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem;" class="glass-card reveal-element">
+                    <div>
+                        <span class="section-tag gold-tag" style="display: inline-block; margin-bottom: 0.5rem;"><i class="fa-solid fa-key"></i> Enterprise Security</span>
+                        <h2 style="font-size: 2rem; margin: 0.5rem 0 1rem 0; color: var(--text-light);">Multi-Sig DAO Treasury <span style="color: var(--accent);">Safe Creator</span></h2>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6; font-size: 0.9rem;">Select a multi-signature signature threshold below to configure your enterprise vault security enclaves.</p>
+                    </div>
+                    
+                    <div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">Signature Threshold</label>
+                            <select id="safe-threshold-select" style="background: var(--bg-secondary); border: 1px solid var(--border-glass); padding: 0.6rem 1rem; border-radius: 6px; color: var(--text-light); width: 100%;" onchange="document.getElementById('safe-out-threshold').textContent = this.value + ' Owner Signatures';">
+                                <option value="2 / 3">2 out of 3 Signers</option>
+                                <option value="3 / 5">3 out of 5 Signers</option>
+                                <option value="4 / 7">4 out of 7 Signers</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-gold" style="width: 100%;" onclick="window.generateMultiSigSafe()">Deploy Treasury Safe</button>
+                    </div>
+                </div>
+
+                <div style="order: 2; display: flex; flex-direction: column;" class="reveal-element">
+                  <div style="background: #020617; border-radius: 12px; border: 1px solid var(--border-glass); padding: 2rem; font-family: monospace; font-size: 0.82rem; color: var(--text-secondary); flex-grow: 1; text-align: left; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-glow-primary);">
                     <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
                       <span style="color: var(--cyan); font-weight: 700;"><i class="fa-solid fa-vault"></i> Safe Config Telemetry</span>
                       <span style="color: #ef4444; font-weight: 700;" id="safe-status-badge">UNINITIALIZED</span>
@@ -134,22 +155,6 @@
                         <p style="margin: 0; display: none;" id="safe-out-success" style="color: #10b981; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> Safe generated successfully on Ethereum mainnet!</p>
                     </div>
                   </div>
-                </div>
-                <div style="order: 1; text-align: left;">
-                    <span class="section-tag gold-tag"><i class="fa-solid fa-key"></i> Enterprise Security</span>
-                    <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem 0; color: var(--text-light);">Multi-Sig DAO Treasury <span style="color: var(--accent);">Safe Creator</span></h2>
-                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">Select a multi-signature signature threshold below to configure your enterprise vault security enclaves.</p>
-                    
-                    <div class="form-group" style="margin-bottom: 1.5rem;">
-                        <label style="display: block; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">Signature Threshold</label>
-                        <select id="safe-threshold-select" style="background: var(--bg-secondary); border: 1px solid var(--border-glass); padding: 0.6rem 1rem; border-radius: 6px; color: var(--text-light); width: 100%;" onchange="document.getElementById('safe-out-threshold').textContent = this.value + ' Owner Signatures';">
-                            <option value="2 / 3">2 out of 3 Signers</option>
-                            <option value="3 / 5">3 out of 5 Signers</option>
-                            <option value="4 / 7">4 out of 7 Signers</option>
-                        </select>
-                    </div>
-
-                    <button class="btn btn-gold" onclick="window.generateMultiSigSafe()">Deploy Treasury Safe</button>
                 </div>
             </div>
 
