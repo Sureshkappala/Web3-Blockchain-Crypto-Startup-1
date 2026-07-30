@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbarDrawer();
     initRevealAnimations();
     initCompoundCalculator();
+    initLiveTelemetryLogs();
 });
 
 /* ========================================
@@ -271,4 +272,61 @@ function initRevealAnimations() {
     }, { threshold: 0.5 });
 
     counterElements.forEach(elem => counterObserver.observe(elem));
+}
+
+/* ========================================
+   7. LIVE NETWORK TELEMETRY LOGS SIMULATOR
+======================================== */
+function initLiveTelemetryLogs() {
+    const logsBox = document.getElementById('live-node-logs');
+    if (!logsBox) return;
+
+    const templates = [
+        "Swiss-Vault signature relay active | 100% sync",
+        "Proposed block validation completed on Solana Singapore",
+        "Checking peer-to-peer telemetry handshakes...",
+        "Attestation signature verified for block #{BLOCK}",
+        "New validator block proposal broadcasted globally",
+        "P2P consensus weight reached 99.85%",
+        "Swiss-Vault ping latency optimized to 3.8ms",
+        "MEV transaction sequencing bundle executed (+0.12 ETH fee)"
+    ];
+
+    let blockNum = 18409214;
+
+    setInterval(() => {
+        blockNum += Math.floor(Math.random() * 3) + 1;
+        const randTemplate = templates[Math.floor(Math.random() * templates.length)];
+        const text = randTemplate.replace('{BLOCK}', blockNum);
+        
+        const now = new Date().toTimeString().split(' ')[0];
+        const p = document.createElement('p');
+        p.style.margin = "0";
+        p.style.opacity = "0";
+        p.style.transform = "translateY(5px)";
+        p.style.transition = "all 0.3s ease";
+        
+        if (text.includes("verified") || text.includes("active") || text.includes("completed")) {
+            p.style.color = "#10b981";
+        } else if (text.includes("latency") || text.includes("MEV")) {
+            p.style.color = "var(--cyan)";
+        }
+        
+        p.innerHTML = `<span style="color: var(--text-muted);">[${now}]</span> ${text}`;
+        logsBox.appendChild(p);
+        
+        setTimeout(() => {
+            p.style.opacity = "1";
+            p.style.transform = "translateY(0)";
+        }, 50);
+
+        if (logsBox.children.length > 5) {
+            const first = logsBox.children[0];
+            first.style.opacity = "0";
+            first.style.transform = "translateY(-5px)";
+            setTimeout(() => {
+                first.remove();
+            }, 300);
+        }
+    }, 3000);
 }

@@ -272,36 +272,59 @@
         </div>
     </section>
 
-    <!-- 5. CONSULTATION TIMETABLE SCHEDULE -->
-    <section id="schedule">
+    <!-- 5. REAL-TIME NODE NETWORK STATUS CONSOLE -->
+    <section id="schedule" style="background: radial-gradient(circle at 10% 10%, rgba(217, 119, 6, 0.04) 0%, transparent 60%), radial-gradient(circle at 90% 90%, rgba(6, 182, 212, 0.08) 0%, transparent 60%), var(--bg-primary);">
         <div class="container" style="text-align: center; margin-bottom: 4rem;">
-            <span class="section-tag"><i class="fa-solid fa-calendar-check"></i> Relayer Timetable</span>
-            <h2 style="font-size: 2.5rem; color: var(--text-light);">Validator Maintenance Timetable</h2>
-            <p style="color: var(--text-muted); margin-top: 0.5rem;">Weekly scheduled upgrades and testnet relays audits coordinate board.</p>
+            <span class="section-tag gold-tag"><i class="fa-solid fa-earth-americas"></i> Global Validator Infrastructure</span>
+            <h2 style="font-size: 2.5rem; color: var(--text-light);">Real-Time Node Network Status</h2>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0.5rem auto 0 auto;">Monitor active latency pings, consensus weights, and live block signatures across our global validator nodes.</p>
         </div>
-        <div class="container" style="max-width: 900px;">
-            <div class="schedule-tabs">
-                <button class="btn btn-secondary btn-sm" onclick="alert('Monday: Node_US_East memory check (9 AM), backup keys rotation (2 PM).')">Mon</button>
-                <button class="btn btn-secondary btn-sm" onclick="alert('Tuesday: Solana client v1.18 deployment (10 AM), load testing (4 PM).')">Tue</button>
-                <button class="btn btn-secondary btn-sm" onclick="alert('Wednesday: EVM gas relay tweaks (11 AM), audit report checks (3 PM).')">Wed</button>
-                <button class="btn btn-secondary btn-sm" onclick="alert('Thursday: Bare-metal Swiss node disk optimization (9 AM).')">Thu</button>
-                <button class="btn btn-secondary btn-sm" onclick="alert('Friday: Yield pool APY parameter revisions (10 AM).')">Fri</button>
+        
+        <div class="container grid-2col" style="align-items: stretch;">
+            <!-- Left: Node List -->
+            <div style="display: flex; flex-direction: column; gap: 1rem; text-align: left;">
+                <div class="glass-card reveal-element" style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; border-color: rgba(6, 182, 212, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="background: #10b981; width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 10px #10b981;" class="anim-pulse"></div>
+                        <div>
+                            <h4 style="font-size: 1.05rem; color: var(--text-light); margin-bottom: 0.2rem;">Swiss Vault (Zurich)</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Height: #18,409,214 | 12,500 staked</p>
+                        </div>
+                    </div>
+                    <span style="font-size: 0.9rem; color: var(--cyan); font-weight: 700; font-family: monospace;">4.2ms ping</span>
+                </div>
+                <div class="glass-card reveal-element" style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; border-color: rgba(6, 182, 212, 0.08); transition-delay: 100ms;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="background: #10b981; width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 10px #10b981;" class="anim-pulse"></div>
+                        <div>
+                            <h4 style="font-size: 1.05rem; color: var(--text-light); margin-bottom: 0.2rem;">Solana Cluster (Singapore)</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Height: #184,902,112 | 84,200 staked</p>
+                        </div>
+                    </div>
+                    <span style="font-size: 0.9rem; color: var(--cyan); font-weight: 700; font-family: monospace;">6.5ms ping</span>
+                </div>
+                <div class="glass-card reveal-element" style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; border-color: rgba(6, 182, 212, 0.08); transition-delay: 200ms;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="background: #10b981; width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 10px #10b981;" class="anim-pulse"></div>
+                        <div>
+                            <h4 style="font-size: 1.05rem; color: var(--text-light); margin-bottom: 0.2rem;">Cosmos Hub (Frankfurt)</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Height: #14,921,802 | 9,800 staked</p>
+                        </div>
+                    </div>
+                    <span style="font-size: 0.9rem; color: var(--cyan); font-weight: 700; font-family: monospace;">8.5ms ping</span>
+                </div>
             </div>
-            <div class="glass-card" style="padding: 2.5rem; text-align: left;">
-                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-glass);">
-                    <span>09:00 AM - 10:30 AM</span>
-                    <span style="font-weight: 700; color: var(--primary);">Low-Latency Network Relayer Audit</span>
-                    <span>Marcus Vance, Relayer Lead</span>
+            
+            <!-- Right: Simulated Diagnostics Terminal -->
+            <div class="glass-card reveal-element" style="background: #020617; border-radius: 12px; border: 1px solid var(--border-glass); padding: 1.5rem 2rem; font-family: monospace; font-size: 0.82rem; color: var(--text-secondary); min-height: 290px; text-align: left; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-glow-primary); transition-delay: 300ms;">
+                <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--cyan); font-weight: 700;"><i class="fa-solid fa-terminal"></i> Node Event Monitor</span>
+                    <span style="color: var(--gold);" id="console-node-status">Active Nodes: 3</span>
                 </div>
-                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-glass);">
-                    <span>02:00 PM - 03:30 PM</span>
-                    <span style="font-weight: 700; color: var(--primary);">Compiler Bug Bytecode Check</span>
-                    <span>Sarah Jenkins, Auditor Lead</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; padding: 1rem 0;">
-                    <span>05:00 PM - 06:30 PM</span>
-                    <span style="font-weight: 700; color: var(--primary);">Dynamic Staking Yield Projections</span>
-                    <span>David Ross, Yield Strategist</span>
+                <div id="live-node-logs" style="display: flex; flex-direction: column; gap: 0.6rem; flex-grow: 1; margin-top: 1rem; line-height: 1.5;">
+                    <p style="color: #10b981; margin: 0;"><span style="color: var(--text-muted);">[09:56:12]</span> Swiss-Vault signature relay active | 100% sync</p>
+                    <p style="color: #10b981; margin: 0;"><span style="color: var(--text-muted);">[09:56:15]</span> Proposed block validation completed on Solana Singapore</p>
+                    <p style="color: var(--text-muted); margin: 0;"><span style="color: var(--text-muted);">[09:56:18]</span> Checking peer-to-peer telemetry handshakes...</p>
                 </div>
             </div>
         </div>
