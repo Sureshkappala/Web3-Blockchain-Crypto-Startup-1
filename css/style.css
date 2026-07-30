@@ -190,8 +190,7 @@ img {
 }
 
 /* Highlight glass card borders when they sit on the primary background (same color as page background) */
-section:not([style*="var(--bg-secondary)"]):not([style*="var(--bg-tertiary)"]) .glass-card,
-body:not(.portal-body) .glass-card {
+section:not([style*="var(--bg-secondary)"]):not([style*="var(--bg-tertiary)"]):not([style*="var(--bg-accent)"]) .glass-card {
     border: 1px solid rgba(6, 182, 212, 0.25) !important;
     border-top: 1px solid rgba(6, 182, 212, 0.4) !important;
     box-shadow: 0 0 15px rgba(6, 182, 212, 0.08) !important;
