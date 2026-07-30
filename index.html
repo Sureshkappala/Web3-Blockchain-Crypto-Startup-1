@@ -297,7 +297,7 @@
     <section class="stats-counter-section" style="padding: 5rem 0;">
         <div class="container grid-4col" style="text-align: center;">
             <div class="counter-item">
-                <h3 class="counter-value" data-target="15000">0</h3>
+                <h3 class="counter-value" data-target="99">0</h3>
                 <p>Validator Uptime (%)</p>
             </div>
             <div class="counter-item">
@@ -306,7 +306,7 @@
             </div>
             <div class="counter-item">
                 <h3 class="counter-value" data-target="15">0</h3>
-                <p>Years Ecosystem</p>
+                <p>Supported Networks</p>
             </div>
             <div class="counter-item">
                 <h3 class="counter-value" data-target="1280">0</h3>
@@ -375,41 +375,45 @@
 
     <!-- 6. INTERACTIVE STAKING REWARDS CONFIGURATOR -->
     <section style="background-color: var(--bg-secondary); background: radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.03) 0%, transparent 60%), var(--bg-secondary);">
-        <div class="container grid-2col" style="align-items: center;">
+        <div class="container grid-2col" style="align-items: stretch;">
             
             <!-- Left: Yield Configurator -->
-            <div class="calc-box reveal-element" style="text-align: left;">
-                <span class="section-tag gold-tag"><i class="fa-solid fa-calculator"></i> Reward Engine</span>
-                <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-light);">Interactive Yield Estimator</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Adjust the delegator staking amount and duration parameters below to project real-time consensus rewards.</p>
+            <div class="calc-box reveal-element glass-card" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between; padding: 2.5rem 2rem;">
+                <div>
+                    <span class="section-tag gold-tag" style="display: inline-block; margin-bottom: 0.5rem;"><i class="fa-solid fa-calculator"></i> Reward Engine</span>
+                    <h3 style="font-size: 2rem; margin: 0.5rem 0 1rem 0; color: var(--text-light);">Interactive Yield Estimator</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Adjust the delegator staking amount and duration parameters below to project real-time consensus rewards.</p>
+                </div>
                 
-                <!-- Asset Selector Tabs -->
-                <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                    <button class="btn btn-secondary btn-sm" id="calc-tab-eth" style="background: var(--gradient-primary); border-color: var(--cyan); color: var(--text-light); font-weight: 700;" onclick="window.setCalcAsset('ETH', 4.5)">Ethereum (4.5%)</button>
-                    <button class="btn btn-secondary btn-sm" id="calc-tab-sol" style="font-weight: 700;" onclick="window.setCalcAsset('SOL', 6.8)">Solana (6.8%)</button>
-                    <button class="btn btn-secondary btn-sm" id="calc-tab-atom" style="font-weight: 700;" onclick="window.setCalcAsset('ATOM', 14.2)">Cosmos (14.2%)</button>
-                </div>
-
-                <div class="form-group" style="margin-bottom: 1.5rem;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                        <label style="margin-bottom: 0;">Staking delegation amount</label>
-                        <span style="font-weight: 700; color: var(--cyan);" id="calc-amount-val">100 ETH</span>
+                <div>
+                    <!-- Asset Selector Tabs -->
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <button class="btn btn-secondary btn-sm" id="calc-tab-eth" style="background: var(--gradient-primary); border-color: var(--cyan); color: var(--text-light); font-weight: 700;" onclick="window.setCalcAsset('ETH', 4.5)">Ethereum (4.5%)</button>
+                        <button class="btn btn-secondary btn-sm" id="calc-tab-sol" style="font-weight: 700;" onclick="window.setCalcAsset('SOL', 6.8)">Solana (6.8%)</button>
+                        <button class="btn btn-secondary btn-sm" id="calc-tab-atom" style="font-weight: 700;" onclick="window.setCalcAsset('ATOM', 14.2)">Cosmos (14.2%)</button>
                     </div>
-                    <input type="range" id="calc-amount-range" min="1" max="5000" value="100" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; outline: none; cursor: pointer;" oninput="window.updateYieldEstimator()">
-                </div>
 
-                <div class="form-group" style="margin-bottom: 2.5rem;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                        <label style="margin-bottom: 0;">Horizon duration</label>
-                        <span style="font-weight: 700; color: var(--gold);" id="calc-duration-val">3 Years</span>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <label style="margin-bottom: 0;">Staking delegation amount</label>
+                            <span style="font-weight: 700; color: var(--cyan);" id="calc-amount-val">100 ETH</span>
+                        </div>
+                        <input type="range" id="calc-amount-range" min="1" max="5000" value="100" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; outline: none; cursor: pointer;" oninput="window.updateYieldEstimator()">
                     </div>
-                    <input type="range" id="calc-duration-range" min="1" max="10" value="3" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; outline: none; cursor: pointer;" oninput="window.updateYieldEstimator()">
+
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <label style="margin-bottom: 0;">Horizon duration</label>
+                            <span style="font-weight: 700; color: var(--gold);" id="calc-duration-val">3 Years</span>
+                        </div>
+                        <input type="range" id="calc-duration-range" min="1" max="10" value="3" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; outline: none; cursor: pointer;" oninput="window.updateYieldEstimator()">
+                    </div>
                 </div>
             </div>
             
             <!-- Right: Yield Output -->
-            <div class="reveal-element" style="text-align: left;">
-                <div class="glass-card" style="padding: 2.5rem; border-color: rgba(6, 182, 212, 0.2); box-shadow: var(--shadow-glow-primary); position: relative; overflow: hidden;">
+            <div class="reveal-element" style="text-align: left; display: flex; flex-direction: column;">
+                <div class="glass-card" style="padding: 2.5rem; border-color: rgba(6, 182, 212, 0.2); box-shadow: var(--shadow-glow-primary); position: relative; overflow: hidden; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                     <div style="position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: rgba(6, 182, 212, 0.1); filter: blur(20px); border-radius: 50%;"></div>
                     
                     <h4 style="font-size: 1.25rem; color: var(--text-light); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-chart-pie" style="color: var(--cyan);"></i> Projected Yield Output</h4>
