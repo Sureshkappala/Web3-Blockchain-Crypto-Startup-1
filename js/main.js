@@ -172,14 +172,18 @@ function initNavbarDrawer() {
         menuToggle.addEventListener('click', () => {
             navbar.classList.add('active');
             document.body.classList.add('menu-open');
-            document.body.style.overflowY = 'hidden';
+            document.documentElement.classList.add('menu-open');
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
         });
     }
 
     const closeMenu = () => {
         if (navbar) navbar.classList.remove('active');
         document.body.classList.remove('menu-open');
-        document.body.style.overflowY = 'auto';
+        document.documentElement.classList.remove('menu-open');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     };
 
     if (drawerClose) {
