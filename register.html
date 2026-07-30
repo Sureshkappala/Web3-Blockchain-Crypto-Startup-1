@@ -184,9 +184,9 @@
 
             localStorage.setItem('loggedInUserName', name.toUpperCase());
             localStorage.setItem('loggedInUserRole', role);
-            window.showCustomAlert('Account Created Successfully! Redirecting to Portfolio Dashboard...', 'success');
+            window.showCustomAlert('Account Created Successfully! Redirecting to Login Page...', 'success');
             setTimeout(() => {
-                window.location.href = 'studio-portal.html';
+                window.location.href = 'login.html';
             }, 1800);
         });
     </script>

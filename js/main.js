@@ -365,3 +365,51 @@ function initLiveTelemetryLogs() {
         }
     }, 3000);
 }
+
+/* ========================================
+   8. SYSTEM ALERT OVERLAY NOTIFICATION
+======================================== */
+window.showCustomAlert = function(message, type = 'info') {
+    let alertBox = document.getElementById('custom-system-alert');
+    if (!alertBox) {
+        alertBox = document.createElement('div');
+        alertBox.id = 'custom-system-alert';
+        alertBox.style.position = 'fixed';
+        alertBox.style.top = '20px';
+        alertBox.style.right = '20px';
+        alertBox.style.zIndex = '99999';
+        alertBox.style.padding = '1rem 1.5rem';
+        alertBox.style.borderRadius = '8px';
+        alertBox.style.fontFamily = 'sans-serif';
+        alertBox.style.fontSize = '0.9rem';
+        alertBox.style.fontWeight = '600';
+        alertBox.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.5)';
+        alertBox.style.transition = 'all 0.4s ease';
+        alertBox.style.opacity = '0';
+        alertBox.style.transform = 'translateY(-20px)';
+        document.body.appendChild(alertBox);
+    }
+    
+    if (type === 'success') {
+        alertBox.style.background = 'rgba(16, 185, 129, 0.95)';
+        alertBox.style.color = '#fff';
+        alertBox.style.border = '1px solid #10b981';
+    } else if (type === 'error') {
+        alertBox.style.background = 'rgba(239, 68, 68, 0.95)';
+        alertBox.style.color = '#fff';
+        alertBox.style.border = '1px solid #ef4444';
+    } else {
+        alertBox.style.background = 'rgba(6, 182, 212, 0.95)';
+        alertBox.style.color = '#fff';
+        alertBox.style.border = '1px solid #06b6d4';
+    }
+    
+    alertBox.textContent = message;
+    alertBox.style.opacity = '1';
+    alertBox.style.transform = 'translateY(0)';
+    
+    setTimeout(() => {
+        alertBox.style.opacity = '0';
+        alertBox.style.transform = 'translateY(-20px)';
+    }, 3000);
+};
