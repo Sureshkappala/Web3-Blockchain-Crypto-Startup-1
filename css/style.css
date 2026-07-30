@@ -189,11 +189,11 @@ img {
     transform: translateY(-6px);
 }
 
-/* Highlight glass card borders when they sit on the primary background (same color as page background) */
+/* Highlight glass card borders when they sit on the primary background (same color as page background) in pink */
 section:not([style*="var(--bg-secondary)"]):not([style*="var(--bg-tertiary)"]):not([style*="var(--bg-accent)"]) .glass-card {
-    border: 1px solid rgba(6, 182, 212, 0.25) !important;
-    border-top: 1px solid rgba(6, 182, 212, 0.4) !important;
-    box-shadow: 0 0 15px rgba(6, 182, 212, 0.08) !important;
+    border: 1px solid rgba(236, 72, 153, 0.4) !important;
+    border-top: 1px solid rgba(236, 72, 153, 0.6) !important;
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.15) !important;
 }
 
 /* Ambient Glowing Background Blobs */
@@ -1503,7 +1503,7 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
 
 .panel-box {
     background: var(--bg-secondary);
-    border: 1px solid rgba(6, 182, 212, 0.18);
+    border: 1px solid rgba(236, 72, 153, 0.3);
     border-radius: var(--radius-sm);
     padding: 2rem;
     margin-bottom: 2rem;
@@ -1676,11 +1676,11 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
     
     .db-table tr {
         margin-bottom: 1.25rem !important;
-        border: 1px solid rgba(6, 182, 212, 0.25) !important;
+        border: 1px solid rgba(236, 72, 153, 0.4) !important;
         border-radius: var(--radius-sm) !important;
         padding: 0.85rem !important;
         background: rgba(255, 255, 255, 0.01) !important;
-        box-shadow: 0 0 12px rgba(6, 182, 212, 0.08) !important;
+        box-shadow: 0 0 12px rgba(236, 72, 153, 0.12) !important;
     }
     
     .db-table td {
