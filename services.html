@@ -120,27 +120,36 @@
                 </div>
             </div>
 
-            <!-- Row 2: Live console generator -->
-            <div class="grid-2col" style="align-items: center;">
+            <!-- Row 2: Multi-Sig DAO Treasury Configurator -->
+            <div class="grid-2col" style="align-items: center; margin-bottom: 5rem;">
                 <div style="order: 2;">
-                  <div style="background: #020617; border-radius: 8px; border: 1px solid var(--border); padding: 2rem; font-family: monospace; font-size: 0.8rem; color: var(--text-secondary); min-height: 250px; text-align: left; overflow: hidden; position: relative;">
-                    <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
-                      <span style="color: var(--text-primary); font-weight: 700;">Live Proposer Logs</span>
-                      <span style="color: var(--gold);" id="block-counter">Block #1409214</span>
+                  <div style="background: #020617; border-radius: 12px; border: 1px solid var(--border-glass); padding: 2rem; font-family: monospace; font-size: 0.82rem; color: var(--text-secondary); min-height: 270px; text-align: left; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-glow-primary);">
+                    <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                      <span style="color: var(--cyan); font-weight: 700;"><i class="fa-solid fa-vault"></i> Safe Config Telemetry</span>
+                      <span style="color: #ef4444; font-weight: 700;" id="safe-status-badge">UNINITIALIZED</span>
                     </div>
-                    <div id="console-logs-box" style="display: flex; flex-direction: column; gap: 0.5rem; line-height: 1.6;">
-                      <p style="color: #10b981;"><span style="color: var(--text-muted);">[18:22:15]</span> HSM Signature Relay Active</p>
-                      <p><span style="color: var(--text-muted);">[18:22:18]</span> Proposed Block validator signature verified</p>
+                    <div style="flex-grow: 1; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; line-height: 1.6;">
+                        <p style="margin: 0;"><span style="color: var(--text-muted);">Threshold:</span> <span id="safe-out-threshold" style="color: var(--text-primary);">2 / 3 Owner Signatures</span></p>
+                        <p style="margin: 0;"><span style="color: var(--text-muted);">Safe Address:</span> <span id="safe-out-address" style="color: var(--text-muted); word-break: break-all;">0x0000000000000000000000000000000000000000</span></p>
+                        <p style="margin: 0; display: none;" id="safe-out-success" style="color: #10b981; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> Safe generated successfully on Ethereum mainnet!</p>
                     </div>
                   </div>
                 </div>
                 <div style="order: 1; text-align: left;">
-                    <span class="section-tag gold-tag"><i class="fa-solid fa-terminal"></i> Validator Proposer</span>
-                    <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem 0; color: var(--text-light);">Testnet & Proposer <span style="color: var(--accent);">Log Simulator</span></h2>
-                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">Click the button below to simulate mock validator block proposals in real-time, executing cryptographic consensus checks.</p>
+                    <span class="section-tag gold-tag"><i class="fa-solid fa-key"></i> Enterprise Security</span>
+                    <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem 0; color: var(--text-light);">Multi-Sig DAO Treasury <span style="color: var(--accent);">Safe Creator</span></h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">Select a multi-signature signature threshold below to configure your enterprise vault security enclaves.</p>
                     
-                    <button class="btn btn-gold" id="btn-trigger-block" style="margin-right: 1rem;">Simulate Block Proposal</button>
-                    <a href="404.html" class="btn btn-secondary">Export API Keys</a>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">Signature Threshold</label>
+                        <select id="safe-threshold-select" style="background: var(--bg-secondary); border: 1px solid var(--border-glass); padding: 0.6rem 1rem; border-radius: 6px; color: var(--text-light); width: 100%;" onchange="document.getElementById('safe-out-threshold').textContent = this.value + ' Owner Signatures';">
+                            <option value="2 / 3">2 out of 3 Signers</option>
+                            <option value="3 / 5">3 out of 5 Signers</option>
+                            <option value="4 / 7">4 out of 7 Signers</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-gold" onclick="window.generateMultiSigSafe()">Deploy Treasury Safe</button>
                 </div>
             </div>
 
@@ -271,30 +280,33 @@
 
     <script src="js/main.js"></script>
 <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const btn = document.getElementById('btn-trigger-block');
-        const logsBox = document.getElementById('console-logs-box');
-        const blockCounter = document.getElementById('block-counter');
-        let height = 1409214;
-
-        if (btn && logsBox && blockCounter) {
-          btn.addEventListener('click', () => {
-            height += 1;
-            blockCounter.textContent = 'Block #' + height;
-            
-            const now = new Date().toTimeString().split(' ')[0];
-            const newLog = document.createElement('p');
-            newLog.style.color = '#d97706';
-            newLog.innerHTML = '<span style="color: #64748b;">[' + now + ']</span> Block #' + height + ' proposed & signatures verified (latency: 6.2ms)';
-            
-            logsBox.appendChild(newLog);
-            
-            if (logsBox.children.length > 5) {
-              logsBox.removeChild(logsBox.firstChild);
+    window.generateMultiSigSafe = function() {
+        const badge = document.getElementById('safe-status-badge');
+        const addrDisplay = document.getElementById('safe-out-address');
+        const successMsg = document.getElementById('safe-out-success');
+        
+        if (!badge || !addrDisplay) return;
+        
+        badge.textContent = 'DEPLOYING...';
+        badge.style.color = 'var(--gold)';
+        addrDisplay.textContent = 'Deploying smart contracts to blockchain network...';
+        if (successMsg) successMsg.style.display = 'none';
+        
+        setTimeout(() => {
+            const chars = '0123456789abcdef';
+            let mockAddress = '0x';
+            for (let i = 0; i < 40; i++) {
+                mockAddress += chars[Math.floor(Math.random() * 16)];
             }
-          });
-        }
-      });
-    </script>
+            
+            badge.textContent = 'ACTIVE';
+            badge.style.color = '#10b981';
+            addrDisplay.textContent = mockAddress;
+            if (successMsg) {
+                successMsg.style.display = 'block';
+            }
+        }, 1500);
+    };
+</script>
 </body>
 </html>
