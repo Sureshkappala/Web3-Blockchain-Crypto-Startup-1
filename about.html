@@ -183,53 +183,54 @@
         </div>
     </section>
 
-    <!-- 4. LEADERSHIP TEAM SECTION -->
-    <section style="padding: 6rem 0;" id="leadership">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <span class="section-tag"><i class="fa-solid fa-users"></i> Cryptographic Council</span>
-                <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-light);">Meet the Validator <span style="color: var(--primary);">Operators</span></h2>
-                <p style="color: var(--text-muted);">Collaborate directly with our senior managing partners and relayer engineering teams.</p>
+    <!-- 4. SECURITY AUDITS & CERTIFICATIONS SECTION -->
+    <section id="leadership" style="padding: 5rem 0; background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 80%), var(--bg-secondary);">
+        <div class="container" style="text-align: center; margin-bottom: 4rem;">
+            <span class="section-tag gold-tag"><i class="fa-solid fa-file-shield"></i> Security Audits</span>
+            <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-light);">Smart Contract Audit Records</h2>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0.5rem auto 0 auto;">Verify our historical smart contract vulnerability audits and validator client compliance logs.</p>
+        </div>
+        
+        <div class="container grid-3col">
+            <!-- Audit 1 -->
+            <div class="glass-card reveal-element" style="text-align: left; padding: 2.25rem 1.75rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 320px;">
+                <div>
+                    <div style="background: rgba(6, 182, 212, 0.1); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);"><i class="fa-solid fa-file-signature" style="font-size: 1.5rem;"></i></div>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-light);">ConsenSys Diligence</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 1.5rem;">Vulnerability audit on L1 validator delegation smart contracts and gas payout distribution logic.</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-glass); padding-top: 1rem;">
+                        <li><i class="fa-solid fa-calendar-days" style="color: var(--cyan); margin-right: 0.5rem;"></i> Audit Date: Jan 2026</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 0.5rem;"></i> 0 Critical issues found</li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="leadership-grid">
-                <div class="glass-card" style="display: flex; align-items: center; gap: 2rem; text-align: left;">
-                    <img src="images/advisor1.webp" alt="Marcus Vance Relayer CIO" class="img-fixed-avatar">
-                    <div>
-                        <h4 style="font-size: 1.3rem; color: var(--text-light); margin-bottom: 0.2rem;">Marcus Vance</h4>
-                        <p style="font-size: 0.85rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem;">Chief Infrastructure Operator</p>
-                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Marcus directs our low-latency validator server configurations and bare-metal nodes connectivitySwiss lab.</p>
-                    </div>
+            <!-- Audit 2 -->
+            <div class="glass-card reveal-element" style="text-align: left; padding: 2.25rem 1.75rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 320px; transition-delay: 150ms;">
+                <div>
+                    <div style="background: rgba(6, 182, 212, 0.1); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);"><i class="fa-solid fa-shield-halved" style="font-size: 1.5rem;"></i></div>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-light);">Halborn Security</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 1.5rem;">Compliance check on HSM signature relayer proxies and Jito-Solana client configurations.</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-glass); padding-top: 1rem;">
+                        <li><i class="fa-solid fa-calendar-days" style="color: var(--cyan); margin-right: 0.5rem;"></i> Audit Date: Nov 2025</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 0.5rem;"></i> 0 Critical issues found</li>
+                    </ul>
                 </div>
-
-                <div class="glass-card" style="display: flex; align-items: center; gap: 2rem; text-align: left;">
-                    <img src="images/advisor2.webp" alt="Sarah Jenkins Auditor Lead" class="img-fixed-avatar">
-                    <div>
-                        <h4 style="font-size: 1.3rem; color: var(--text-light); margin-bottom: 0.2rem;">Sarah Jenkins</h4>
-                        <p style="font-size: 0.85rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem;">Auditing & Smart Contract Director</p>
-                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Sarah leads gas optimization analysis, compiler auditing, and HSM hardware validation keys deployment.</p>
-                    </div>
-                </div>
-            </div>.</p>
             </div>
-            
-            <div class="leadership-grid">
-                <div class="glass-card" style="display: flex; align-items: center; gap: 2rem;">
-                    <img src="images/advisor1.webp" alt="Marcus Vance CIO" class="img-fixed-avatar">
-                    <div>
-                        <h4 style="font-size: 1.3rem; color: var(--text-light); margin-bottom: 0.2rem;">Marcus Vance, CFA</h4>
-                        <p style="font-size: 0.85rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem;">Chief Investment Officer</p>
-                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">With over 16 years in quantitative asset management, Marcus directs our global macro equity strategies and downside risk algorithms.</p>
-                    </div>
-                </div>
 
-                <div class="glass-card" style="display: flex; align-items: center; gap: 2rem;">
-                    <img src="images/advisor2.webp" alt="Sarah Jenkins CFP" class="img-fixed-avatar">
-                    <div>
-                        <h4 style="font-size: 1.3rem; color: var(--text-light); margin-bottom: 0.2rem;">Sarah Jenkins, CFP®</h4>
-                        <p style="font-size: 0.85rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem;">Managing Director - Private Wealth</p>
-                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Sarah leads tax structuring, estate trusts, and multi-generational family office wealth transition across North America.</p>
-                    </div>
+            <!-- Audit 3 -->
+            <div class="glass-card reveal-element" style="text-align: left; padding: 2.25rem 1.75rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 320px; transition-delay: 300ms;">
+                <div>
+                    <div style="background: rgba(6, 182, 212, 0.1); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--cyan); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);"><i class="fa-solid fa-vault" style="font-size: 1.5rem;"></i></div>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-light);">Trail of Bits</h3>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 1.5rem;">Integrity check on multi-signature DAO enclaves, custody protocols, and withdraw logic loops.</p>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-glass); padding-top: 1rem;">
+                        <li><i class="fa-solid fa-calendar-days" style="color: var(--cyan); margin-right: 0.5rem;"></i> Audit Date: Aug 2025</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 0.5rem;"></i> 0 Critical issues found</li>
+                    </ul>
                 </div>
             </div>
         </div>
