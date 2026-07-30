@@ -1109,7 +1109,8 @@ img {
 }
 
 .footer .container {
-    max-width: 1440px !important;
+    max-width: 90% !important;
+    width: 90% !important;
 }
 
 .footer-grid {
