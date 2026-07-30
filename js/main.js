@@ -203,31 +203,66 @@ function initNavbarDrawer() {
 /* ========================================
    5. COMPOUND REWARDS CALCULATOR
 ======================================= */
+let currentAsset = 'ETH';
+let currentApy = 4.5;
+
 function initCompoundCalculator() {
-    window.calculateStakingGrowth = function() {
-        const principal = parseFloat(document.getElementById('calc-principal-input').value);
-        const monthly = parseFloat(document.getElementById('calc-monthly-input').value);
-        const rateVal = parseFloat(document.getElementById('calc-rate-input').value) / 100;
-        const years = parseFloat(document.getElementById('calc-years-input').value);
-        const display = document.getElementById('calc-result-display');
+    window.setCalcAsset = function(asset, apy) {
+        currentAsset = asset;
+        currentApy = apy;
         
-        if (!display) return;
+        const tabs = ['eth', 'sol', 'atom'];
+        tabs.forEach(t => {
+            const btn = document.getElementById('calc-tab-' + t);
+            if (btn) {
+                if (t === asset.toLowerCase()) {
+                    btn.style.background = 'var(--gradient-primary)';
+                    btn.style.borderColor = 'var(--cyan)';
+                    btn.style.color = 'var(--text-light)';
+                } else {
+                    btn.style.background = 'transparent';
+                    btn.style.borderColor = 'var(--border-glass)';
+                    btn.style.color = 'var(--text-muted)';
+                }
+            }
+        });
         
-        // Compound interest formula: Final = P*(1+r/12)^(12*t) + PMT * [((1+r/12)^(12*t) - 1) / (r/12)]
-        const months = years * 12;
-        const monthlyRate = rateVal / 12;
-        
-        let compoundPrincipal = principal * Math.pow(1 + monthlyRate, months);
-        let compoundAnnuity = 0;
-        if (monthlyRate > 0) {
-            compoundAnnuity = monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
-        } else {
-            compoundAnnuity = monthly * months;
-        }
-        
-        const finalVal = compoundPrincipal + compoundAnnuity;
-        display.textContent = '$' + finalVal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        window.updateYieldEstimator();
     };
+
+    window.updateYieldEstimator = function() {
+        const amountRange = document.getElementById('calc-amount-range');
+        const durationRange = document.getElementById('calc-duration-range');
+        const amountDisplay = document.getElementById('calc-amount-val');
+        const durationDisplay = document.getElementById('calc-duration-val');
+        
+        const outDaily = document.getElementById('calc-out-daily');
+        const outMonthly = document.getElementById('calc-out-monthly');
+        const outBalance = document.getElementById('calc-out-balance');
+        const outTotal = document.getElementById('calc-out-total');
+        
+        if (!amountRange || !durationRange) return;
+        
+        const amount = parseFloat(amountRange.value);
+        const duration = parseFloat(durationRange.value);
+        
+        if (amountDisplay) amountDisplay.textContent = amount.toLocaleString() + ' ' + currentAsset;
+        if (durationDisplay) durationDisplay.textContent = duration + (duration === 1 ? ' Year' : ' Years');
+        
+        const dailyRewards = amount * (currentApy / 100) / 365;
+        const monthlyRewards = amount * (currentApy / 100) / 12;
+        const totalRewards = amount * Math.pow(1 + (currentApy / 100), duration) - amount;
+        const finalBalance = amount + totalRewards;
+        
+        if (outDaily) outDaily.textContent = dailyRewards.toFixed(4) + ' ' + currentAsset;
+        if (outMonthly) outMonthly.textContent = monthlyRewards.toFixed(3) + ' ' + currentAsset;
+        if (outBalance) outBalance.textContent = finalBalance.toLocaleString(undefined, {maximumFractionDigits: 2}) + ' ' + currentAsset;
+        if (outTotal) outTotal.textContent = totalRewards.toLocaleString(undefined, {maximumFractionDigits: 2}) + ' ' + currentAsset;
+    };
+    
+    setTimeout(() => {
+        window.updateYieldEstimator();
+    }, 100);
 }
 
 /* ========================================

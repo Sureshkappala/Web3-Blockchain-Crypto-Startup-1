@@ -2221,3 +2221,38 @@ body.light .sidebar-link:hover, body.light .sidebar-link.active {
     background: rgba(239, 68, 68, 0.08) !important;
     border-color: rgba(239, 68, 68, 0.15) !important;
 }
+
+/* Mobile Responsive Overrides for Hero Section & Site Layout */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 6rem !important;
+        padding-bottom: 2rem !important;
+        text-align: center !important;
+    }
+    .hero-left-box {
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .hero-description {
+        margin: 0 auto 1.5rem auto !important;
+    }
+    .hero-actions {
+        justify-content: center !important;
+    }
+    .hero-stats-row {
+        justify-content: center !important;
+        gap: 1.5rem !important;
+    }
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 2.5rem) !important;
+    }
+    .hero-right-card {
+        margin-top: 1rem !important;
+        min-height: auto !important;
+        padding: 1.5rem 1rem !important;
+    }
+    .hero-visual-frame {
+        padding: 1rem !important;
+        margin: 1rem 0 !important;
+    }
+}

@@ -373,47 +373,72 @@
         </div>
     </section>
 
-    <!-- 6. COMPOUND INTEREST / ROI CALCULATOR -->
-    <section style="background-color: var(--bg-secondary);">
+    <!-- 6. INTERACTIVE STAKING REWARDS CONFIGURATOR -->
+    <section style="background-color: var(--bg-secondary); background: radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.03) 0%, transparent 60%), var(--bg-secondary);">
         <div class="container grid-2col" style="align-items: center;">
+            
+            <!-- Left: Yield Configurator -->
             <div class="calc-box reveal-element" style="text-align: left;">
                 <span class="section-tag gold-tag"><i class="fa-solid fa-calculator"></i> Reward Engine</span>
-                <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-light);">Staking Reward Projection Model</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Calculate long-term compound validator returns based on delegation size, monthly staking additions, and protocol rates.</p>
-                <form onsubmit="event.preventDefault(); window.calculateStakingGrowth();">
-                    <div class="form-group">
-                        <label for="calc-principal-input">Initial Delegation Capital ($)</label>
-                        <input type="number" id="calc-principal-input" value="250000" required>
+                <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-light);">Interactive Yield Estimator</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Adjust the delegator staking amount and duration parameters below to project real-time consensus rewards.</p>
+                
+                <!-- Asset Selector Tabs -->
+                <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                    <button class="btn btn-secondary btn-sm" id="calc-tab-eth" style="background: var(--gradient-primary); border-color: var(--cyan); color: var(--text-light); font-weight: 700;" onclick="window.setCalcAsset('ETH', 4.5)">Ethereum (4.5%)</button>
+                    <button class="btn btn-secondary btn-sm" id="calc-tab-sol" style="font-weight: 700;" onclick="window.setCalcAsset('SOL', 6.8)">Solana (6.8%)</button>
+                    <button class="btn btn-secondary btn-sm" id="calc-tab-atom" style="font-weight: 700;" onclick="window.setCalcAsset('ATOM', 14.2)">Cosmos (14.2%)</button>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <label style="margin-bottom: 0;">Staking delegation amount</label>
+                        <span style="font-weight: 700; color: var(--cyan);" id="calc-amount-val">100 ETH</span>
                     </div>
-                    <div class="form-group">
-                        <label for="calc-monthly-input">Monthly Staking Additions ($)</label>
-                        <input type="number" id="calc-monthly-input" value="2500" required>
+                    <input type="range" id="calc-amount-range" min="1" max="5000" value="100" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; outline: none; cursor: pointer;" oninput="window.updateYieldEstimator()">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 2.5rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <label style="margin-bottom: 0;">Horizon duration</label>
+                        <span style="font-weight: 700; color: var(--gold);" id="calc-duration-val">3 Years</span>
                     </div>
-                    <div class="grid-2col" style="gap: 1rem; margin-bottom: 0;">
-                        <div class="form-group">
-                            <label for="calc-rate-input">Validator APY Return (%)</label>
-                            <input type="number" id="calc-rate-input" value="9.5" step="0.1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="calc-years-input">Horizon (Years)</label>
-                            <input type="number" id="calc-years-input" value="15" required>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 1rem;">Project Rewards Yield</button>
-                </form>
+                    <input type="range" id="calc-duration-range" min="1" max="10" value="3" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; outline: none; cursor: pointer;" oninput="window.updateYieldEstimator()">
+                </div>
             </div>
             
+            <!-- Right: Yield Output -->
             <div class="reveal-element" style="text-align: left;">
-                <div class="glass-card" style="margin-bottom: 1.5rem;">
-                    <h4 style="font-size: 1.2rem; color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-chart-line"></i> Yield Projection Results</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Validator compound calculation executing dynamic compound reward intervals.</p>
-                    <div style="border-top: 1px solid var(--border-glass); padding-top: 1rem;">
-                        <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Estimated Total Rewards Value</span>
-                        <h2 style="font-size: 2.2rem; color: var(--text-light); font-weight: 700;" id="calc-result-display">$250,000.00</h2>
+                <div class="glass-card" style="padding: 2.5rem; border-color: rgba(6, 182, 212, 0.2); box-shadow: var(--shadow-glow-primary); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: rgba(6, 182, 212, 0.1); filter: blur(20px); border-radius: 50%;"></div>
+                    
+                    <h4 style="font-size: 1.25rem; color: var(--text-light); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-chart-pie" style="color: var(--cyan);"></i> Projected Yield Output</h4>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Daily Rewards:</span>
+                            <span style="font-weight: 700; color: var(--text-primary); font-family: monospace;" id="calc-out-daily">0.012 ETH</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Monthly Yield:</span>
+                            <span style="font-weight: 700; color: var(--text-primary); font-family: monospace;" id="calc-out-monthly">0.375 ETH</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Estimated Staked Balance:</span>
+                            <span style="font-weight: 700; color: var(--text-primary); font-family: monospace;" id="calc-out-balance">100.0 ETH</span>
+                        </div>
                     </div>
+                    
+                    <div>
+                        <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Total Horizon Rewards</span>
+                        <h2 style="font-size: 2.5rem; color: #10b981; font-weight: 800; line-height: 1;" id="calc-out-total">13.5 ETH</h2>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.4;">Estimations based on compound validator signature relays. Returns are dynamic and variable according to global pool capacities.</p>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-gold btn-sm" style="width: 100%; text-align: center; margin-top: 1.5rem;"><i class="fa-solid fa-bolt"></i> Delegate Instantly</a>
                 </div>
-                <img src="images/portfolio.webp" alt="Growth Projection Chart" class="img-fixed-feature" style="border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
             </div>
+            
         </div>
     </section>
 
